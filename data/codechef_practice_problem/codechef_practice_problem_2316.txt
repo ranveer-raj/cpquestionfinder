@@ -1,0 +1,105 @@
+
+Read problem statements in Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+You are given two strings PP and QQ. Consider some uniformly randomly and independently chosen non-empty prefix XX and non-empty suffix YY of PP. A string ZZ is formed by concatenating XX and YY in this order. Find the probability that ZZ is a substring of QQ.
+It can be shown that the answer can be represented as a fraction U/VU/V, where UU and VV are non-negative integers and VV is coprime with 998,244,353998,244,353. You should compute U⋅V−1U⋅V−1 modulo 998,244,353998,244,353, where V−1V−1 denotes the multiplicative inverse of VV modulo 998,244,353998,244,353.
+Input
+
+The first line of the input contains a single integer TT denoting the number of test cases. The description of TT test cases follows.
+The first line of each test case contains a single string PP.
+The second line contains a single string QQ.
+
+Output
+For each test case, print a single line containing one integer U⋅V−1U⋅V−1 modulo 998,244,353998,244,353.
+Constraints
+
+1≤T≤101≤T≤10
+1≤|P|,|Q|≤100,0001≤|P|,|Q|≤100,000
+PP and QQ contain only lowercase English letters
+
+Subtasks
+Subtask #1 (25 points): |P|,|Q|≤2,000|P|,|Q|≤2,000
+Subtask #2 (75 points): original constraints
+
+                        Sample Input 1
+                        
+
+
+
+
+
+1
+abac
+aacabc
+
+
+
+                        Sample Output 1
+                        
+
+
+
+
+
+811073537
+
+
+Explanation
+Example case 1: There are 44 possible prefixes XX and 44 suffixes YY. The only combinations that result in a string ZZ that is a substring of QQ are:
+
+XX = "a", YY = "ac"
+XX = "a", YY = "c"
+XX = "ab", YY = "c"
+
+The probability that ZZ is a substring of QQ is 3/163/16.
+
+
+
+Author:
+6★smartnj
+
+
+Editorial:
+https://discuss.codechef.com/problems/SUBPROB
+
+
+Tags:
+
+               
+                 Trees, Segment Trees, KMP Algorithm, HLD, Probability, Lowest Common Ancestor, DFS
+                 
+                     
+                     Data Structures, Graphs, Advanced Data Structures, Advanced Tree Structures, Advanced Algorithms, String Matching, Advanced Graph Algos, Mathematics, Algorithms, Graph Algos, Traversals
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2592
+
+
+Date Added:
+13-02-2021
+
+
+Time Limit:
+2 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+CPP17, PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, SQLQ, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

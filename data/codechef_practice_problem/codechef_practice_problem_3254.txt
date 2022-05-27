@@ -1,0 +1,124 @@
+
+Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese, and Bengali as well.
+You are given a directed graph GG with NN vertices (numbered 11 through NN) and MM edges. Let's denote the set of its vertices by VV, the set of its edges by EE and an edge from a vertex uu to a vertex vv by (u,v)(u,v). Then, let's define:
+
+For each u,v∈Vu,v∈V, R(u,v)R(u,v) is true if vv can be reached from uu or false otherwise. Specifically, if u=vu=v, it is always true.
+For each v∈Vv∈V, a set of vertices N(v)={u∈V∣R(u,v)∧R(v,u)}N(v)={u∈V∣R(u,v)∧R(v,u)}.
+For each subset U⊆VU⊆V, two sets of edges Out(U)={(u,v)∈E∣u∈U}Out(U)={(u,v)∈E∣u∈U} and In(U)={(v,u)∈E∣u∈U}In(U)={(v,u)∈E∣u∈U}.
+
+You need to assign a label to each edge in EE; you may only use labels 11 and 22. The costs of labelling an edge are c1c1 and c2c2 for the labels 11 and 22 respectively.
+In the resulting graph, QQ constraints (numbered 11 through QQ) need to be satisfied. For each valid ii, the ii-th constraint is that the number of edges in a set SiSi with the label xixi should be between lili and riri (inclusive); SiSi is determined by a given vertex wiwi and the type of this constraint titi as follows:
+
+ti=1ti=1: Si=Out(N(wi))Si=Out(N(wi))
+ti=2ti=2: Si=In(N(wi))Si=In(N(wi))
+ti=3ti=3: Si=Out({wi})Si=Out({wi})
+ti=4ti=4: Si=In({wi})Si=In({wi})
+
+Find the smallest cost of labelling all the edges in such a way that these QQ constraints are satisfied or determine that there is no solution satisfying all constraints.
+Input
+
+The first line of the input contains a single integer TT denoting the number of test cases. The description of TT test cases follows.
+The first line of each test case contains three space-separated integers NN, MM and QQ.
+Each of the following MM lines contains two space-separated integers uu and vv denoting a directed edge (u,v)(u,v).
+The next line contains two space-separated integers c1c1 and c2c2.
+QQ lines follow. For each valid ii, the ii-th of these lines contains five space-separated integers titi, wiwi, xixi, lili and riri.
+
+Output
+For each test case, print a single line containing one integer ― the smallest cost of labelling the edges or −1−1 if it is impossible to label the edges in such a way that all constraints are satisfied.
+Constraints
+
+1≤T≤1001≤T≤100
+1≤N≤3⋅1041≤N≤3⋅104
+0≤M≤3⋅1040≤M≤3⋅104
+0≤Q≤3⋅1050≤Q≤3⋅105
+1≤u,v≤N1≤u,v≤N
+1≤c1,c2≤1091≤c1,c2≤109
+1≤ti≤41≤ti≤4 for each valid ii
+1≤wi≤N1≤wi≤N for each valid ii
+xi∈{1,2}xi∈{1,2} for each valid ii
+0≤li≤ri≤M0≤li≤ri≤M for each valid ii
+the sum of NN over all test cases does not exceed 6⋅1046⋅104
+the sum of MM over all test cases does not exceed 6⋅1046⋅104
+the sum of QQ over all test cases does not exceed 6⋅1056⋅105
+
+
+                        Sample Input 1
+                        
+
+
+
+
+
+1
+4 4 1
+1 2
+2 3
+1 3
+3 4
+10 20
+3 1 1 1 1
+
+
+
+                        Sample Output 1
+                        
+
+
+
+
+
+50
+
+
+
+
+
+Author:
+5★manishtanwar
+
+
+Editorial:
+https://discuss.codechef.com/problems/GPHLBL
+
+
+Tags:
+
+               
+                 Directed Graphs, Maximum Flow, Strongly Connected Components, DFS, BFS
+                 
+                     
+                     Data Structures, Graphs, Advanced Algorithms, Advanced Graph Algos, Flow Networks, Algorithms, Graph Algos, Traversals
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+3294
+
+
+Date Added:
+7-09-2020
+
+
+Time Limit:
+3 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+CPP17, PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, SQLQ, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

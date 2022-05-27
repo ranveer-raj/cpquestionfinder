@@ -1,0 +1,106 @@
+
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Chef is a painter. He likes to draw geometric figures and among them, he especially loves isosceles right triangles. The longest side of a right triangle is called its hypotenuse. Chef drew NN isosceles right triangles (numbered 11 through NN) on an infinite sheet of paper, which can be represented by a Cartesian half-plane (containing all points (x,y)(x,y) such that y≥0y≥0), in such a way that the hypotenuse of each triangle lies on the xx-axis (the line y=0y=0). For example, the resulting figure could look like this:
+
+The sides of the triangles and the xx-axis split the paper into one or more contiguous regions, which Chef calls districts. Chef is fascinated by his drawing, so he would like to know how many districts are on his paper. For each valid ii, the hypotenuse of the ii-th triangle is the line segment between points (li,0)(li,0) and (ri,0)(ri,0); note that the triangles are uniquely defined by this information.
+Help Chef calculate the number of districts in the painting.
+Input
+
+The first line of the input contains a single integer TT denoting the number of test cases. The description of TT test cases follows.
+The first line of each test case contains a single integer NN.
+NN lines follow. For each valid ii, the ii-th of these lines contains two space-separated integers lili and riri.
+
+Output
+For each test case, print a single line containing one integer ― the number of districts.
+Constraints
+
+1≤T≤101≤T≤10
+1≤N≤1051≤N≤105
+−109≤li<ri≤109−109≤li<ri≤109 for each valid ii
+the pairs (l1,r1),(l2,r2),…,(lN,rN)(l1,r1),(l2,r2),…,(lN,rN) are distinct
+
+Subtasks
+Subtask #1 (50 points): N≤103N≤103
+Subtask #2 (50 points): original constraints
+
+                        Sample Input 1
+                        
+
+
+
+
+
+1
+4
+40 110
+100 140
+-100 100
+-100 60
+
+
+
+                        Sample Output 1
+                        
+
+
+
+
+
+8
+
+
+Explanation
+Example case 1: The paper with all triangles and eight numbered districts is shown in the figure below.
+
+
+
+
+Author:
+admin3
+
+
+Editorial:
+https://discuss.codechef.com/problems/PAINTERP
+
+
+Tags:
+
+               
+                 Hashmaps, Fenwick Trees, Triangles
+                 
+                     
+                     Data Structures, Advanced Data Structures, Advanced Tree Structures, Advanced Algorithms, Computational Geometry, Polygons
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2645
+
+
+Date Added:
+26-02-2020
+
+
+Time Limit:
+3 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+CPP17, PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

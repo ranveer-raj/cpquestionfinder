@@ -1,0 +1,124 @@
+
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Consider NN parallel wires running from left to right. The wires are numbered 11 through NN from top to bottom. There are MM devices called balancers, numbered 11 through MM from left to right. For each valid ii, balancer ii connects wires xixi and yiyi (xi<yixi<yi). Let's call such a structure of wires and balancers a balancing network.
+
+Each balancer can be directed either upwards or downwards. The directions of all balancers define the state of the balancing network.
+Consider a token that starts moving to the right along some wire, from a point on that wire which is to the left of all balancers. During this process, the token encounters each balancer exactly once. Whenever the token encounters a balancer ii, the following happens:
+
+if the token is moving along the wire xixi and balancer ii is directed downwards, the token moves down to the wire yiyi
+otherwise, if the token is moving along the wire yiyi and balancer ii is directed upwards, the token moves up to the wire xixi
+in all other cases, the token does not move to a different wire
+afterwards, the token keeps moving to the right
+
+We say that a state of the balancing network:
+
+transforms a wire ii into a wire jj, if a token that starts moving along the wire ii ends up on the wire jj after passing through all MM balancers
+unifies wires ii and jj, if it transforms both of these wires into the same wire (possibly different from each of them)
+is kk-non-unifying, if there is a set of kk distinct wires such that this state does not unify any pair of wires from this set
+
+For a given balancing network, please find any ⌈N2⌉⌈N2⌉-non-unifying state or determine that there is no such state.
+Input
+
+The first line of the input contains a single integer TT denoting the number of test cases. The description of TT test cases follows.
+The first line of each test case contains two space-separated integers NN and MM.
+MM lines follow. For each ii (1≤i≤M1≤i≤M), the ii-th of these lines contains two space-separated integers xixi and yiyi.
+
+Output
+For each test case:
+
+If there is no ⌈N2⌉⌈N2⌉-non-unifying state for the given balancing network, print a single line containing the string "failure" (without quotes).
+Otherwise, print a single line containing a string with length MM. This string should describe some ⌈N2⌉⌈N2⌉-non-unifying state. For each valid ii, its ii-th character should be either '^' if the ii-th balancer is directed upwards or 'v' if the ii-th balancer is directed downwards.
+
+Constraints
+
+1≤T≤1031≤T≤103
+2≤N≤1062≤N≤106
+1≤M≤1061≤M≤106
+1≤xi<yi≤N1≤xi<yi≤N for each valid ii
+the sum of NN over all test cases does not exceed 106106
+the sum of MM over all test cases does not exceed 106106
+
+Subtasks
+Subtask #1 (7 points): M≤10M≤10
+Subtask #2 (14 points):
+
+N≤10N≤10
+M≤103M≤103
+the sum of MM over all test cases does not exceed 104104
+
+Subtask #3 (29 points): N,M≤100N,M≤100
+Subtask #4 (50 points): original constraints
+Example Input
+2
+3 3
+1 2
+2 3
+1 3
+5 6
+1 2
+3 4
+1 3
+2 4
+2 3
+1 4
+
+Example Output
+^^^
+v^vv^v
+
+Explanation
+Example case 1: The state where all balancers are directed upwards ("^^^") transforms wire 11 into itself, wire 22 into wire 11 and wire 33 into wire 22. We can see that this state does not unify wires 11 and 33 (or wires 22 and 33), thus it is 22-non-unifying. Another 22-non-unifying state of this balancing network is "^^v". The remaining 66 states are not 22-non-unifying.
+Example case 2:
+
+
+
+
+Author:
+7★alex_2oo8
+
+
+Editorial:
+https://discuss.codechef.com/problems/BALNET
+
+
+Tags:
+
+               
+                 Observation, Implementation
+                 
+                     
+                     Algorithms
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2894
+
+
+Date Added:
+7-01-2020
+
+
+Time Limit:
+1 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

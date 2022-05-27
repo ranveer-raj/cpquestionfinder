@@ -1,0 +1,115 @@
+
+Read problem statements in Mandarin, Russian, and Vietnamese as well.
+There are NN stones numbered 11 through NN. Each stone has a value written on it; for each valid ii, the value on stone ii is ViVi.
+You are initially on the first stone and your goal is to jump to stone NN by perfoming a valid sequence of jumps. Formally, let's denote a sequence of visited stones during these jumps by S1,S2,…,SMS1,S2,…,SM, where M−1M−1 is the number of jumps. Then, the following conditions must be satisfied:
+
+1=S1<S2<…<SM=N1=S1<S2<…<SM=N
+for each ii (1≤i<M1≤i<M), min(VS1,VS2,…,VSi)+max(VSi+1,…,VSM)=Si+1−Simin(VS1,VS2,…,VSi)+max(VSi+1,…,VSM)=Si+1−Si, which is the length of the ii-th jump
+
+Find the minimum number of jumps needed to reach stone NN, or report that it is impossible to reach stone NN using valid jumps.
+Input Format
+
+The first line of the input contains a single integer TT denoting the number of test cases. The description of TT test cases follows.
+The first line of each test case contains a single integer NN.
+The second line contains NN space-separated integers V1,V2,…,VNV1,V2,…,VN.
+
+Output Format
+For each test case, print a single line containing one integer --- the minimum number of jumps, or −1−1 if it is impossible to reach stone NN.
+Constraints
+
+1≤T≤501≤T≤50
+2≤N≤5002≤N≤500
+1≤Vi≤N1≤Vi≤N for each valid ii
+the sum of NN over all test cases does not exceed 500500
+
+Subtasks
+Subtask #1 (15 points): Vi≤2Vi≤2 for each valid ii
+Subtask #2 (35 points): the sum of NN over all test cases does not exceed 100100
+Subtask #3 (50 points): original constraints
+
+                        Sample Input 1
+                        
+
+
+
+
+
+3
+3
+1 2 1
+5
+1 3 4 1 2
+11
+1 4 5 3 2 8 3 4 3 7 1
+
+
+
+                        Sample Output 1
+                        
+
+
+
+
+
+1
+-1
+3
+
+
+Explanation
+Example case 1: You can jump from stone 11 to stone NN directly because min(V1)+max(VN)=2min(V1)+max(VN)=2 and the length of the jump is exactly 22.
+Example case 2: It is impossible to reach stone NN.
+Example case 3: One valid sequence of visited stones which uses the minimum number or jumps is (1,5,9,11)(1,5,9,11). It is valid because the lengths of the jumps are:
+
+first jump: min(V1)+max(V5,V9,V11)=4min(V1)+max(V5,V9,V11)=4
+second jump: min(V1,V5)+max(V9,V11)=4min(V1,V5)+max(V9,V11)=4
+third jump: min(V1,V5,V9)+max(V11)=2min(V1,V5,V9)+max(V11)=2
+
+
+
+
+Author:
+dannyboy1204
+
+
+Tags:
+
+               
+                 DP Approach, Memoization
+                 
+                     
+                     Algorithms, Dynamic Programming, Recursion
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2936
+
+
+Date Added:
+25-08-2021
+
+
+Time Limit:
+1.5 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+CPP17, PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, SQLQ, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

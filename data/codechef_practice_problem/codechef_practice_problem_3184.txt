@@ -1,0 +1,102 @@
+
+Chef's professor gave him homework to find a permutation of length 2N2N such that each integer from 00 to 2N−12N−1 appears exactly once in the permutation and the maximum bitwise XOR of any even length subarray is minimized. 
+Chef wonders how many such permutations are there. Help Chef to find out the number of permutations modulo (109+7)(109+7), satisfying the above conditions and also help him find one such permutation.
+Input Format
+
+First-line will contain TT, the number of test cases. Then the test cases follow.
+The only line of each test case contains an integer NN.
+
+Output Format
+
+For each test case, print two lines of output. 
+In the first line, print the number of permutations modulo (109+7)(109+7), for which maximum bitwise xor of any even-length subarray is minimized. 
+In the next line, print 2N2N space-separated numbers denoting any such permutation.
+
+Constraints
+
+1≤T≤181≤T≤18
+1≤N≤181≤N≤18
+Sum of 2N2N over all test cases does not exceed 106106
+
+
+                        Sample Input 1
+                        
+
+
+
+
+
+2
+1
+2
+
+
+
+                        Sample Output 1
+                        
+
+
+
+
+
+2
+0 1
+8
+3 2 0 1
+
+
+Explanation
+Test case 11: There are two optimal permutations: [0,1][0,1] and [1,0][1,0].
+Test case 22: The maximum xor value of any even-sized subarray will be 22 and there are 88 such permutations.
+
+
+
+Author:
+utkarsh_adm
+
+
+Editorial:
+https://discuss.codechef.com/problems/MINMAXOR
+
+
+Tags:
+
+               
+                 Modular Arithmetic, Bitwise Operation, Factorials
+                 
+                     
+                     Mathematics, Bit Manipulation, Basic Maths
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+3177
+
+
+Date Added:
+25-08-2021
+
+
+Time Limit:
+1 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+CPP17, PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, SQLQ, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

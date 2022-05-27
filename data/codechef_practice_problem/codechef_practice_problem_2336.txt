@@ -1,0 +1,90 @@
+
+Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese, and Bengali as well.
+You are given integers NN and KK. Construct a connected undirected unweighted graph with NN nodes (numbered 11 through NN) such that there are exactly KK unordered pairs of nodes which have distance equal to the diameter of the graph (the largest distance between two nodes), or determine that no such graph exists.
+Input
+
+The first line of the input contains a single integer TT denoting the number of test cases. The description of TT test cases follows.
+The first and only line of each test case contains two space-separated integers NN and KK.
+
+Output
+For each test case:
+
+If no valid graph exists, print a single line containing the integer −1−1.
+Otherwise, first, print a line containing a single integer MM — the number of edges in your graph.
+Then, print MM lines. Each of these lines must contain two space-separated integers uu and vv (1≤u,v≤N1≤u,v≤N; u≠vu≠v) denoting the endpoints of one edge. All edges must be different, i.e. parallel edges are not allowed.
+
+Constraints
+
+1≤T≤1001≤T≤100
+2≤N≤1002≤N≤100
+1≤K≤N(N−1)21≤K≤N(N−1)2
+
+Example Input
+1
+6 4
+
+Example Output
+7
+1 2
+2 3
+3 1
+3 4
+4 5
+5 6
+6 4
+
+Explanation
+Example case 1: The diameter of the graph is 33. There are exactly 44 unordered pairs of nodes at distance 33: (1,5)(1,5), (1,6)(1,6), (2,5)(2,5) and (2,6)(2,6).
+
+
+
+
+Author:
+jatin_adm
+
+
+Editorial:
+https://discuss.codechef.com/problems/KDIAMS
+
+
+Tags:
+
+               
+                 Graphs, ad-hoc, Observation
+                 
+                     
+                     Data Structures, Algorithms, Constructive
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2605
+
+
+Date Added:
+21-11-2020
+
+
+Time Limit:
+1 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+CPP17, PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, SQLQ, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

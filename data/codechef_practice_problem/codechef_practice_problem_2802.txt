@@ -1,0 +1,125 @@
+
+Read problems statements in Hindi,
+Mandarin chinese
+, Russian and Vietnamese as well.
+There are NN dragons in Wonderland (numbered 11 through NN). Each dragon lives in one of NN caves, which are located in a single row and numbered 11 through NN in the order from left to right. Let's denote the strength of the ii-th dragon by SiSi.
+Also, a beautiful princess lives in Wonderland. Many princes would like to marry her. But the princess feels self-sufficient, so she doesn't want to get married. She loves living in dragon caves and talking to dragons.
+One day, the princess heard that a new prince is travelling to Wonderland to propose to her. She doesn't want to even see the prince — instead, she's going to choose some cave to live in and assign exactly one dragon to each cave to protect her from the prince.
+Let's denote the cave the princess chose by FF and the strength of the dragon inhabiting the ii-th cave after the princess assigns the dragons to caves by XiXi. The prince will start his journey near some cave VV and move straight towards cave FF, fighting the dragons in all caves between VV and FF (both inclusive). The prince initially has strength PP; by defeating a dragon with strength XX, the prince's strength decreases by XX. If the prince's strength becomes non-positive at any time, he dies.
+The princess does not know the cave the prince will choose to start from. Therefore, she wants to assign the dragons to caves in such a way that the number of caves the prince can start from and die while going to the princess (possibly after defeating all dragons) is maximum possible. Help the princess calculate this number for each possible choice of her cave FF.
+Input
+
+The first line of the input contains a single integer TT denoting the number of test cases. The description of TT test cases follows.
+The first line of each test case contains two space-separated integers NN and PP denoting the number of dragons and the strength of the prince.
+The second line contains NN space-separated integers S1,S2,…,SNS1,S2,…,SN denoting the strengths of the dragons.
+
+Output
+For each test case, print a single line containing NN space-separated integers. For each valid ii, the ii-th of these integers should denote the number of starting caves for the prince such that the prince dies if the princess stays in the ii-th cave.
+Constraints
+
+1≤T≤101≤T≤10
+1≤N≤1051≤N≤105
+1≤P≤1051≤P≤105
+1≤Si≤1051≤Si≤105 for each valid ii
+
+Subtasks
+Subtask #1 (10 points): N≤8N≤8
+Subtask #2 (10 points): N≤20N≤20
+Subtask #3 (20 points):
+
+N,P≤2,000N,P≤2,000
+Si≤2,000Si≤2,000 for each valid ii
+
+Subtask #4 (20 points):
+
+N,P≤20,000N,P≤20,000
+Si≤20,000Si≤20,000 for each valid ii
+
+Subtask #5 (40 points): original constraints
+
+                        Sample Input 1
+                        
+
+
+
+
+
+2
+3 4
+2 1 2
+4 5
+1 1 1 1
+
+
+
+                        Sample Output 1
+                        
+
+
+
+
+
+2 1 2
+0 0 0 0
+
+
+Explanation
+Example case 1:
+
+If F=1F=1, the optimal sequence XX is [2,2,1][2,2,1]. Then, if the prince starts at the second or third cave, he will die while going to the princess, so the answer is 2.
+If F=2F=2, the optimal sequence XX is again [2,2,1][2,2,1]; the prince will die if he starts near the first cave.
+If F=3F=3, the optimal sequence XX is [1,2,2][1,2,2]; the prince will die if he starts near the first or second cave.
+
+On the contrary, if X=[2,1,2]X=[2,1,2] for F=2F=2, the prince would be able to reach the princess starting from any cave, so this is not an optimal assignment of dragons.
+
+
+
+Author:
+7★step_by_step
+
+
+Editorial:
+https://discuss.codechef.com/problems/PRINDRAG
+
+
+Tags:
+
+               
+                 Dynamic Programming, Sorting
+                 
+                     
+                     Algorithms
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2879
+
+
+Date Added:
+13-07-2018
+
+
+Time Limit:
+1.5 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SCM guile, PERL6, ERL, CLPS, PRLG, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

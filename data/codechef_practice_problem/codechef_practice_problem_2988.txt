@@ -1,0 +1,122 @@
+
+You are given a matrix AA with NN rows and MM columns. We can select some non-empty subset of rows and some non-empty subset of columns of the given matrix and add all the elements which occur at the intersection of selected rows and columns. This value is called the happiness of the selected rows and columns. For example, let the matrix be the following:
+11 22 33
+77 55 66
+22 11 22 
+Let rows be numbered 11 to NN from top to bottom and columns numbered 11 to MM from left to right. If we select rows 11 and 33 and columns 11 and 22, we get a happiness of 1+2+2+1=61+2+2+1=6. 
+We are also given an integer BB. We need to tell the number of ways to select some non-empty subset of rows and some non-empty subset of columns so that their happiness is BB. Since the answer can be large, find it modulo 109+7109+7.
+Input
+
+The first line contains an integer TT, the number of test cases.
+The first line of each test case contains three integers NN, MM and BB - the number of rows, the number of columns, and the intended happiness, respectively.
+Each of the next NN lines of the test case contains MM space-separated integers. The jj-th element in the ii-th line represents the element A[i][j]A[i][j] in the ii-th row and jj-th column.
+
+Output
+For each test case, output in a separate line, the number of ways to select some non-empty subset of rows and some non-empty subset of columns so that their happiness is BB, modulo 109+7109+7.
+Constraints
+
+1≤T≤31≤T≤3
+1≤N⋅M≤2001≤N⋅M≤200
+1≤A[i][j],B≤1051≤A[i][j],B≤105
+
+Subtasks
+Subtask #1 (15 points):
+
+1≤N⋅M≤101≤N⋅M≤10
+
+Subtask #2 (25 points):
+
+1≤N⋅M≤401≤N⋅M≤40
+
+Subtask #3 (35 points):
+
+1≤N⋅M≤1441≤N⋅M≤144
+
+Subtask #4 (25 points):
+
+original constraints
+
+
+                        Sample Input 1
+                        
+
+
+
+
+
+1
+    3 3 6
+    1 2 3
+    7 5 6
+    2 1 2
+
+
+
+                        Sample Output 1
+                        
+
+
+
+
+
+4
+
+
+Explanation
+There are 44 ways to select subsets of rows and columns to get happiness equal to 66.
+Select rows {1,3}{1,3} and columns {1,2}{1,2}. The elements at the intersections are {1,2,2,1}{1,2,2,1}. So, the happiness is 1+2+2+1=61+2+2+1=6.
+Select rows {1}{1} and columns {1,2,3}{1,2,3}. The elements at the intersections are {1,2,3}{1,2,3}. So, the happiness is 1+2+3=61+2+3=6.
+Select rows {2}{2} and columns {3}{3}. The elements at the intersections are {6}{6}. So, the happiness is 66.
+Select rows {2,3}{2,3} and columns {2}{2}. The elements at the intersections are {5,1}{5,1}. So, the happiness is 5+1=65+1=6.
+
+
+
+Author:
+5★zankanotachi
+
+
+Editorial:
+https://discuss.codechef.com/problems/IMAT
+
+
+Tags:
+
+               
+                 Knapsack, Meet in the middle, Observation
+                 
+                     
+                     Algorithms, Dynamic Programming
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2985
+
+
+Date Added:
+19-04-2021
+
+
+Time Limit:
+0.5 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+CPP17, PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, SQLQ, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

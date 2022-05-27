@@ -1,0 +1,104 @@
+
+Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese, and Bengali as well.
+Chef is playing a tricky game with a sequence a1,a2,…,aNa1,a2,…,aN. Initially, his score is S=1S=1. In the game, he performs the following process exactly KK times (note that the sequence aa never changes):
+
+Pick an element XX from the sequence aa uniformly randomly.
+Change the score SS to (S⋅X)%N(S⋅X)%N.
+
+Find the expected value of Chef's score SS at the end of the game. It can be shown that this expected value can be expressed as a fraction PQPQ, where PP and QQ are coprime integers, P≥0P≥0, Q>0Q>0 and QQ is coprime with 109+7109+7. You should compute P⋅Q−1%(109+7)P⋅Q−1%(109+7), where Q−1Q−1 denotes the multiplicative inverse of QQ modulo 109+7109+7.
+Input
+
+The first line of the input contains a single integer TT denoting the number of test cases. The description of TT test cases follows.
+The first line of each test case contains two space-separated integers NN and KK.
+The second line contains NN space-separated integers a1,a2,…,aNa1,a2,…,aN.
+
+Output
+For each test case, print a single line containing one integer P⋅Q−1P⋅Q−1 modulo 109+7109+7.
+Constraints
+
+1≤T≤51≤T≤5
+2≤N≤1,0002≤N≤1,000
+0≤ai<N0≤ai<N for each valid ii
+1≤K≤1091≤K≤109
+
+
+                        Sample Input 1
+                        
+
+
+
+
+
+2
+2 3
+1 1
+3 2
+2 1 2
+
+
+
+                        Sample Output 1
+                        
+
+
+
+
+
+1
+444444449
+
+
+Explanation
+Example case 1: Regardless of Chef's exact choices, the final score is always (1⋅1⋅1)%2=1(1⋅1⋅1)%2=1.
+
+
+
+Author:
+6★imanik
+
+
+Editorial:
+https://discuss.codechef.com/problems/EXPTPROD
+
+
+Tags:
+
+               
+                 Modular Exponentiation, Expected Value, Arithmetic
+                 
+                     
+                     Mathematics, Modular Arithmetic, Probability, Basic Maths
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2665
+
+
+Date Added:
+12-07-2019
+
+
+Time Limit:
+3 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

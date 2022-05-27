@@ -1,0 +1,98 @@
+
+You are given two positive integers aa and bb, we define f(a,b)f(a,b) as the maximum value of |gcd(a,x)−gcd(b,x)||gcd(a,x)−gcd(b,x)| where xx is some natural number. Formally, 
+f(a,b)=maxx∈ℕ|gcd(a,x)−gcd(b,x)|f(a,b)=maxx∈N|gcd(a,x)−gcd(b,x)|
+, where ℕN represents the set of natural numbers and gcd(a,b)gcd(a,b) represents the greatest common divisor of aa and bb.
+You are given an integer kk. You need to find the number of ordered pairs (a,b)(a,b) (where a,ba,b are positive) such that f(a,b)=kf(a,b)=k. 
+Note that pairs (a,b)(a,b) and (b,a)(b,a) are considered different if a≠ba≠b. For example, pair (1,2)(1,2) is not the same as (2,1)(2,1).
+Input Format
+
+The first line of the input contains a single integer TT denoting the number of test cases. The description of TT test cases follows.
+The first and only line of each testcase contains a single integer kk.
+
+Output Format
+For each testcase, output the number of ordered pairs (a,b)(a,b) such that f(a,b)=kf(a,b)=k.
+Constraints
+
+1≤T≤1061≤T≤106
+1≤k≤1061≤k≤106
+
+
+                        Sample Input 1
+                        
+
+
+
+
+
+2
+1
+3
+
+
+
+                        Sample Output 1
+                        
+
+
+
+
+
+2
+6
+
+
+Explanation
+Test case 11: For k=1k=1, we see that f(1,2)=f(2,1)=1f(1,2)=f(2,1)=1. Therefore the answer is 22. It can be verified that there are no other pairs for which the ff value is 11.
+Test case 22: For k=3k=3, there exists 66 ordered pairs for which the ff value is 33. One of them is (4,3)(4,3).
+
+
+
+Author:
+6★jeevanjyot
+
+
+Editorial:
+https://discuss.codechef.com/problems/MAXGCDVAL
+
+
+Tags:
+
+               
+                 Pre processing, GCD, Euler Totient Function, Divisors
+                 
+                     
+                     Advanced Algorithms, Mathematics, Number Theory, Integer Factorisation
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2872
+
+
+Date Added:
+20-11-2021
+
+
+Time Limit:
+5 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+CPP17, PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, SQLQ, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

@@ -1,0 +1,98 @@
+
+Read problem statements in Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+You are given a tree (connected, undirected, acyclic graph) consisting of NN nodes. Based on this tree, you have to answer QQ queries. 
+Each query is of the form:
+
+K D V1 V2 ⋯ VKK D V1 V2 ⋯ VK - output the number of pairs (i,j)(i,j), 1≤i<j≤K1≤i<j≤K, such that the shortest path between nodes ViVi and VjVj in the tree has DD edges.
+
+Input
+
+The first line contains an integer TT, the number of test cases. Then the test cases follow.
+The first line of each test case contains two integers, NN and QQ.
+N−1N−1 lines follow. Each line consists of two integers uu and vv, indicating that there is an edge between nodes uu and vv in the tree. 
+QQ lines follow. Each line describes a query in the format given above.
+
+Output
+For each query, output the answer on a new line.
+Constraints
+
+1≤T≤51≤T≤5
+1≤N,Q≤1051≤N,Q≤105
+1≤u,v,Vi≤N1≤u,v,Vi≤N
+0≤D≤1050≤D≤105
+The sum of KK across all queries in a single test case is at most 105105.  
+
+Subtasks
+
+Subtask 1 (20 points): For each query, K≤10K≤10
+Subtask 2 (80 points): Original constraints
+
+Sample Input
+1
+5 2
+1 2
+1 3
+2 4
+4 5
+3 2 2 3 5
+2 4 1 3
+
+Sample Output
+2
+0
+
+Explanation
+In the first query, the pairs of nodes (2,3)(2,3) and (2,5)(2,5) have distance 22.
+In the second query, there is no pair with distance 44.
+
+
+
+Author:
+2★aryanag_adm
+
+
+Editorial:
+https://discuss.codechef.com/problems/PAIRCNT
+
+
+Tags:
+
+               
+                 Trees, Disjoint Set Union, Centroid Decomposition, DFS, Euler Tour
+                 
+                     
+                     Data Structures, Graphs, Advanced Data Structures, Advanced Algorithms, Advanced Graph Algos, Algorithms, Graph Algos, Traversals
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2896
+
+
+Date Added:
+24-06-2021
+
+
+Time Limit:
+4 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+CPP17, PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, SQLQ, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

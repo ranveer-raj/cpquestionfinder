@@ -1,0 +1,97 @@
+
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+You are given a directed weighted graph with NN vertices (numbered 11 through NN) and MM edges (numbered 11 through MM). For each valid ii, the ii-th edge is initially directed from a vertex uiui to a vertex vivi and it has a flipping cost WiWi. There is one ant living in each vertex of the graph.
+Let's denote a directed edge from a vertex uu to a vertex vv by (u,v)(u,v). The outdegree of a vertex uu is the number of vertices vv such that there is an edge (u,v)(u,v) in the graph. A vertex uu is adjacent to a vertex vv if there is an edge (u,v)(u,v) in the graph.
+The queen of ants wants to gather all ants in at most KK distinct vertices. In order to do that, she may perform the following instructions in any order, any number of times:
+
+1 i: Flip the ii-th edge ― if the edge was (u,v)(u,v) before this instruction, it becomes (v,u)(v,u). The cost of performing such an instruction is WiWi antcoins and it can be used at most 5⋅1055⋅105 times.
+2: The queen orders that each ant which is currently in a vertex with outdegree 11 must move to the only vertex adjacent to it. All ants move at once and when there are multiple ants that have to move from some vertex, they move together. The cost of performing such an instruction is SS antcoins and it can be used at most 700700 times.
+
+After all instructions are performed, the number of distinct vertices which still contain ants must be at most KK. Find a way to achieve this with as little cost as possible.
+Input
+
+The first line of the input contains four space-separated integers NN, MM, KK and SS.
+MM lines follow. For each valid ii, the ii-th of these lines contains three space-seperated integers uiui, vivi and WiWi.
+
+Output
+First, print a line containing a single integer QQ ― the number of instructions.
+Then, print QQ lines. Each of these lines should describe one instruction in the format 1 i or 2.
+Example Input
+6 6 1 1
+1 2 1
+3 2 2
+4 3 3
+5 4 4
+6 5 5
+6 1 6
+
+Example Output
+6
+2
+2
+2
+1 1
+1 5
+2
+
+Explanation
+The following picture describes the state of the graph after the first operation (the highlighted vertices contain ants).
+
+In the fourth and fifth instructions, the edges (1,2)(1,2) and (6,5)(6,5) are flipped. At the end, all ants are gathered in vertex 11.
+Test generation and constraints
+
+NN is either 103103 or 104104
+M=105M=105
+SS is 5050, 500500 or 5,0005,000
+KK is 11 or 88
+
+There are twelve test files ― one for each combination of the parameters NN, MM, SS and KK.
+MM distinct undirected edges are chosen uniformly randomly and independently from the N⋅(N−1)/2N⋅(N−1)/2 possibilities, then a direction is uniformly random and independently chosen for each edge. The cost of each edge is chosen uniformly randomly and independently between 11 and 5050 inclusive.
+Scoring
+If any of your instructions are invalid or there are more than KK vertices containing ants after all instructions are performed, you will receive the Wrong Answer verdict. Otherwise, the score of a test file is the sum of costs of all instructions. The score of a submission is the sum of scores of all test files. Your goal is to minimise the score of your submission.
+There are twelve test files. During the contest, the displayed score will account for exactly six test files, i.e. your score reflects your submission's performance on 50% of the test files. However, if your program gets a non-AC verdict on any test file, your submission's verdict will be non-AC. In other words, an AC verdict denotes that your program runs successfully on all the test files. After the end of the contest, your score will be changed to include the sum of your program's scores over the other 6 test files.
+
+
+
+Author:
+7★alei
+
+
+Tags:
+
+               
+                 alei
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+3767
+
+
+Date Added:
+24-07-2020
+
+
+Time Limit:
+5 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+CPP17, PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, SQLQ, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

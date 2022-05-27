@@ -1,0 +1,176 @@
+
+Jon Snow has to defeat the army of the Night King.
+For that he needs to increase the power of the Dragon Glass. 
+Dragon Glass's power depends on certain numbers, described as follows.  
+Dragon Glass follows its own number system, which comprises YY integers ranging in  [0,Y−1][0,Y−1].         
+Normally, there are bases like base 2 (binary) , 8 (octal)  , 10 (decimal) , etc.
+In this new number system, there are total (X+1)(X+1) bases, ranging from base 22 to base X+2X+2 in which these YY numbers can be represented.    
+Jon Snow initially has exactly MM distinct numbers in base 22. (1<=M<=Y)(1<=M<=Y) 
+If a number bb is in base aa, it can be transformed into 3 of the following -  
+
+Number b+1b+1 in base a+1a+1, if 0≤b+1≤Y−10≤b+1≤Y−1
+Number bb in base a+1a+1
+Number b−1b−1 in base a+1a+1, if 0≤b−1≤Y−10≤b−1≤Y−1
+
+These transformations have some restrictions, which are detailed below.
+So, let’s say YY = 10 (numbers range from [0-9]). And MM be 3.
+Let those MM numbers we initially have in base 22 be 4, 7 and 9.
+So, 4 in base 2 can be transformed into 3, 4 and 5 in base 3.
+Similarly, 7 in base 2 can be transformed into 6,7 and 8 in base 3.
+Similarly, 9 in base 2 can be transformed into 8 and 9 in base 3.
+3 in base 3 can be transformed into 2, 3 and 4 in base 4.
+And, so on……. …. …..   
+But, the dragon glass is not perfect.
+Some of the combinations of bases and numbers are blocked i.e can't be obtained. In other words, you cannot transform into any of these combinations. 
+There are NN total such combinations which can't be obtained.
+These combinations are of the following form -   
+
+aa bb 
+It denotes that number bb in base aa is blocked i.e can't be obtained. 
+There are at most 200 distinct bases in which numbers can’t be obtained.  That is, among the NN blocked combinations, there are at most 200 distinct bases. 
+
+Suppose that currently we have number bb in base aa.
+If the number bb and b+1b+1 are blocked to be obtained in base a+1a+1, then number bb in base aa can be transformed into b+1b+1 in base aa (provided it is not blocked).
+If the number bb and b−1b−1 are blocked to be obtained in base a+1a+1, then number bb in base aa can be transformed into b−1b−1 in base aa (provided it is not blocked).         
+Also, one can never go back to a combination/pair which was obtained in the past.
+In other words, let’s say we have (a,b)(a,b) - ( number bb in base aa ), and we apply some sequence of transformations to it and obtain (c,d)(c,d) - ( number dd in base cc), 
+(a,b)→…......→(c,d)(a,b)→…......→(c,d)
+Then (a,b)…..→(c,d)→…..→(a,b)(a,b)…..→(c,d)→…..→(a,b) is not allowed.
+You need to help Jon Snow find the number of ways to obtain numbers in base (X+2)(X+2) i.e the last base as stated above. In other words, you have to find the number of different sequences of transformations, which start out with one of the MM numbers in base 2, and end with some number in base X+2X+2.
+As the value can be very high, print it mod 109+7109+7.
+Please refer sample examples for more explanation.  
+Input:
+
+First line will contain 4 space separated integers - Y,X,M,NY,X,M,N .
+Second line comprises MM distinct space separated integers denoting the numbers in the range [0,Y−1][0,Y−1] initially in base 2.    
+NN lines follow. Each line comprises 2 space separated integers aa bb denoting the number bb in base aa is blocked i.e can't be obtained.
+
+Output:
+Output in a single line number of ways to obtain numbers in base X+2X+2 modulo 109+7109+7.
+Constraints
+
+1≤Y≤2001≤Y≤200
+1≤X≤1091≤X≤109 
+1≤M≤Y1≤M≤Y  (These MM elements range in [0,Y−1][0,Y−1])
+0≤N≤200∗Y0≤N≤200∗Y (as only 200 distinct bases will have numbers that can't be obtained)  
+3≤a≤X+13≤a≤X+1 
+0≤b≤Y−10≤b≤Y−1
+
+Sample Input 1:
+3 3 1 3
+  0
+  3 0
+  3 1
+  4 2
+Sample Output 1:
+3
+
+EXPLANATION 1:
+YY = 3 (The Number system has integers only in range [0,2]).
+XX = 3 ( The bases range from base 2 to base 5).
+MM = 1 ( At base 2, only 1 number is present).
+Array of MM integers  = {0} ( Only number 0 is present initially at base 2).
+NN = 3 ( There are 3 combinations that are blocked/can't be obtained )
+Array of length NN = { ( 3, 0), (3, 1), (4,2) } (Number 0 and 1 in base 3 can never be obtained, and number 2 in base 4 can never be obtained).      
+The answer is 3. 
+The possible ways are obtained as follows -
+Number 0 in base 2 can transform into number 0 and number 1 in base 3.
+But, both these numbers can’t be obtained. So, number 0 in base 2 can be transformed to number 1 in base 2.
+This number 1 in base 2 can be transformed into number 2 in base 3.
+This number 2 in base 3 can be transformed into number 1 in base 4.
+This number 1 in base 4 can be transformed into number 0 in base 5, number 1 in base 5 or number 2 in base 5. 
+Thus at base (X+2) i.e base 5, there are 3 ways of obtaining numbers.         
+Sample Input 2:
+3 3 1 2
+  0
+  3 0
+  3 1      
+Sample Output 2:
+5   
+
+EXPLANATION 2:
+YY = 3 (The Number system has integers only in range [0,2]).
+XX = 3 ( The bases range from base 2 to base 5).
+MM = 1 ( At base 2, only 1 number is present).
+Array of MM integers  = {0} ( Only number 0 is present initially at base 2).
+NN = 2 ( There are 2 combinations that are blocked/can't be obtained )
+Array of length NN = { ( 3, 0), (3, 1) } (Number 0 and 1 in base 3 can never be obtained).     
+The answer is 5.
+The possible ways are obtained as follows -        
+Number 0 in base 2 can transform into number 0 and number 1 in base 3.
+But, both these numbers can’t be obtained. So, number 0 in base 2 can be transformed to number 1 in base 2.
+This number 1 in base 2 can be transformed into number 2 in base 3.
+This number 2 in base 3 can be transformed into number 1 in base 4, and number 2 in base 4.
+This number 1 in base 4 can be transformed into number 0 in base 5, number 1 in base 5 or number 2 in base 5.
+The number 2 in base 4 can be transformed into number 1 in base 5 or number 2 in base 5.      
+Thus at base (X+2) i.e base 5, there are 5 ways of obtaining numbers.    
+Sample Input 3:
+4 2 2 2
+  1 2
+  3 1
+  3 2      
+Sample Output 3:
+8     
+
+EXPLANATION 3:
+YY = 4 (The Number system has integers only in range [0,3]).
+XX = 2 ( The bases range from base 2 to base 4).
+MM = 2 ( At base 2, only 2 numbers are present).
+Array of MM integers  = {1,2} ( Only numbers 1 and 2 are present initially at base 2).
+NN = 2 ( There are 2 combinations that are blocked/can't be obtained )
+Array of length NN = { ( 3, 1), (3, 2) } (Number 1 and 2 in base 3 can never be obtained).           
+The number 1 in base 2 can transform into numbers 0,1 and 2 in base 3.
+But numbers 1 and 2 in base 3 can't be obtained. So, number 1 in base 2 can be transformed into number 2 in base 2.
+The number 2 in base 2  can be transformed into number 3 in base 3.
+The number 3 in base 3 can be transformed into numbers 2 and 3 in base 4. 
+The number 0 in base 3 can be transformed into numbers 0 and 1 in base 4  .   
+Similarly, one can find 4 other ways.
+Total number of ways to obtain numbers at base (X+2) i.e base 4 are 8.
+
+
+
+Author:
+5★shivamg_isc
+
+
+Tags:
+
+               
+                 Number System, Matrix Exponentiation
+                 
+                     
+                     Mathematics, Matrices, Matrix Multiplication
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+3170
+
+
+Date Added:
+2-04-2019
+
+
+Time Limit:
+2 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SCM guile, PERL6, ERL, CLPS, PRLG, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

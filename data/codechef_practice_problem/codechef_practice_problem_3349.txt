@@ -1,0 +1,114 @@
+
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+This is not intended to be the tie-break problem.
+In the Chefland army, there are MM generals (numbered 11 through MM) and NN soldiers (numbered 11 through NN).
+The Army has a vertical hierarchy ― a soldier may command many other soldiers (including zero), but each soldier has at most one commander. A soldier yy is a subordinate of a soldier xx if soldier xx is the commander of soldier yy or there is a soldier zz commanded by soldier xx such that soldier yy is a subordinate of soldier zz. No soldier is commanded by one of their subordinates because every soldier is feared by all of his subordinates. Moreover, all soldiers are subordinates of soldier 11. Let's denote the commander of soldier ii by pipi (p1=0p1=0 since soldier 11 cannot have a commander).
+As in any organisation, the generals have some soldiers they hate. If a general meets a soldier whom he hates, this general becomes angry for the rest of the day.
+The soldiers should be paid some wages over one or more days. For each valid ii, soldier ii should be paid SiSi chefcoins. Shyam is in charge of this; he should choose an integer DD (0≤D≤N20≤D≤N2) and during each of the next DD days, perform the following process:
+
+Choose an integer KK and KK soldiers, then call these soldiers to report their feats to the generals. Shyam is very careful ― on each day, he chooses these soldiers in such a way that there are no two called soldiers where one is afraid of the other (in other words, no called soldier is a subordinate of another called soldier).
+Choose a positive real number RR and give each of the called soldiers RR chefcoins.
+For each soldier vv and general uu, if soldier vv was called and is hated by general uu, then general uu becomes angry. Let GG be the total number of angry generals on this day. Then, the total angriness of the generals increases by G⋅RG⋅R.
+Before the start of the next day, the generals that were angry calm down and are not angry anymore (so they can become angry again).
+
+Help Shyam pay the soldiers while minimising the total angriness of the generals over all DD days.
+Input
+
+The first line of the input contains a single integer TT denoting the number of test cases. The description of TT test cases follows.
+The first line of each test case contains two space-separated integers MM and NN.
+Each of the next MM lines contains a binary string BB with length NN. For each valid ii and jj, the jj-th character in the ii-th of these strings is '1' if general ii hates soldier jj or '0' otherwise.
+The next line contains NN space-separated integers S1,S2,…,SNS1,S2,…,SN.
+The last line contains NN space-separated integers p1,p2,…,pNp1,p2,…,pN.
+
+Output
+For each test case:
+
+First, print a line containing a single integer DD (0≤D≤N20≤D≤N2) ― the number of days during which the soldiers are paid.
+Then, print DD lines. In each of these lines, print an integer KK, a space, a real number RR, a space and KK space-separated integers x1,x2,…,xKx1,x2,…,xK ― the numbers of the called soldiers.
+For each valid ii, let the total amount of money received by soldier ii be WiWi; your answer will be considered correct if |Wi−Si|≤10−6|Wi−Si|≤10−6.
+
+Constraints
+
+T=50T=50
+M=16M=16 
+N=128N=128
+0≤pi≤N0≤pi≤N for each valid ii
+1≤Si≤1001≤Si≤100 for each valid ii
+
+Test generation
+For each test case:
+
+S1,S2,…,SNS1,S2,…,SN are chosen uniformly randomly and independently between 11 and 100100.
+For each valid ii, pipi is chosen uniformly randomly between 11 and i−1i−1.
+For each test case, a real number pp is chosen manually. There are 1010 test cases for each p∈{0.1,0.2,0.5,0.7,0.8}p∈{0.1,0.2,0.5,0.7,0.8}.
+For each valid ii and jj, Bi,jBi,j is chosen to be '1' with probability pp or '0' with probability 1−p1−p.
+
+Scoring
+The score of each test case is the sum of R⋅GR⋅G over all DD days. The score of a submission is equal to the sum of its scores over all test cases.
+The goal is to minimise the score of your submission. However, this problem is solvable optimally ― there is a solution which is guaranteed to score 100 points.
+Example Input
+1
+3 4
+0000
+1111
+0101
+1 2 3 4
+0 1 1 3
+
+Example Output
+5
+2 1 2 4
+2 1 2 3
+1 2 3
+1 3 4
+1 1 1
+
+
+
+
+Author:
+7★alei
+
+
+Editorial:
+https://discuss.codechef.com/problems/CHEFARMY
+
+
+Tags:
+
+               
+                 alei, alei, breadth-first-search, depth-first-search, hashing, jan20, linear-algebra, linear-programming, vijju123
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+3603
+
+
+Date Added:
+22-12-2019
+
+
+Time Limit:
+7 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

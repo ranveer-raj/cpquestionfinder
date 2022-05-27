@@ -1,0 +1,104 @@
+
+Read problems statements in Mandarin chinese, Russian and Vietnamese as well.
+The chefs are making fruit salads today! There are kk chefs in total, each making a different type of salad. However, the chefs have run out of fruit, so they sent mm workers to pick fruit for them.
+Some workers are fast, but some are really slow. Specifically, for each worker, we know two integers aa and bb, which mean that this worker can pick between aa and bb units of fruit today (inclusive). There are nn groups of workers; all workers in each group have the same a,ba,b.
+The workers don't care about the number of units of fruit they pick, so they choose these numbers randomly. A worker with parameters aa, bb will choose an integer between aa and bb uniformly randomly and pick this number of units of fruit today.
+If the number of units of fruit picked by all workers together at the end of the day is SS, the chefs define the goodness of the day as F(S)=SkF(S)=Sk for some reason. They would like you to find the expected value of FF. It can be proven that this expected value can be written as a fraction P/QP/Q, where P≥0P≥0 and Q>0Q>0 are coprime integers. You should calculate P⋅Q−1P⋅Q−1 modulo 998244353998244353, where Q−1Q−1 denotes the modular inverse of QQ modulo 998244353998244353. (It is guaranteed that this inverse exists and is unique.)
+Input
+
+The first line of the input contains two space-separated integers kk and mm.
+The second line contains a single integer nn.
+Each of the following nn lines contains three space-separated integers AA, BB and CC denoting a group of workers; there are CC workers in this group, with a=Aa=A and b=Bb=B for each of them.
+
+Output
+Print a single line containing one integer - the value of P⋅Q−1P⋅Q−1 modulo 998244353998244353.
+Constraints
+
+1≤n⋅k≤1051≤n⋅k≤105
+1≤A≤B≤1091≤A≤B≤109
+1≤C<9982443531≤C<998244353
+the sum of all CC is equal to mm
+
+Subtasks
+Subtask #1 (20 points): n,k≤50n,k≤50
+Subtask #2 (30 points): n,k≤200n,k≤200
+Subtask #3 (50 points): original constraints
+
+                        Sample Input 1
+                        
+
+
+
+
+
+2 2
+2
+1 1 1
+1 2 1
+
+
+
+                        Sample Output 1
+                        
+
+
+
+
+
+499122183
+
+
+Explanation
+There are two workers. The first worker always picks 11 unit of fruit. The second worker can pick 11 or 22 units. If he picks 11 unit, S=2S=2 and F=4F=4. If he picks 22 units, S=3S=3 and F=9F=9. Each situation happens with probability 1/21/2, so the expected value is 4/2+9/2=13/24/2+9/2=13/2. This means P=13P=13 and Q=2Q=2, so Q−1=499122177Q−1=499122177.
+
+
+
+Author:
+ohweonfire
+
+
+Editorial:
+https://discuss.codechef.com/problems/PFRUIT
+
+
+Tags:
+
+               
+                 Probability, Generating Functions, Polynomial, FFT
+                 
+                     
+                     Mathematics, Sequences and Progression, Algebra, Transformations
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2766
+
+
+Date Added:
+20-06-2018
+
+
+Time Limit:
+2 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SCM guile, PERL6, ERL, CLPS, PRLG, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

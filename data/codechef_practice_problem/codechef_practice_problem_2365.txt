@@ -1,0 +1,130 @@
+
+          
+            Coach Chef has selected all the players and now he has to separate them into 2 teams, AA and BB.
+Each player must be included in exactly one of the 2 teams and each player xx, has a skill level SxSx. It is not necessary for both teams to have equal number of players, but they have to be non-empty.
+Since the number of players is way too high, Chef doesn't have an actual list of every player individually. Instead, he keeps a list of NN pairs {Xi,Yi}{Xi,Yi}, which tells him that there are YiYi players with skill level XiXi.
+
+Chef thinks that a division into 2 teams is Good, if the skill value of every player in A divides the skill value of every player in B. More formally, SbmodSa=0SbmodSa=0, ∀ a ∈ A, b ∈ B.
+
+Since he is busy, can you help him find total number of Good divisions? Since the answer can be very large, print it modulo 998244353998244353.
+
+NOTE : 2 divisions are considered different if there exists any player xx belonging to different teams in the 2 divisions. (See example for more clarity). 
+
+ Input 
+
+The first line of the input contains a single integer TT denoting the number of test cases. The description of
+        TT test cases follows.
+    The first line for each testcase has a single integer NN, denoting the number of pairs in Chef's list. 
+    NN lines follow. Each contains 2 space separated integers XiXi and YiYi, denoting Chef has YiYi players with skill level XiXi.
+
+
+ Output 
+Output one integer for every testcase. The number of total Good divisions, modulo 998244353998244353.
+
+Constraints
+
+ 1≤T,N≤1051≤T,N≤105
+ 1≤Xi≤109,Xi≠Xj1≤Xi≤109,Xi≠Xj for i≠ji≠j
+ 1≤Yi≤1051≤Yi≤105
+ Sum of NN over all testcases does not exceed 105105
+
+
+Example Input
+5
+1
+10 1
+3
+1 1
+3 1
+6 1
+3
+1 1
+3 2
+6 1
+10
+1 30
+2 40
+3 30
+6 50
+12 100
+18 500
+216 400
+24 999
+432 9999
+864 123
+1
+10 1000
+
+Example Output
+0
+2
+4
+128248098
+23226275
+
+Explanation
+Example Case 1: Only one player P1. No way to split into teams.
+Example Case 2: 3 players total, P1, P2 & P3 with skill level 1, 3 & 6 respectively. Possible divisions:
+
+ A=[P1], B=[P2, P3]
+ A=[P1, P2], B=[P3]
+
+Example Case 3: 4 players total, P1, P2, P3 & P4 with skill levels 1, 3, 3 & 6 respectively. Possible divisions :
+
+ A=[P1], B=[P2, P3, P4]
+ A=[P1, P2], B=[P3, P4]
+ A=[P1, P3], B=[P2, P4]
+ A=[P1, P2, P3], B=[P4]
+
+
+
+
+Author:
+6★shikhar7s
+
+
+Editorial:
+https://discuss.codechef.com/problems/ICM0005
+
+
+Tags:
+
+               
+                 1D Arrays, GCD, LCM, Combinatorics, Observation
+                 
+                     
+                     Data Structures, Arrays, Mathematics, Number Theory, Algorithms
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2627
+
+
+Date Added:
+22-03-2021
+
+
+Time Limit:
+1 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+CPP17, PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, SQLQ, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

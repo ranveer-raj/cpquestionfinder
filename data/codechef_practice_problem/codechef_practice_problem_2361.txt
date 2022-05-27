@@ -1,0 +1,73 @@
+
+Instead of writing,a×(b+c)=a×b+a×ca×(b+c)=a×b+a×c, Joe by mistakenly swapped the ×× and + signs on the left hand side. The equation became, a+(b×c)=a×b+a×ca+(b×c)=a×b+a×c ?
+Joe somehow knew the value of a, but forgot the values of b and c such that the equation is satisfied. Can you help him find how many ordered pairs (b,c)(b,c) satisfy the above equation?
+If there exists infinite ordered pair, output -1.
+Note: a,b,ca,b,c are integers
+Input 
+
+Single line containing a single integer aa
+
+Output
+Single line containing one integer, denoting the number of ordered set (b,c)
+
+
+Constraints
+
+|a|≤1018|a|≤1018
+
+Sample Input
+2
+
+Sample Output
+4
+
+Explanation
+Possible ordered pairs are (0,1),(1,0),(3,4),(4,3)(0,1),(1,0),(3,4),(4,3)
+
+
+
+Author:
+5★kalpitk
+
+
+Tags:
+
+               
+                 Primality Checking, Sieve of Eratosthenes, Integer Factorisation
+                 
+                     
+                     Mathematics, Number Theory
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2625
+
+
+Date Added:
+20-03-2019
+
+
+Time Limit:
+1 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SCM guile, PERL6, ERL, CLPS, PRLG, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

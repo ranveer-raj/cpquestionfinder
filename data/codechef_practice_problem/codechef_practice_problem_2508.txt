@@ -1,0 +1,79 @@
+
+Chef's pizza is the tastiest pizza to exist, and the reason for that is his special, juicy homegrown tomatoes. 
+Tomatoes can be grown in rectangular patches of any side lengths. However, Chef only has a limited amount of land. 
+Consider the entire town of Chefville to be consisting of cells in a rectangular grid of positive coordinates. 
+Chef own all cells (x,y)(x,y) that satisfy x∗y≤Nx∗y≤N
+As an example if N=4N=4, Chef owns the following cells: 
+(1,1),(1,2),(1,3),(1,4),(2,1),(2,2),(3,1),(4,1)(1,1),(1,2),(1,3),(1,4),(2,1),(2,2),(3,1),(4,1)
+Chef can only grow tomatoes in rectangular patches consisting only of cells which belong to him. Also, if he uses a cell, he must use it entirely. He cannot use only a portion of it. 
+Help Chef find the number of unique patches of rectangular land that he can grow tomatoes in! Since this number can be very large, output it modulo 10000000071000000007.
+Input:
+
+The first line of the input contains TT, the number of test cases.
+The next TT lines of input contains one integer NN.
+
+Output:
+For each testcase, output the number of ways modulo 10000000071000000007.
+Constraints
+
+1≤T≤51≤T≤5
+1≤N≤10101≤N≤1010
+
+Sample Input:
+    2
+    4
+    10000000000
+
+Sample Output:
+    23
+    227374950
+
+
+
+
+Author:
+5★madhav_1999
+
+
+Editorial:
+https://discuss.codechef.com/problems/PCJ18G
+
+
+Tags:
+
+               
+                 madhav_1999, madhav_1999, prakhar17252, proconjunior, tanmay28
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2723
+
+
+Date Added:
+29-07-2018
+
+
+Time Limit:
+1 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SCM guile, PERL6, ERL, CLPS, PRLG, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

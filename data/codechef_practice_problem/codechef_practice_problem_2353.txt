@@ -1,0 +1,101 @@
+
+Read problems statements in Mandarin chinese, Russian  and Vietnamese as well.
+Sonya has NN segments on the xx-axis. For each valid ii, the ii-th segment contains all points between lili and riri inclusive.
+Maks gave Sonya a magic number KK. Sonya wants to choose exactly KK of her segments in such a way that the intersection of the chosen segments is empty, i.e. there is no point which is contained in each of the chosen segments. Find the number of ways in which Sonya can choose KK segments. Since this number can be large, Sonya only needs to know its remainder modulo 10000000071000000007 (109+7109+7).
+Input
+
+The first line of the input contains a single integer TT denoting the number of test cases. The description of TT test cases follows.
+The first line of each test case contains two space-separated integers NN and KK.
+NN lines follow. For each valid ii, the ii-th of these lines contains two space-separated integers lili and riri.
+
+Output
+For each test case, print a single line containing one integer — the number of ways to choose the segments, modulo 10000000071000000007 (109+7109+7).
+Constraints
+
+1≤T≤1,0001≤T≤1,000
+1≤K≤N≤4⋅1051≤K≤N≤4⋅105
+1≤li≤ri≤1091≤li≤ri≤109 for each valid ii
+the sum of NN for all test cases does not exceed 4⋅1054⋅105
+
+
+                        Sample Input 1
+                        
+
+
+
+
+
+1
+5 2
+1 4
+2 5
+5 10
+4 7
+8 9
+
+
+
+                        Sample Output 1
+                        
+
+
+
+
+
+4
+
+
+Explanation
+Example case 1: We are looking for pairs of segments. The four pairs with empty intersections are (1,3)(1,3), (1,5)(1,5), (2,5)(2,5) and (4,5)(4,5).
+
+
+
+Author:
+5★barenuz
+
+
+Editorial:
+https://discuss.codechef.com/problems/SONYASEG
+
+
+Tags:
+
+               
+                 Multiset, Fermat's Little Theorem, Permutations & Combinations
+                 
+                     
+                     Data Structures, Sets, Mathematics, Modular Arithmetic, Combinatorics
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2621
+
+
+Date Added:
+14-06-2018
+
+
+Time Limit:
+1 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SCM guile, PERL6, ERL, CLPS, PRLG, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

@@ -1,0 +1,16 @@
+{
+  "name": "qstnfinder",
+  "version": "1.0.0",
+  "description": "CP question finder",
+  "main": "index.js",
+  "scripts": {
+    "start":"node index.js"
+  },
+  "author": "Ranveer Raj",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16"
+  }
+}

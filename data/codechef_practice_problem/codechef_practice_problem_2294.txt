@@ -1,0 +1,104 @@
+
+The White Walkers are coming.    
+The Winterfell is the first place to be attacked by the Night King and his army of the dead.
+Jon Snow with Khaleesi has to take some important decisions to minimize the damage from the White Walkers.   
+Winterfell can be denoted as a graph with NN nodes.
+There are MM roads each connecting 2 nodes - AiAi and BiBi.
+The road is directed from node AiAi to BiBi, and not vice-versa.
+The power required to travel on this road is CiCi initially.   
+Also, Winterfell is built in such a way that it is not possible to visit the same node twice using these roads. That is, you cannot start at a node, follow some of the roads and return back to the same node.
+Jon has to stop the army of the dead.
+All white walkers are standing at node 11 right now.  
+For this, he decided to carry out QQ steps of two different types -     
+
+11 KK
+Add value KK to the power required to travel each road in Winterfell. i.e after this operation Ci=Ci+KCi=Ci+K ∀∀ ii ϵ[1,M]ϵ[1,M] . Value KK can be negative as well.  
+22 YY
+Find the minimum power required for the white walkers to reach node YY in Winterfell from node 11.     
+
+Help Jon is finding out the answer for each query of type 22.  
+Input:
+
+First line will contain 2 space separated integers - NN and MM, number of nodes , and the number of roads in Winterfell.  
+M lines follow. Each of the lines comprises 3 space separated integers  - AiAi, BiBi and CiCi, denoting that ithith road is directed from node AiAi to BiBi with initial power required to travel this road being CiCi.  
+Next line comprises QQ - the number of queries.  
+Q lines follow. Each query is of the type as described above, and will comprise 2 space separated integers. For type 11, the second integer will be KK - the amount of power added to each road. For type 22, the second integer will be YY - the node to reach from node 11.
+
+Output:
+For each query of type 22, output in a single line answer to the minimum power required for white walkers at node 11 to reach node YY.
+If there is no way to reach node YY, output "No Path Exists" (without quotes) . 
+Constraints
+
+1≤N≤30001≤N≤3000
+1≤M≤70001≤M≤7000 
+1≤Q≤5∗1061≤Q≤5∗106 
+1≤Ai,Bi≤N,Ai!=Bi1≤Ai,Bi≤N,Ai!=Bi 
+−109≤Ci,K≤109−109≤Ci,K≤109
+1≤Y≤N1≤Y≤N 
+At any point of time, the power required to travel on each road will always be [−1012,1012][−1012,1012] 
+
+Sample Input:
+3 3
+1 2 1
+1 3 3
+2 3 2
+3
+2 3
+1 2
+2 3   
+Sample Output:
+3
+5  
+EXPLANATION:
+Initially, the road to reach node 33 with minimum power is either (1→2,2→3)(1→2,2→3) or (1→3)(1→3), each amounting to total power = 33.
+Then, the power requirement of each edge is increased by 22.
+So, now the road (1→2,2→3)(1→2,2→3) requires total power = 3+4=73+4=7.
+The road (1→3)(1→3) requires total power = 55. 
+
+
+
+Author:
+5★shivamg_isc
+
+
+Tags:
+
+               
+                 Lines, DFS
+                 
+                     
+                     Advanced Algorithms, Computational Geometry, Algorithms, Graph Algos, Traversals
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2579
+
+
+Date Added:
+5-04-2019
+
+
+Time Limit:
+1.5 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SCM guile, PERL6, ERL, CLPS, PRLG, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

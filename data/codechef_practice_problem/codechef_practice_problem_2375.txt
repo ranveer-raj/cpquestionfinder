@@ -1,0 +1,121 @@
+
+Read problem statements in Mandarin, Bengali, Russian, and Vietnamese as well.
+Bugs Bunny is very smart, but he keeps constantly worrying about the future and is always anxious. Therefore, he keeps hopping between towns without standing still.
+The place where Bugs Bunny lives has NN towns (numbered 11 through NN) with one-way roads connecting them in such a way that they form an arborescence (a tree with all paths directed from the root), rooted at town 11. Therefore, each town except the root has exactly one incoming road; for each ii (1≤i≤N−11≤i≤N−1), there is a road from town PiPi to town i+1i+1. Each town has a distinct rating associated with it; for each valid ii, the ii-th town has rating AiAi.
+From a town ii, Bugs Bunny is allowed to hop to town jj (without visiting any other towns in between), if the following conditions are satisfied:
+
+there is a path between towns ii and jj, i.e. a path from town ii to town jj or from town jj to town ii
+town jj has a lower rating than town ii, i.e. Aj<AiAj<Ai
+
+This way, Bugs Bunny can visit a sequence of towns by hopping, starting anywhere and stopping whenever he chooses. Clearly, he cannot keep hopping forever, so the number of such sequences is finite.
+Tell Bugs Bunny the number of sequences of two or more towns which can be formed by hopping, given that he can start at any town and stop at any town. Since this number can be very large, calculate it modulo 109+7109+7.
+Input Format
+
+The first line of the input contains a single integer TT denoting the number of test cases. The description of TT test cases follows.
+The first line of each test case contains a single integer NN.
+The second line contains N−1N−1 space-separated integers P1,P2,…,PN−1P1,P2,…,PN−1.
+The third line contains NN space-separated integers A1,A2,…,ANA1,A2,…,AN.
+
+Output Format
+For each test case, print a single line containing one integer --- the number of valid sequences of visited towns modulo 109+7109+7.
+Constraints
+
+1≤T≤101≤T≤10
+1≤N≤1051≤N≤105
+1≤Ai≤1091≤Ai≤109 for each valid ii
+A1,A2,…,ANA1,A2,…,AN are pairwise distinct
+the graph described on the input is a directed tree
+the sum of NN over all test cases does not exceed 3⋅1053⋅105
+
+Subtasks
+Subtask #1 (20 points): the tree is a straight line --- there is a single path starting at town 11 and passing through all towns
+Subtask #2 (20 points):
+
+N≤103N≤103
+the sum of NN over all test cases does not exceed 104104
+
+Subtask #3 (60 points): original constraints
+
+                        Sample Input 1
+                        
+
+
+
+
+
+3
+3
+1 1
+10 15 5
+5
+1 1 3 3
+50 10 20 40 30
+9
+1 1 2 2 2 2 7 7
+1 2 3 4 5 6 7 8 9
+
+
+
+                        Sample Output 1
+                        
+
+
+
+
+
+3
+8
+28
+
+
+Explanation
+Example case 1: The possible hops for Bugs Bunny are from town 11 to town 33 and from town 22 to town 11. Therefore, the 33 possible sequences of visited towns are (2,1,3)(2,1,3), (2,1)(2,1) and (1,3)(1,3). 
+
+
+
+Author:
+4★hemanthram
+
+
+Editorial:
+https://discuss.codechef.com/problems/BNYHOP
+
+
+Tags:
+
+               
+                 easy-medium, eulerian-tour, fenwick-tree, hemanthram, ltime99
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2632
+
+
+Date Added:
+25-08-2021
+
+
+Time Limit:
+1 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+CPP17, PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, SQLQ, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

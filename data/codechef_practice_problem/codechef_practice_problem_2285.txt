@@ -1,0 +1,95 @@
+
+You are given two arrays of length N. Array A = AA1, AA2, …, AAN. Array L = LL1, LL2, …, LLN. For every k such that 1≤k≤N1≤k≤N, you have to find the length of the longest possible subsequence in the first k elements of array A such that if AAj immediately follows AAi in the subsequence, then |A|Aj−A−Ai|≤L|≤Lj 
+Please note that the input is encrypted. Read Input section for information.
+It is advised to use fast I/O methods 
+Input:
+
+First line contains a single integer NN, the no of elements of the arrays.
+The i-th of the next N lines contains two values, A′A′i and L′L′i, the encrypted values of AAi and LLi.
+Suppose that the (i-1)-th output was AnsAnsi-1, then AAi = AnsAnsi-1 XORXOR A′A′i, and LLi = AnsAnsi-1 XORXOR L′L′i, where XORXOR denotes the bitwise xor operator. Assume AnsAns0 = 0. 
+
+Output:
+Output N integers, each in a new line, the i-th of which should be the length of the longest possible subsequence uptil AAi.
+Constraints
+
+1≤N≤1051≤N≤105
+1≤A1≤Ai≤109≤109
+1≤L1≤Li≤109≤109
+0≤A′0≤A′i≤2∗109≤2∗109
+0≤L′0≤L′i≤2∗109≤2∗109
+
+Sample Input:
+5
+1 1
+3 0
+6 1
+5 2
+4 0  
+Sample Output:
+1
+2
+3
+3
+4  
+EXPLANATION:
+The decrypted query is:-
+5
+1 1
+2 1
+4 3
+6 1
+7 3  
+The largest possible subsequences are:-
+1) {1}
+2) {1,2}
+3) {1,2.4}
+4) {1,2,4}
+5) {1,2,4,7}  
+
+
+
+Author:
+6★kr_abhinav
+
+
+Tags:
+
+               
+                 Segment Trees
+                 
+                     
+                     Advanced Data Structures, Advanced Tree Structures
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2575
+
+
+Date Added:
+2-04-2018
+
+
+Time Limit:
+1 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SCM guile, PERL6, ERL, CLPS, PRLG, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

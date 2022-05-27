@@ -1,0 +1,117 @@
+
+Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese, and Bengali as well.
+This is an interactive problem. After printing a query do not forget to output the end of the line and flush the output. You can read more about it here.
+L was unhappy after losing a tennis match against Light. Being super competitive, he has been looking for ways to get back at him ever since. L knows that Light is weak in graph theory, so he decided to challenge Light to solve a graph problem.
+L has a hidden connected triangle-free graph with NN vertices (numbered 11 through NN). The graph does not have any self-loops or parallel edges. L gives Light the degrees of all vertices and an integer KK; for each valid ii, let's denote the degree of the ii-th vertex by didi.
+Light has to divide the vertices of the graph into two disjoint sets SS and RR such that:
+
+Each vertex belongs to exactly one of the sets.
+The size of the set SS is at least KK.
+For each two distinct vertices u,v∈Su,v∈S, the shortest distance between uu and vv is greater than 11.
+For each vertex v∈Rv∈R, there is a vertex u∈Su∈S such that the shortest distance between uu and vv is 11.
+
+To do so, Light may give L zero or more requests. There are two types of requests:
+
+1 u: Light asks L to add vertex uu to the set SS. L does that and then provides Light with the list of all vertices which are neighbours of uu.
+2 u: L simply provides Light with the list of all vertices which are neighbours of uu, without adding uu to SS.
+
+Light may not give L the same request more than once, i.e. he may not add any vertex to SS more than once and he may only give L a request of type 22 at most once. After Light finishes making his requests, all the vertices that Light did not ask to add to SS are considered to be in RR.
+L does not know that Light has been secretly practising graph theory for a year, more than eager to beat him again. Light thinks to himself: "In all things, one cannot win with thinking alone. To win, you must program." and starts laughing like an evil madman. 
+You are acting as Light. The grader is acting as L. Construct a valid set SS (and RR) using these requests. It is guaranteed to be always possible.
+Interaction
+
+First, you should read a line containing two space-separated integers NN and KK.
+Next, you should read a line containing NN space-separated integers d1,d2,…,dNd1,d2,…,dN.
+Then, you may make your requests which the grader processes. To make a request:
+Print a line containing two space-separated integers tt and uu (1≤t≤21≤t≤2, 1≤u≤N1≤u≤N), where tt is the type of the request.
+Read a line containing a single integer. If the format is invalid or you have made the same request before, this integer is −1−1; otherwise, it is dudu.
+Read another line containing dudu space-separated integers — the neighbours of the vertex uu.
+Finally, when you have constructed your set SS, print a single line containing the integer 33.
+
+If you read −1−1, you must immediately terminate your program to receive a Wrong Answer verdict. Otherwise, you may receive any verdict. Don't forget to flush the output after printing each line!
+Constraints
+
+2≤N≤1052≤N≤105
+1≤K2≤N1≤K2≤N
+1≤di<N1≤di<N for each valid ii
+d1+d2+…+dN≤2⋅106d1+d2+…+dN≤2⋅106
+the graph is connected
+
+Example
+L (grader)      Light (you)
+4 2
+2 2 2 2
+                1 1
+2
+2 3
+                2 2
+2
+1 4
+                1 4
+2
+2 3
+                3
+
+Explanation
+
+L informs Light that the hidden graph has 44 vertices, each with degree 22, and the final size of the set SS must be at least 22.
+Light asks L to add vertex 11 to SS. L does so and reports that vertex 11 has two neighbours: vertices 22 and 33. 
+Light asks L about the neighbours of vertex 22. L reports that this vertex has two neighbours: vertices 11 and 44. 
+Light asks L to add vertex 44 to SS. L does so and reports that vertex 44 has two neighbours: vertices 22 and 33.
+Light informs L that he is done adding vertices to the set SS.
+
+The figure below describes L's hidden graph:
+
+Light puts vertices 11 and 44 in the set SS, so vertices 22 and 33 are put in the set RR. We can see that the size of set SS is 2≥K2≥K, the distance between vertices 11 and 44 is 2>12>1 and both vertices 22 and 33 are at distance 11 from vertex 11. Thus, Light successfully created a valid set SS.
+
+
+
+Author:
+5★shaanknight
+
+
+Editorial:
+https://discuss.codechef.com/problems/SETQUER
+
+
+Tags:
+
+               
+                 Interactive Problems, Constructive
+                 
+                     
+                     Special, Algorithms
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2959
+
+
+Date Added:
+21-11-2020
+
+
+Time Limit:
+1 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+CPP17, PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, SQLQ, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

@@ -1,0 +1,110 @@
+
+Read problem statements in Hindi, Vietnamese, Mandarin Chinese, Russian and Bengali as well.
+These days, Chef is working on opening a restaurant. Obviously, Chef dislikes running the restaurant by himself. In order to avoid such a terrible thing, he decided to hire exactly MM workers (numbered 11 through MM) to help him.
+The workers will choose some positive integer constants a1,a2,…,aMa1,a2,…,aM. A worker with a constant aa wants to be paid a fixed salary after each aa days. Chef is very orderly, so he wants to choose a Chef-year — a period of xx days, and a Chef-week — a period of yy days, where xx and yy depend on the workers' constants in such a way that Chef can always pay each worker's salary at the end of a Chef-week and all the workers are paid their salaries at once at the end of a Chef-year.
+Chef also wants a Chef-year to be as short as possible and a Chef-week to be as long as possible. It can be shown that these conditions are satisfied when xx is the lowest common multiple of a1,a2,…,aMa1,a2,…,aM and yy is the greatest common divisor of a1,a2,…,aMa1,a2,…,aM. For a group of MM workers with known a1,a2,…,aMa1,a2,…,aM, Chef then defines the value of the group as xpf(y)xpf(y)，where f(x)=∑qi=0fixq−if(x)=∑i=0qfixq−i is a polynomial of degree qq.
+Now, Chef wants to know the sum of values of the group of MM workers over all possible sequences a1,a2,…,aMa1,a2,…,aM which meet the constraint x≤Nx≤N. Since the answer may be extremely large, you should compute it modulo 109+7109+7.
+Note: This problem has a stricter submission limit, each user may only submit this problem at most 50 times during the contest.
+Input
+
+The first line of the input contains four space-separated integers NN, MM, pp and qq.
+The second line contains q+1q+1 space-separated integers f0,f1,…,fqf0,f1,…,fq — the coefficients of the polynomial ff.
+
+Output
+Print a single line containing one integer — the sum of values for all possible groups of workers modulo 109+7109+7.
+Constraints
+
+1≤N≤5×10121≤N≤5×1012
+1≤M≤1091≤M≤109
+0≤p,q≤200≤p,q≤20
+0≤fi<109+70≤fi<109+7 for each valid ii
+f0≠0f0≠0
+
+Subtasks
+Subtask #1 (5 points):
+
+1≤N,M≤1,0001≤N,M≤1,000
+time limit 1 second
+
+Subtask #2 (10 points):
+
+1≤N,M≤1071≤N,M≤107
+time limit 5 seconds
+
+Subtask #3 (10 points):
+
+M=2,p=0,q=1,f1=0M=2,p=0,q=1,f1=0
+1≤N≤10111≤N≤1011 
+
+Subtask #4 (25 points): 1≤N≤10111≤N≤1011
+Subtask #5 (50 points): original constraints
+
+                        Sample Input 1
+                        
+
+
+
+
+
+5 2 1 1
+1 0
+
+
+
+                        Sample Output 1
+                        
+
+
+
+
+
+99
+
+
+Explanation
+There are 1515 possible sequences: [1,1][1,1], [1,2][1,2], [1,3][1,3], [1,4][1,4], [1,5][1,5], [2,1][2,1], [2,2][2,2], [2,4][2,4], [3,1][3,1], [3,3][3,3], [4,1][4,1], [4,2][4,2], [4,4][4,4], [5,1][5,1], [5,5][5,5]. The sum of corresponding values is 1+2+3+4+5+2+4+8+3+9+4+8+16+5+25=991+2+3+4+5+2+4+8+3+9+4+8+16+5+25=99.
+
+
+
+Author:
+7★whzzt
+
+
+Tags:
+
+               
+                 whzzt
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+3287
+
+
+Date Added:
+5-12-2018
+
+
+Time Limit:
+1 - 18 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SCM guile, PERL6, ERL, CLPS, PRLG, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

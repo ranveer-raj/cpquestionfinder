@@ -1,0 +1,113 @@
+
+There are NN cities number from 11 to NN each city is having a weight of wiwi and they are connected through MM bidirectional roads between them. 
+Let the parity of a city cici be even if the number of set bits in its binary representation of wiwi is even and odd otherwise.
+You are given QQ queries, each query can be of two types:
+
+11 KK - print the size of largest connected group of cities in which parity of each city is odd after XOR with KK.
+22 KK -  print the size of largest connected group of cities in which parity of each city is even after XOR with KK.
+
+A group of cities is said to be connected if we can go from one city of the group to any other city of the group without passing through any city that is not in the group. A group with one city is considered as connected.
+Input:
+
+The first line of the input contains a single integer TT denoting the number of test cases. The description of TT test cases follows.
+The first line input of each test case contains two space-separated integers NN and MM. 
+The second line contains NN space-separated integers denoting wiwi.
+The next MM lines contain two space-separated integers UiUi and ViVi, each denoting a bidirectional edge between the cities UiUi and ViVi.
+The next QQ lines describe each query in the format given above.
+
+Output:
+
+For each query of type 11 -  print the size of largest connected group of cities in which parity of each city is odd after XOR with KK.
+For each query of type 22-  print the size of largest connected group of cities in which parity of each city is even after XOR with KK.
+
+Constraints
+
+1≤T≤51≤T≤5
+1≤N≤2×1051≤N≤2×105
+1≤M≤min(2×105,N×(N−1)21≤M≤min(2×105,N×(N−1)2)
+1≤wi,K≤1091≤wi,K≤109
+1≤Ui,Vi≤N1≤Ui,Vi≤N  for each valid i
+1≤Q≤1051≤Q≤105
+the graph contains no duplicate edges or self-loops
+
+Sample Input:
+1
+6 6
+6 4 10 7 5 5
+3 4
+5 1
+5 6
+3 6
+1 4
+5 3
+4
+1 6
+1 8
+1 7
+2 6
+
+Sample Output:
+1
+4
+4
+4
+
+Explanation:
+ 
+
+Query 1 - The size of the largest connected group of cities in which parity of each city is odd after XOR with 66 is equal to 11.  Since the parity of the city, 22 and 44 is odd after XOR with 66, but 22 is not connected with 44. Therefore the answer is equal to 11.
+Query 2 - The size of the largest connected group of cities in which parity of each city is odd after XOR with 88 is equal to 44 because, after XOR with 88, cities 1,5,3,61,5,3,6 have odd parity. Therefore the answer is equal to 44.
+
+Similarly, you can find the answer for other queries.
+
+
+
+Author:
+5★saurabhshadow
+
+
+Editorial:
+https://discuss.codechef.com/problems/CENS20E
+
+
+Tags:
+
+               
+                 Disjoint Set Union, Inbuilt functions, Bitwise Operation, Binary, DFS, BFS
+                 
+                     
+                     Advanced Data Structures, Basic Programming Concepts, Mathematics, Bit Manipulation, Number System, Algorithms, Graph Algos, Traversals
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2580
+
+
+Date Added:
+17-07-2020
+
+
+Time Limit:
+1.5 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+CPP17, PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, SQLQ, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

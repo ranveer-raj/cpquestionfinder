@@ -1,0 +1,138 @@
+
+This is an interactive problem.
+You are given a tree having NN nodes. Each node of this tree is colored either Black or White but you don't know the initial color of any node. 
+You can ask up to QQ queries. In each query, you will give a node to the grader. The grader will flip the color of this node and then return the number of edges in the tree connecting nodes of different colors. Note that the flipping of color is permanent, meaning that the color of the node remains flipped after the query. 
+Your task is to make the color of all nodes the same.
+Interaction
+First, read a line containing a single integer TT denoting the number of test cases.
+For each test case, first read a line containing two integers NN and QQ denoting the number of nodes and the maximum number of queries allowed.
+Then read N−1N−1 lines each containing two integers UU and VV denoting that there is an edge between nodes UU and VV.
+Then you may ask up to QQ queries. For each query, print a line containing a single integer XX (1≤X≤N1≤X≤N). Then read a line containing a single integer YY. If you ask an invalid query or exceed QQ queries then Y=−1Y=−1, otherwise YY will be the answer to the query. If you receive Y=−1Y=−1, terminate the program immediately to get the Wrong Answer verdict, otherwise you may get any verdict.
+Once you are done asking all queries, print a line containing the integer 00 and then read a line containing a single integer denoting the verdict for the test case. If all nodes have the same color, the grader will return 11, else −1−1. If you get −1−1, terminate the program immediately. Note that printing this line does not count as a query.
+Don't forget to flush the output after printing each line!
+Constraints
+
+1≤T≤1041≤T≤104
+2≤N≤1052≤N≤105
+1≤U,V≤N1≤U,V≤N
+The given edges form a tree
+The sum of QQ over all test cases does not exceed 1.5⋅1051.5⋅105
+
+Subtasks
+
+Subtask 11 (12 points) : N≤250N≤250, Q=N2Q=N2
+Subtask 22 (20 points) : Q=3NQ=3N
+Subtask 33 (20 points) : Q=2NQ=2N
+Subtask 44 (48 points) : Q=⌊3N2⌋Q=⌊3N2⌋
+
+
+                        Sample Input 1
+                        
+
+
+
+
+
+You         Grader
+
+            2
+            3 4
+            1 2
+            1 3
+1
+            1
+3
+            2
+1
+            0
+0
+            1
+            5 7
+            1 2
+            1 3
+            2 4
+            2 5
+5
+            3
+1
+            3
+2
+            2
+1
+            0
+0
+            1
+
+
+Explanation
+
+Test case 11:
+
+
+
+Test case 22: the initial color of nodes is shown below
+
+
+
+Before the first query, the colors of the nodes are {B,W,B,B,W}{B,W,B,B,W}.
+After the first query, the colors of the nodes will be {B,W,B,B,B}{B,W,B,B,B} and there will be 3 edges connecting nodes of different colors −− (1,2),(1,2), (2,4)(2,4) and (2,5)(2,5).
+After the second query, the colors of the nodes will be {W,W,B,B,B}{W,W,B,B,B} and there will be 3 edges connecting nodes of different colors −− (1,3),(1,3), (2,4)(2,4) and (2,5)(2,5).
+After the third query, the colors of the nodes will be {W,B,B,B,B}{W,B,B,B,B} and there will be 2 edges connecting nodes of different colors −− (1,3)(1,3) and (1,2)(1,2).
+After the fourth query, the colors of the nodes will be {B,B,B,B,B}{B,B,B,B,B}.
+
+
+
+
+Author:
+6★jay_1048576
+
+
+Tester:
+6★iceknight1093
+
+
+Editorial:
+https://discuss.codechef.com/problems/INTREENCLR
+
+
+Tags:
+
+               
+                 Greedy, Observation, Prefix Sum
+                 
+                     
+                     Algorithms, Simple Algos
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2762
+
+
+Date Added:
+17-12-2021
+
+
+Time Limit:
+2 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+CPP17, PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, SQLQ, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

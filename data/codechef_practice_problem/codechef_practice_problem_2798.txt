@@ -1,0 +1,121 @@
+
+Read problems statements Hindi , Vietnamese , Mandarin Chinese , Russian and Bengali as well.
+You have a tree with NN vertices (numbered 11 through NN) rooted at vertex 11. Each vertex contains a decimal digit; let's denote the digit in vertex ii by didi.
+A subtree is a non-empty subgraph satisfying the following condition: for any vertex vv, if vv belongs to subtree SS, then the parent of vv also belongs to SS. Note that each subtree contains the root. The vertices in any subtree SS are sorted in DFS-order, i.e. using the following algorithm:
+
+let's denote a current vertex by cc; initially, the current vertex is the root
+when processing vertex cc:
+cc is the next vertex in DFS-order
+consider all sons of cc which belong to SS, sorted in increasing order
+for each of these sons, change the current vertex cc to that son and process it recursively
+
+For any subtree SS with kk vertices, we define the digit string D(S)D(S) as a string with length kk; for each valid ii, the ii-th character of this string is the digit in the ii-th vertex of SS (in DFS-order). D(S)D(S) may also be considered an integer in decimal representation.
+Let's define maxDigit(x)maxDigit(x) as the largest decimal digit in a positive integer xx. Consider the following infinite recurrent sequence aa:
+
+a1=1a1=1
+an=an−1+maxDigit(an−1)an=an−1+maxDigit(an−1) for each n>1n>1
+
+For example, the first few members of this sequence are 1,2,4,8,16,221,2,4,8,16,22.
+Next, let's call a subtree SS good if D(S)D(S) occurs in sequence aa. You should find the number of good subtrees of the given tree. Since this number may be large, compute it modulo 109+7109+7.
+Input
+
+The first line of the input contains a single integer TT denoting the number of test cases. The description of TT test cases follows.
+The first line of each test case contains a single integer NN.
+Each of the following N−1N−1 lines contains two space-separated integers uu and vv denoting an edge between vertices uu and vv.
+The last line contains NN space-separated integers d1,d2,…,dNd1,d2,…,dN.
+
+Output
+For each test case, print a single line containing one integer — the number of good subtrees modulo 109+7109+7.
+Constraints
+
+1≤T≤101≤T≤10
+1≤N≤5001≤N≤500
+1≤u,v≤N1≤u,v≤N
+the graph described on the input is a tree
+0≤di≤90≤di≤9 for each valid ii
+d1≠0d1≠0
+the sum of NN over all test cases does not exceed 500500
+
+Subtasks
+Subtask #1 (20 points): di=2di=2 for each valid ii
+Subtask #2 (80 points): original constraints
+
+                        Sample Input 1
+                        
+
+
+
+
+
+2
+3
+1 2
+2 3
+1 6 4
+5
+1 2
+1 3
+2 4
+3 5
+2 2 2 2 2
+
+
+
+                        Sample Output 1
+                        
+
+
+
+
+
+3
+6
+
+
+Explanation
+Example case 1: All valid subtrees are good (their digit strings are 11, 1616 and 164164).
+
+
+
+Author:
+5★altruist_
+
+
+Tags:
+
+               
+                 altruist_
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2877
+
+
+Date Added:
+22-09-2018
+
+
+Time Limit:
+1 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SCM guile, PERL6, ERL, CLPS, PRLG, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

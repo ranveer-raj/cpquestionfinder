@@ -1,0 +1,95 @@
+
+You are given a string SS of length NN consisting only of A's and B's.
+You will be given QQ queries each of which can be either of Type 1 or Type 2.
+
+For a query of Type 1, you will be given two numbers LL and RR and a character CC. You are supposed to replace every character in SS from position LL to RR with CC.
+For a query of Type 2, you will be given 4 numbers LL, RR, pp and qq. Now, for every character in SS from position LL to RR, perform the following operations in the order left to right:
+If the character is "A", then replace pp with (p−q+MOD)%MOD(p−q+MOD)%MOD and qq with (p+q)%MOD(p+q)%MOD.
+If the character is "B", then replace pp with (p+q)%MOD(p+q)%MOD and qq with (q−p+MOD)%MOD(q−p+MOD)%MOD.
+
+MODMOD is 109+7109+7.
+Your task is to print the final values of pp and qq for each query of Type 2.
+Input:
+
+First line will contain TT, number of testcases. Then the testcases follow. 
+Each testcase contains multiple lines of input.
+The first line of a testcase contains the integer NN
+The second line containes the string SS
+The third line contains the number of queries for that testcase, QQ
+The next QQ lines contain the actual queries. 
+For Type 1 query, the input would be 11 LL RR CC
+For Type 2 query, the input would be 22 LL RR pp qq
+
+Output:
+For each testcase, for each query of type 2, output in separate lines the value of pp followed by qq.
+Constraints
+
+1≤T≤51≤T≤5
+1≤N≤1051≤N≤105
+1≤Q≤1041≤Q≤104
+0≤p,q≤1090≤p,q≤109
+1≤L,R≤N1≤L,R≤N
+C∈A,BC∈A,B
+The sum of NN over all testcases is less than equal to 105105 and sum of QQ over all testcases is less than equal to 104104
+
+Sample Input:
+1
+2
+AA
+3
+1 2 2 B
+2 1 1 1 1
+2 1 2 1 2
+
+Sample Output:
+0 2
+2 4
+
+
+
+
+Author:
+5★theanshul
+
+
+Tags:
+
+               
+                 Lazy Propagation, Matrix Multiplication, Implementation
+                 
+                     
+                     Advanced Data Structures, Advanced Tree Structures, Segment Trees, Mathematics, Matrices, Algorithms
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2664
+
+
+Date Added:
+10-02-2020
+
+
+Time Limit:
+1 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+CPP17, PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

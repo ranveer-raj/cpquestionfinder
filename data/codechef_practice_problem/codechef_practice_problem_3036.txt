@@ -1,0 +1,108 @@
+
+Read problem statements in Russian
+You are given a full binary tree of height nn. Node 11 is the root, and for i≤2n−1−1i≤2n−1−1, node ii is the parent of node 2i2i and node 2i+12i+1. For each node ii, there is a positive integer aiai written on it.
+A primeful cycle is a group of k>2k>2 nodes x1,x2,…,xkx1,x2,…,xk such that:
+
+kk is a prime number,
+gcd(ax1,ax2ax1,ax2) mod k=k= gcd(ax2,ax3ax2,ax3) mod k=…=k=…= gcd(axk−1,axkaxk−1,axk) mod k=k= gcd(axk,ax1axk,ax1) mod kk .
+
+Let the height of each node be 11 plus the distance from that node to node 11. Note that by this definition, the height of node 11 is 11. Let the beauty value of a primeful cycle of nodes be the sum of the height of each node.
+There are qq queries. In each query, you are given a node xx. Considering all the nodes in the subtree of node xx (including node xx), find the smallest possible beauty value of a primeful cycle of nodes taken from these nodes only. If there is no such group, print −1−1 instead.
+Input:
+
+The first line contains two integers, nn and qq.
+The second line contains 2n−12n−1 integers, a1,a2,…,a2n−1a1,a2,…,a2n−1.
+The third line contains qq integers, the ii-th of which is the integer xx for the ii-th query. 
+
+Output:
+For each test case, print a single line containing the answer to the test case. Print the answer to the test cases on separate lines.
+Constraints
+
+1≤n≤201≤n≤20
+1≤x≤2n−11≤x≤2n−1
+1≤q≤1051≤q≤105
+1≤ai≤1091≤ai≤109
+
+Subtasks:
+Subtask #1 (70 points): q≤10q≤10
+Subtask #2 (30 points): original constraints
+
+                        Sample Input 1
+                        
+
+
+
+
+
+3 3
+    1 2 4 5 6 7 10
+    1 3 7
+
+
+
+                        Sample Output 1
+                        
+
+
+
+
+
+6
+    -1
+    -1
+
+
+Explanation
+In the first query, we choose nodes 1,31,3 and 66.
+
+
+
+Author:
+4★minh2345
+
+
+Editorial:
+https://discuss.codechef.com/problems/PRIMECYC
+
+
+Tags:
+
+               
+                 Binary Tree, Pigeonhole Principle, Observation
+                 
+                     
+                     Data Structures, Tree Data Structure, Mathematics, Set Theory, Algorithms
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+3021
+
+
+Date Added:
+2-01-2021
+
+
+Time Limit:
+2 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+CPP17, PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, SQLQ, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

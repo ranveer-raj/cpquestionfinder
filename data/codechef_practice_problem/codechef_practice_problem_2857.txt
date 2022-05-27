@@ -1,0 +1,117 @@
+
+There are NN people waiting in a queue at ATM. The ithith person in the queue has a power level equal to AiAi (1≤Ai≤N1≤Ai≤N). The following process happens every second till the queue is not empty.
+
+The person in front of the queue uses the ATM and then leaves the queue.
+After the first step, if the queue is empty, the process stops. Otherwise, for each person from left to right (except for the first person in the queue), if the person has a strictly greaterstrictly greater power level than the person in front of him, he will overtake the person in front, i.e. their positions get swapped. Note that the overtaking happens one after the other from left to right, i.e. state of the queue changes after every overtake.
+
+For each person, find the time at which they will use the ATM.
+Note:Note: Please refer to the explanation section for a simulation of one such scenario.
+Input Format
+
+First line of input contains TT, the number of test cases. Then TT test cases follow.
+Each test case consists of two lines of input.
+First line of each test case contains NN, the number of people in the queue.
+Second line of each test case contains NN positive integers AiAi, the power level of ithith person.
+
+Output Format
+For each test case, print a line containing NN numbers where ithith number is equal to the time at which ithith person uses the ATM.
+Constraints
+
+1≤T≤2⋅1041≤T≤2⋅104
+1≤N≤2⋅1051≤N≤2⋅105
+1≤Ai≤N1≤Ai≤N
+Sum of NN over all test cases doesn't exceed 2⋅1052⋅105.
+
+
+                        Sample Input 1
+                        
+
+
+
+
+
+3
+5
+2 3 4 1 5
+4
+1 2 4 2
+10
+5 1 3 7 6 9 8 9 2 10
+
+
+
+                        Sample Output 1
+                        
+
+
+
+
+
+1 4 2 5 3
+1 3 2 4
+1 10 2 3 8 4 7 5 9 6
+
+
+Explanation
+Test Case 11:
+Initially, let the order of people in the queue is [1,2,3,4,5][1,2,3,4,5], and their power levels are 2,3,4,12,3,4,1 and  55 respectively.
+
+During the 1st1st second, 11 uses the ATM and leaves. The order of the people in the queue will be [2,3,4,5][2,3,4,5] after 11 leaves. Now people start overtaking (2nd2nd step of the process). Since 33 is the 2nd2nd person in the queue and 22 is in front of him and A2A2 < A3A3, 33 will overtake 22. The order of the people in the queue will become [3,2,4,5][3,2,4,5]. Now 44 is the 3rd3rd person in the queue and 22 is in front of him. But A2A2 > A4A4, so there will be no overtaking here. Finally, 55 is the 4th4th person and 44 is in front of him. And since A4A4 < A5A5, 55 will overtake 44 and The order of the people in the queue will be [3,2,5,4][3,2,5,4] after the 11st second.
+During the 2nd2nd second, 33 is in front of the queue. He will use the ATM and leave. The order of the people in the queue will become [2,5,4][2,5,4]. Since 55 is the 2nd2nd person in the queue with 22 in front of him and A2A2 < A5A5, 55 will overtake 22 and the order of the people in the queue becomes [5,2,4][5,2,4]. Now 44 is the 3rd3rd person in the queue. But A2A2 > A4A4, so 44 can't overtake 22. By the end of 2nd2nd second, the order of people in the queue is [5,2,4[5,2,4].
+During the 3rd3rd second, 55 is in front of the queue. He will use the ATM and leave. After this, the queue will be 2,42,4. And since A2A2 > A4A4, there will be no overtaking.
+During the 4th4th second, 22 uses the ATM and leaves. 
+During the 5th5th second, 44 uses the ATM and leaves.
+
+Hence, 1,2,3,41,2,3,4 and 55 use the ATM at 1,4,2,5,31,4,2,5,3 second, respectively.
+
+
+
+Author:
+5★akashbhalotia
+
+
+Editorial:
+https://discuss.codechef.com/problems/ATMQ
+
+
+Tags:
+
+               
+                 Priority Queue, Constructive
+                 
+                     
+                     Data Structures, Queues, Algorithms
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2911
+
+
+Date Added:
+11-09-2021
+
+
+Time Limit:
+1 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+CPP17, PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, SQLQ, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

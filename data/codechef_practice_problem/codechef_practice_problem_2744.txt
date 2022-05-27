@@ -1,0 +1,126 @@
+
+You are given a matrix CC that has NN rows and MM columns where each entry is 11 or 00 or 𝚡x. Here 𝚡x denotes a don't care value. 
+You can perform the following operation on the matrix:
+
+Pick any column jj such that 1≤j≤M1≤j≤M.
+Assign Ci,j→Ci,j⊕1Ci,j→Ci,j⊕1 for all 1≤i≤N1≤i≤N
+
+You are given that:
+
+0⊕1=10⊕1=1
+1⊕1=01⊕1=0
+𝚡⊕1=𝚡x⊕1=x
+where ⊕⊕ denotes the bitwise XOR operation.
+
+You have to perform any number of operations (possibly 00) such that each row in the matrix has at most a single 11.
+Determine if it's possible to achieve this. Print YES if it's possible, else print NO.
+Input Format
+
+The first line will contain TT - the number of test cases. Then the test cases follow.
+The first line of each test case has two integers NN and MM - the number of rows and number of columns respectively.  
+The next MM lines of the test case contain NN characters each where the jj-th character in the ii-th line denotes Ci,jCi,j.
+
+Output Format
+Print YES if it's possible to perform any number of operations so that each row has at most a single 11, else print NO.
+You may print each character of Yes and No in uppercase or lowercase (for example, yes, yEs, YES will be considered identical).
+Constraints
+
+1≤T≤4001≤T≤400
+1≤N,M≤10001≤N,M≤1000
+Sum of N⋅MN⋅M over all test cases does not exceed 106106
+
+
+                        Sample Input 1
+                        
+
+
+
+
+
+3
+2 2
+00
+11
+4 5
+10x1x
+1xx11
+xx101
+1x11x
+3 3
+101
+010
+100
+
+
+
+                        Sample Output 1
+                        
+
+
+
+
+
+YES
+YES
+NO
+
+
+Explanation
+
+Test case-1: We just perform one operation on the first column.
+Test case-2: We perform the operations on the columns 1,31,3 and 55.
+Test case-3: It can be proven that it is impossible to satisfy the given conditions using any number of operations.
+
+
+
+
+Author:
+3★pranav_dv
+
+
+Tester:
+7★tabr
+
+
+Editorial:
+https://discuss.codechef.com/problems/OH1DCARE
+
+
+Tags:
+
+               
+                 2-sat, 2-sat, cook139, cook139, medium, medium, pranav_dv
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2854
+
+
+Date Added:
+2-03-2022
+
+
+Time Limit:
+1 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+CPP17, PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, SQLQ, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

@@ -1,0 +1,122 @@
+
+Chef is bored cooking his regular dishes, so he decided to cook permutations instead. Since this is his first time cooking permutations, he takes some help.
+Chef has two permutations AA and BB, each of size NN. Chef cooks a permutation CC of size N2N2 by doing the following:
+for i = 1 to N:
+    for j = 1 to N:
+        C[i + (j-1) * N] = A[i] + (B[j] - 1) * N
+
+Chef is allowed to make some (maybe 00) moves on permutation CC. In one move, Chef can:
+
+Pick two indices 1≤i<j≤N21≤i<j≤N2 and swap the elements CiCi and CjCj.
+
+Find the minimum number of moves required to sort permutation CC in ascending order. 
+Input Format
+
+The first line of the input contains a single integer TT - the number of test cases. The description of test cases follows.
+The first line of each test case contains an integer NN - the length of permutations AA and BB.
+The second line of each test case contains NN integers A1,A2,…,ANA1,A2,…,AN, denoting permutation AA.
+The third line of each test case contains NN integers B1,B2,…,BNB1,B2,…,BN, denoting permutation BB.
+
+Output Format
+For each test case, print a single integer representing the number of moves required to sort permutation CC.
+Constraints
+
+1≤T≤1051≤T≤105
+1≤N≤2⋅1051≤N≤2⋅105
+1≤Ai,Bi≤N1≤Ai,Bi≤N
+The sum of NN over all test cases doesn't exceed 106106
+
+Subtasks
+Subtask #1 (100 points): original constraints
+
+                        Sample Input 1
+                        
+
+
+
+
+
+3
+3
+3 1 2
+2 1 3
+2
+1 2
+1 2
+2
+2 1
+2 1
+
+
+
+                        Sample Output 1
+                        
+
+
+
+
+
+7
+0
+2
+
+
+Explanation
+
+In the first test case, C=[6,4,5,3,1,2,9,7,8]C=[6,4,5,3,1,2,9,7,8]. Minimum number of moves required to sort permutation CC are 77. 
+In the second test case, C=[1,2,3,4]C=[1,2,3,4]. The permutation is already sorted, so we need 00 moves.
+In the third test case, C=[4,3,2,1]C=[4,3,2,1]. We need 22 moves to sort the permutation.
+
+
+
+
+Author:
+6★maomao90
+
+
+Tester:
+gamegame
+
+
+Editorial:
+https://discuss.codechef.com/problems/COOKPERM
+
+
+Tags:
+
+               
+                 dirichlet-convolution, easy-medium, ltime105, maomao90
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2808
+
+
+Date Added:
+26-02-2022
+
+
+Time Limit:
+1 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+CPP17, PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, SQLQ, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

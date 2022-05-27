@@ -1,0 +1,97 @@
+
+Read problems statements in Mandarin Chinese, Russian, Vietnamese and Bengali as well.
+Chef has an integer matrix AA of NN rows and MM columns, and an integer XX.
+A submatrix is defined as a rectangle of values inside AA. More formally, given two intervals [l,r][l,r] and [L,R][L,R], the corresponding submatrix consists of the values aijaij such that l≤i≤rl≤i≤r and L≤j≤RL≤j≤R. Two submatrices are considered different if one of the ranges [l,r][l,r] or [L,R][L,R] differs.
+Chef uses f(X)f(X) to denote the total number of submatrices BB in which max(B)⊕min(B)=X,max(B)⊕min(B)=X,
+where ⊕⊕ denotes bitwise XOR, max(B)max(B) denotes the maximum integer in BB, and min(B)min(B) denotes the minimum integer in BB.
+Chef does not know in which order he would like to put the rows. He wishes to know the value of f(X)f(X) for every permutation of rows, but since the amount of them can be too large, he wants to know the sum of the answers over all permutations.
+Input
+
+The first line contains three space-separated integers NN, MM and XX.
+Next NN lines contains MM integers each: the jj-th integer of the ii-th line AijAij.
+
+Output
+Output the sum of f(X)f(X) over all permutations of the rows of AA.
+Constraints
+
+1≤N≤81≤N≤8
+1≤M≤1051≤M≤105
+0≤X,Aij≤1090≤X,Aij≤109
+
+
+                        Sample Input 1
+                        
+
+
+
+
+
+3 3 3
+1 2 1
+0 3 0
+2 1 2
+
+
+
+                        Sample Output 1
+                        
+
+
+
+
+
+120
+
+
+
+
+
+Author:
+6★karpovich
+
+
+Editorial:
+https://discuss.codechef.com/problems/MAXXMIN
+
+
+Tags:
+
+               
+                 Coordinate Compression, Bitmasking, Combinatorics, Two pointers
+                 
+                     
+                     Advanced Algorithms, Pre processing, Mathematics, Bit Manipulation, Algorithms, Simple Algos
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+3629
+
+
+Date Added:
+20-05-2021
+
+
+Time Limit:
+3 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+CPP17, PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, SQLQ, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

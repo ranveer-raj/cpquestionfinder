@@ -1,0 +1,100 @@
+
+You are given two integers N,KN,K such that K+1≤N≤2K−1K+1≤N≤2K−1. Your friend is hiding from you a permutation (P1,P2,…,PN)(P1,P2,…,PN) of integers from 11 to NN, whose elements are written cyclically.
+Your friend doesn't tell you the permutation. Instead, he tells you this. For each ii from 11 to NN he will tell you AiAi −− the number of such integers jj with 0≤j<K0≤j<K such that P((i+j)modN)+1<PiP((i+j)modN)+1<Pi. 
+Given A1,A2,…,ANA1,A2,…,AN, find any permutation PP producing them or tell that there is no such permutation.
+Input Format
+The first line of the input contains a single integer TT −− the number of test cases. The description of test cases follows.
+The first line of each test case contains two integers N,KN,K.
+The second line of each test case contains NN integers A1,A2,…,ANA1,A2,…,AN.
+Output Format
+For each test case, if there is no permutation producing array AA, output −1−1. Otherwise, output NN integers P1,P2,…,PNP1,P2,…,PN (1≤Pi≤N1≤Pi≤N, Pi≠PjPi≠Pj for i≠ji≠j) −− the required permutation. If there are several such permutations, you can output any.
+Constraints
+
+1≤T≤1051≤T≤105
+1≤K+1≤N≤2K−11≤K+1≤N≤2K−1.
+0≤Ai≤K0≤Ai≤K
+3≤N≤2⋅1053≤N≤2⋅105
+The sum of NN over all test cases doesn't exceed 2⋅1052⋅105
+
+Subtasks
+Subtask 1 (50 points): The sum of NN over all test cases doesn't exceed 20002000
+Subtask 2 (50 points): No additional constraints
+
+                        Sample Input 1
+                        
+
+
+
+
+
+2
+5 3
+1 2 1 3 0
+5 3
+3 0 0 0 1
+
+
+
+                        Sample Output 1
+                        
+
+
+
+
+
+3 4 2 5 1 
+-1
+
+
+Explanation
+In the first test case, (3,4,2,5,1)(3,4,2,5,1) produces A=[1,2,1,3,0]A=[1,2,1,3,0]. Indeed, there is one element among 4,2,54,2,5 smaller than 33, there are 22 elements among 2,5,12,5,1 smaller than 44, one element among 5,1,35,1,3 smaller than 22, three elements among 1,3,41,3,4 smaller than 55, and no elements among 3,4,23,4,2 smaller than 11.
+It can be shown that array AA from the second test case doesn't correspond to any permutation.
+
+
+
+Author:
+trygub_adm
+
+
+Tester:
+7★tabr
+
+
+Tags:
+
+               
+                 trygub_adm
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2927
+
+
+Date Added:
+28-01-2022
+
+
+Time Limit:
+2 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+CPP17, PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, SQLQ, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

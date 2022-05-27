@@ -1,0 +1,114 @@
+
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Let's call a directed graph egg-free if it is acyclic and for any three pairwise distinct vertices xx, yy and zz, if the graph contains edges x→yx→y and x→zx→z, then it also contains an edge y→zy→z and/or an edge z→yz→y.
+You are given an undirected graph with NN vertices (numbered 11 through NN) and MM edges (numbered 11 through MM). Find a way to assign a direction to each of its edges such that the resulting directed graph is egg-free, or determine that it is impossible. If there are multiple solutions, you may find any one.
+Input
+
+The first line of the input contains a single integer TT denoting the number of test cases. The description of TT test cases follows.
+The first line of each test case contains two space-separated integers NN and MM.
+MM lines follow. For each valid ii, the ii-th of these lines contains two space-separated integers uiui and vivi denoting an edge between vertices uiui and vivi.
+
+Output
+For each test case:
+
+If it is impossible to assign a direction to each edge in such a way that the resulting graph is egg-free, print a single line containing the string "No solution" (without quotes).
+Otherwise, print a single line containing a string with length MM. For each valid ii, the ii-th character of this string should be '^' if you want to direct the ii-th edge from uiui to vivi, or 'v' if you want to direct it from vivi to uiui.
+
+Constraints
+
+1≤T≤51≤T≤5
+1≤N,M≤200,0001≤N,M≤200,000
+1≤ui,vi≤N1≤ui,vi≤N for each valid ii
+ui≠viui≠vi for each valid ii
+each pair of vertices is connected by at most one edge
+
+Subtasks
+Subtask #1 (10 points): N,M≤20N,M≤20
+Subtask #2 (20 points): N,M≤200N,M≤200
+Subtask #3 (70 points): original constraints
+
+                        Sample Input 1
+                        
+
+
+
+
+
+2
+3 3
+1 2
+2 3
+3 1
+7 6
+1 2
+2 3
+3 4
+4 5
+5 6
+6 7
+
+
+
+                        Sample Output 1
+                        
+
+
+
+
+
+^^v
+^^^^^^
+
+
+
+
+
+Author:
+7★gainullinildar
+
+
+Editorial:
+https://discuss.codechef.com/problems/EGGFREE
+
+
+Tags:
+
+               
+                 Chordal Graphs, BFS
+                 
+                     
+                     Data Structures, Graphs, Algorithms, Graph Algos, Traversals
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2693
+
+
+Date Added:
+25-02-2020
+
+
+Time Limit:
+3 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+CPP17, PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

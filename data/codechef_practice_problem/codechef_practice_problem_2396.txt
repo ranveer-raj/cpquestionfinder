@@ -1,0 +1,131 @@
+
+Read problem statements in Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Duck Dodgers is hosting a party to make friends throughout the galaxy. He has already invited NN people (numbered 11 through NN). Initially, none of them are friends with Duck Dodgers, but he plans to become friends with everyone. Each friendship is between two people and bidirectional.
+Among these NN guests, MM friendships have already been made. You are given these MM pairs of people who have become friends, in chronological order. During the party, no more frienships will be made among the guests; each of them can only become friends with Dodgers.
+In order to become friends with everyone, Dodgers follows a specific process.
+
+As long as there is a guest that is not his friend, Dodgers goes to the first such guest (the one with the smallest number; let's name him Brick) and becomes friends with this guest; then, Brick considers all his friends in the order in which he became friends with them, chooses the first (oldest) friend that Dodgers has not become friends with yet (let's name her Savannah) and introduces Dodgers to Savannah.
+Then, Dodgers goes to Savannah, becomes her friend and repeats this ― Savannah introduces Dodgers to her oldest friend which Dodgers has not become friends with, Dodgers becomes friends with this person and so forth, repeating the same step recursively.
+When Dodgers is friends with all of Savannah's friends, he leaves Savannah and goes back to Brick. Brick again considers all his friends in the same order and chooses the next friend that Dodgers has not become friends with until he returned to Brick, introduces Dodgers to this friend, Dodgers becomes friends with this person and repeats the same process as with Savannah.
+This happens with all people Dodgers becomes friends with ― for example, whenever he returns to Savannah, she also chooses her next oldest friend that Dodgers has not become friends with yet (or sends Dodgers back to Brick if there is no such person), introduces Dodgers to this person, Dodgers repeats the same process as with Brick, Savannah and everyone else, and when it's done, returns to Savannah again.
+When Dodgers returns to Brick and Brick finds out that Dodgers is already a friend of all of Brick's friends, Dodgers moves to the guest with the smallest index that has not become his friend yet and continues this process just like with Brick.
+
+When Dodgers knows everyone, he starts playing some games with the guests. For each game, he chooses two integers ll and rr and invites the guests ll through rr (inclusive) to play a game. A guest g1g1 thinks that a game is fair if this guest is invited to play this game and there is no guest g2g2 who satisfies the following conditions:
+
+g2g2 is invited to play this game
+g1g1 and g2g2 are friends
+g2g2 became Dodgers' friend strictly earlier than g1g1 (since Dodgers would support his older friends more)
+
+You should process QQ queries. In each query, you are given the parameters ll and rr of a game, and you should find the number of guests who think it is fair. The queries are encoded so that you have to process them online.
+Input
+
+The first line of the input contains a single integer TT denoting the number of test cases. The description of TT test cases follows.
+The first line of each test case contains four space-separated integers NN, MM, QQ and ss. Here, ss is a parameter which is only used when decoding queries.
+MM lines follow. For each ii (1≤i≤M1≤i≤M), the ii-th of these lines contains two space-separated integers aiai and bibi denoting that the ii-th friendship made before the party was between guests aiai and bibi (friendship 11 is the oldest).
+The next QQ lines describe queries. Each of these lines contains two space-separated integers xx and yy. The parameters ll and rr for this query can be computed as follows:
+Let lastlast be the answer to the previous query, or 00 if this is the first query in this test case.
+Set ll to (x+s⋅last−1)(x+s⋅last−1) modulo N+1N+1.
+Set rr to (y+s⋅last−1)(y+s⋅last−1) modulo N+1N+1.
+If l>rl>r, swap ll and rr.
+
+Output
+For each query, print a single line containing one integer ― the number of guests who think the given game is fair.
+Constraints
+
+1≤N,Q≤1061≤N,Q≤106
+0≤M≤1060≤M≤106
+1≤ai,bi≤N1≤ai,bi≤N for each valid ii
+1≤x,y≤N1≤x,y≤N
+the sum of NN over all test cases does not exceed 106106
+the sum of MM over all test cases does not exceed 106106
+the sum of QQ over all test cases does not exceed 106106
+
+Subtasks
+Subtask 1 (49 points): s=0s=0, i.e. the queries do not have to be processed online
+Subtask 2 (51 points): s=1s=1
+
+                        Sample Input 1
+                        
+
+
+
+
+
+1
+4 3 5 0
+1 2
+1 3
+2 4
+3 4
+1 3
+1 4
+3 2
+3 2
+
+
+
+                        Sample Output 1
+                        
+
+
+
+
+
+2
+1
+1
+2
+2
+
+
+Explanation
+Example case 1: Dodgers first meets and befriends guest 11. Then, guest 11 introduces Dodgers to his oldest friend, which is guest 22. Guest 22 introduces Dodgers to his oldest friend that Dodgers hasn't met yet, which is guest 44. Since Dodgers is already friends with all the friends of guest 44, he goes back to guest 22. Again, all the friends of guest 22 are also Dodgers' friends, so he goes back to guest 11. Then, guest 11 introduces him to guest 33 and Dodgers becomes friends with guest 33. Now, all guests are his friends.
+
+
+
+Author:
+7★kmaaszraa
+
+
+Editorial:
+https://discuss.codechef.com/problems/DODGERS
+
+
+Tags:
+
+               
+                 anand20, data-structure, graphs, kmaaszraa, online-query, persistent-segment-tree, sept19
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2643
+
+
+Date Added:
+15-08-2019
+
+
+Time Limit:
+4 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

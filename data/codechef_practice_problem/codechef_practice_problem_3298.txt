@@ -1,0 +1,157 @@
+
+Read problem statements in Mandarin, Vietnamese, and Russian as well.
+A positive integer N≥1N≥1 is given.
+An NN-uple (x1,x2,…,xN)(x1,x2,…,xN) of nonnegative integers is special if, after we remove all entries which are zero, its entries are nondecreasing. For example (0,2,0,0,4,0,4,5,0,0)(0,2,0,0,4,0,4,5,0,0) is special, but (3,2,0)(3,2,0) and (0,1,3,0,0,1,0)(0,1,3,0,0,1,0) are not.
+One can show that there is a unique function μμ defined on the NN-uples of nonnegative integers such that, for any NN-uple x=(x1,x2,…,xN)x=(x1,x2,…,xN)
+∑y≤xμ(y)={10if x is specialotherwise,∑y≤xμ(y)={1if x is special0otherwise,
+where the sum ranges over all NN-uples y=(y1,y2,…,yN)y=(y1,y2,…,yN) of nonnegative integers such that yi≤xiyi≤xi for all 1≤i≤N1≤i≤N.
+You are given x=(x1,x2,…,xN)x=(x1,x2,…,xN), determine whether μ(x)μ(x) is 00 or not.
+Input Format
+
+The first line will contain TT, the number of test cases. Then the test cases follow.
+The first line of each test case contains one integer NN, the size of the tuple considered.
+The second line of each test case contains NN integers x1,x2,…,xNx1,x2,…,xN, the entries of the given NN-uple.
+
+Output Format
+For each test case, print the string yes if μ(x)=0μ(x)=0 and the string no otherwise. You can print each letter in any case (upper or lower).
+Constraints
+
+1≤T≤200001≤T≤20000
+1≤N≤1000001≤N≤100000
+0≤xi≤1090≤xi≤109
+Sum of NN over all test cases won't exceed 100000100000
+
+
+                        Sample Input 1
+                        
+
+
+
+
+
+12
+1
+0
+1
+1
+1
+10
+2
+0 1
+2
+1 0
+2
+3 2
+2
+3 3
+2
+3 4
+2
+10 43
+5
+2 1 1 4 3
+5
+1 2 2 2 2
+5
+8 6 5 1 8
+
+
+
+                        Sample Output 1
+                        
+
+
+
+
+
+no
+yes
+yes
+yes
+yes
+no
+no
+yes
+yes
+no
+yes
+yes
+
+
+Explanation
+
+Explanation of the test cases 1, 2, 3:
+For N=1N=1, one can prove that μ((0))=1μ((0))=1 and μ((k))=0μ((k))=0 for all k≥1k≥1. 
+
+
+ It holds μ((0))=1≠0μ((0))=1≠0, so the answer to testcase 1 is no. 
+ It holds μ((1))=0μ((1))=0, so the answer to testcase 2 is yes. 
+ It holds μ((10))=0μ((10))=0, so the answer to testcase 3 is yes. 
+
+
+Explanation of testcases 4, 5, 6, 7, 8, 9:
+For N=2N=2, one can prove that μ((0,0))=1μ((0,0))=1, μ((k,k))=1μ((k,k))=1 and μ((k,k−1))=−1μ((k,k−1))=−1 for all k≥2k≥2, and all other values of μμ are 00.
+Let us check that the defining property of μμ holds for x=(2,2)x=(2,2) (notice that xx is special in this case):
+1=∑y≤xμ(y)=μ(0,0)+μ(0,1)+μ(0,2)+μ(1,0)+μ(1,1)+μ(1,2)+μ(2,0)+μ(2,1)+μ(2,2)1=∑y≤xμ(y)=μ(0,0)+μ(0,1)+μ(0,2)+μ(1,0)+μ(1,1)+μ(1,2)+μ(2,0)+μ(2,1)+μ(2,2)
+=1+0+0+0+0+0+0−1+1=1.=1+0+0+0+0+0+0−1+1=1.
+
+
+ It holds μ((0,1))=0μ((0,1))=0, so the answer to testcase 4 is yes. 
+ It holds μ((1,0))=0μ((1,0))=0, so the answer to testcase 5 is yes. 
+ It holds μ((3,2))=−1μ((3,2))=−1, so the answer to testcase 6 is no. 
+ It holds μ((3,3))=1μ((3,3))=1, so the answer to testcase 7 is no. 
+ It holds μ((3,4))=0μ((3,4))=0, so the answer to testcase 8 is yes. 
+ It holds μ((10,43))=0μ((10,43))=0, so the answer to testcase 9 is yes. 
+
+
+
+
+Author:
+7★dario2994
+
+
+Editorial:
+https://discuss.codechef.com/problems/MEGAMU1
+
+
+Tags:
+
+               
+                 Unordered Sets, Mathematics, Dynamic Programming
+                 
+                     
+                     Data Structures, Sets, Algorithms
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+3417
+
+
+Date Added:
+19-11-2021
+
+
+Time Limit:
+1 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+CPP17, PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, SQLQ, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

@@ -1,0 +1,134 @@
+
+Read problem statements in Mandarin, Vietnamese, and Russian as well.
+The tennis tournament you organized has just finished and now you have to decide the ranking of the NN players (indexed by 1,2,…,N1,2,…,N) who participated.
+Each pair of players played exactly one game and for each game you know who won (there are no draws in tennis).
+A ranking is a permutation P1,P2,…,PNP1,P2,…,PN of 1,2,…,N1,2,…,N; where P1P1 represents the winner of the tournament, P2P2 is the second in the ranking, etc.
+A ranking is good if for any 1≤i<j≤min(i+⌈N2⌉,N)1≤i<j≤min(i+⌈N2⌉,N) the player PiPi won against PjPj.
+In other words, a ranking is good if, for any two players whose ranking positions differ by at most ⌈N2⌉⌈N2⌉, the result of their game is consistent with their order in the ranking.
+Find, if it exists, a good ranking.
+Input Format
+
+The first line contains a single integer TT, the number of test cases. Then TT test cases follow.
+The first line of each test case contains one integer NN, the number of participants.
+Then NN lines follow. The ii-th of them contains a string SiSi of length nn whose characters are either 0 or 1. For any 1≤j≤N1≤j≤N with j≠ij≠i, the jj-th character of SiSi is 0 if ii lost against jj and 1 otherwise. It is guaranteed that for any i≠ji≠j the jj-th character of SiSi is different from the ii-th character of SjSj (so that they are consistent). For any 1≤i≤N1≤i≤N, the ii-th character of SiSi is 0 (notice that this character does not correspond to any game in the tournament).
+
+Output Format
+For each test case, print −1−1 if a good ranking does not exist.
+If a good ranking exists, print on a single line the nn integers P1,P2,…,PNP1,P2,…,PN corresponding to a good ranking (P1P1 is the winning player, P2P2 is the runner-up, P3P3 is the third in the ranking, etc.).
+If there is more than one good ranking, print any of them.
+Constraints
+
+1≤T≤10001≤T≤1000
+1≤N≤10001≤N≤1000
+The sum of NN over all test cases does not exceed 10001000.
+
+
+                        Sample Input 1
+                        
+
+
+
+
+
+5
+1
+0
+2
+00
+10
+3
+010
+001
+100
+6
+001001
+101000
+000000
+111011
+111001
+011000
+7
+0101011
+0001100
+1100011
+0010100
+1010011
+0101000
+0101010
+
+
+
+                        Sample Output 1
+                        
+
+
+
+
+
+1 
+2 1 
+-1
+-1
+5 3 1 7 6 2 4 
+
+
+Explanation
+Explanation of the first testcase: There is only one participant and the only possible ranking is good.
+Explanation of the second testcase: There are two participants and the participant 22 won against the participant 11. Thus the ranking 2,12,1 (that is, player 22 wins the tournament) is good.
+Explanation of the third testcase: One may check that there is not a good ranking. Let us explain why some possible rankings are not good:
+
+The ranking P1=1,P2=2,P3=3P1=1,P2=2,P3=3 is not good because for i=1i=1, j=3j=3 (notice that 1≤i<j≤min(N,i+⌈N2⌉)1≤i<j≤min(N,i+⌈N2⌉) since ⌈N2⌉=2⌈N2⌉=2) the result of the game between Pi=1Pi=1 and Pj=3Pj=3 is not consistent with their ranking positions (player 11 lost against player 33 but 11 has a better ranking position).
+The ranking P1=3,P2=2,P3=1P1=3,P2=2,P3=1 is not good because for i=1i=1, j=2j=2 (notice that 1≤i<j≤min(N,i+⌈N2⌉)1≤i<j≤min(N,i+⌈N2⌉) since ⌈N2⌉=2⌈N2⌉=2) the result of the game between Pi=3Pi=3 and Pj=2Pj=2 is not consistent with their ranking positions.
+
+
+
+
+Author:
+7★dario2994
+
+
+Editorial:
+https://discuss.codechef.com/problems/GOODRANKING
+
+
+Tags:
+
+               
+                 ad-hoc, Sorting
+                 
+                     
+                     Algorithms, Constructive
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+3134
+
+
+Date Added:
+19-11-2021
+
+
+Time Limit:
+1 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+CPP17, PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, SQLQ, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

@@ -1,0 +1,188 @@
+
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+This is an interactive problem.
+SnackDown 2099 will take part in the ChefLand International Office (CIO). Ada is in charge of preparation of the coding environment.
+Ada prepared NN computer terminals (numbered 11 through NN) interconnected by MM bidirectional networking cables (numbered 11 through MM). Each of the cables connects two different terminals and no two different cables connect the same pair of terminals. Let's denote a cable between terminals uu and vv by (u,v)(u,v). At the contest site, there should be some guards that make sure everything runs smoothly. During the competition, each terminal is assigned either to a contestant or to a guard; note that the number of contestants is not fixed yet.
+Ada assigns a stability to each terminal. Let's denote the stability of terminal ii by SiSi. Also, let's denote the cost of removing cable ii by WiWi.
+Since there are many cables, the room is messy, so Ada decided to remove some of the cables (possibly none or all of them) one by one. However, after removing any cable, the stability of some terminal or the cost of removing some cable might change.
+Ada thinks that it is dangerous to have cables directly connect terminals assigned to contestants (they could try to team up and share solutions!). To measure the danger of such a situation, she defined DCDC as the sum of Su⋅SvSu⋅Sv over all remaining cables (u,v)(u,v) such that the terminals uu and vv are both assigned to contestants.
+Similarly, Ada thinks that it is dangerous to have cables directly connect terminals assigned to guards (they could start chatting and get distracted!). To measure the danger of this situation, she defined DGDG similarly to DCDC, as the sum of Su⋅SvSu⋅Sv over all remaining cables (u,v)(u,v) such that the terminals uu and vv are both assigned to guards.
+Let's denote the total cost of removing cables (sum of costs for all removed cables when they were removed) by XX. Ada wants to minimise X+DC+DGX+DC+DG. Help her prepare the coding environment! Specifically, choose some cables to remove and then assign the terminals to contestants or guards in such a way that X+DC+DGX+DC+DG is as small as possible.
+Interaction
+
+First, you should read 3+M3+M lines describing the original network configuration.
+The first of these lines contains two space-separated integers NN and MM.
+The second line contains NN space-separated integers S1,S2,…,SNS1,S2,…,SN denoting the initial stabilities of the terminals.
+The third line contains MM space-separated integers W1,W2,…,WMW1,W2,…,WM denoting the initial costs of removing cables.
+Each of the next MM lines contains two space-separated integers uu and vv denoting that terminals uu and vv are connected by a networking cable.
+Then, you should remove cables.
+To remove a cable, you should print a line containing a single integer ww (1≤w≤M1≤w≤M) denoting the number of the cable you want to remove. You must not attempt to remove the same cable twice.
+Then, you should read a line describing any changes in the stabilities or costs after this cable is removed, in one of the following formats:
+0 i x (1≤i≤N1≤i≤N) denoting that the new value of SiSi is xx
+1 i y (1≤i≤M1≤i≤M) denoting that the new value of WiWi is yy
+2 denoting that the stabilities and costs did not change
+When you do not want to remove any more cables, you must print a line containing the integer −1−1.
+Finally, you must print a line containing a single string with length NN. For each valid ii, the ii-th character of this string should be 'C' if the ii-th terminal is assigned to a contestant or 'G' if it is assigned to a guard.
+
+If your output is invalid or you attempt to remove a cable multiple times, you will receive the Wrong Answer verdict. Don't forget to flush the output after printing each line!
+Constraints
+
+1≤N≤291≤N≤29
+0≤M≤N(N−1)/20≤M≤N(N−1)/2
+1≤u,v≤N1≤u,v≤N
+1≤Si≤2101≤Si≤210 for each valid ii
+1≤Wi≤2171≤Wi≤217 for each valid ii
+1≤x≤2101≤x≤210
+1≤y≤2171≤y≤217
+
+Example
+Grader            You
+4 6
+1 2 3 4
+1 2 3 4 5 6
+1 2
+2 3
+3 4
+4 1
+2 4
+1 3
+                  3
+0 1 2
+                  4
+1 2 3
+                  -1
+                  CCGG
+
+Explanation
+
+Scoring
+The score of each test case (and therefore each test file) is X+DC+DGX+DC+DG. The score of a submission is the sum of scores of all test files. Your goal is to minimise the score of your submission.
+There are twenty test files. During the contest, the displayed score will account for exactly four test files, i.e. your score reflects your submission's performance on 20% (4/20) of the test files. However, if your program gets a non-AC verdict on any test file, your submission's verdict will be non-AC. In other words, an AC verdict denotes that your program runs successfully on all the test files. After the end of the contest, your score will be changed to include the sum of your program's scores over the other sixteen test files.
+Test generation
+The grader is given probabilities pvpv, pwpw, and three numbers MXSMXS, MNWMNW and MXWMXW.
+For all test cases, N=512N=512 and MXS=1024MXS=1024. There are three types of networks:
+
+Complete: There is a cable between each pair of terminals.
+Hamiltonian: There is a sequence of terminals a1,a2,…,aNa1,a2,…,aN such that there is a cable between terminals aiai and ai+1ai+1 for each valid ii and a cable between terminals aNaN and a1a1. The number of cables in this network is approximately N(N−1)/5N(N−1)/5.
+Special networks.
+
+The stabilities are generated uniformly randomly between 11 and MXSMXS inclusive and the removal costs are generated uniformly randomly between MNWMNW and MXWMXW inclusive.
+Whenever you remove a cable, the grader decides to modify the stability of some terminal with probability pvpv, the cost of removing some cable with probability pwpw, or to do nothing (with probability 1−pv−pw1−pv−pw). The stabilities and removal costs are changed using one of the following strategies:
+
+Pure Random:
+Stabilities: Choose a terminal uniformly randomly and change its stability to a random integer between 11 and MXSMXS.
+Removal costs: Uniformly randomly choose a cable that has not been removed yet and change its removal cost to a random integer between 11 and MXWMXW.
+Shrink:
+Stabilities: Choose a terminal uniformly randomly and change its stability to a random number between 11 and MXSMXS.
+Removal costs: Let c0,c1,…,cm−1c0,c1,…,cm−1 be the cables that are still in the network, sorted first by their current removal costs and then by their indices. Generate a uniformly random number dd between 00 and 9999 inclusive and choose a cable crcr uniformly randomly. Let XX be the current cost of removing crcr.
+If 2⋅r≤m2⋅r≤m, then the new cost of removing cable crcr will be min(X+d,MXW)min(X+d,MXW).
+Otherwise, the new cost of removing this cable will be max(X−d,1)max(X−d,1).
+Adaptative:
+Let rr be the index of the cable you just decided to remove.
+Stabilities: Choose one of the terminals connected by rr uniformly randomly. Let XX denote the current stability of that terminal. Generate a uniformly random number dd between 00 and 1919.
+With probability 0.30.3, the new stability of this terminal will be min(X+d,MXS)min(X+d,MXS).
+With probability 0.70.7, the new stability of this terminal will be max(X−d,1)max(X−d,1).
+Removal costs: Let cc be the smallest index of a cable such that it has not been removed yet and its removal cost is greater or equal to the cost of removing cable rr. If no such cable exists, then cc is the largest index of a cable with maximum removal cost (that has not been removed yet). Change the removal cost of cable cc to a uniformly random integer between 11 and MXWMXW.
+
+
+
+Network type
+p_v
+p_w
+MN_W
+MX_W
+
+
+Complete
+0.05
+0.05
+1
+217
+
+Complete
+0.4
+0.4
+1
+217
+
+
+Complete
+0.05
+0.05
+216
+216 + 100
+
+
+Hamiltonian
+0.05
+0.05
+1
+217
+
+Hamiltonian
+0.4
+0.4
+1
+217
+
+
+Special
+0.05
+0.05
+1
+217
+
+
+Special
+0.4
+0.4
+216
+216 + 100
+
+
+For each strategy and each row of this table (except the third strategy for row 7), there is a test file with the given parameters from the table and this strategy.
+
+
+
+Author:
+7★alei
+
+
+Tags:
+
+               
+                 alei
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+3620
+
+
+Date Added:
+24-05-2019
+
+
+Time Limit:
+4 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SCM guile, PERL6, ERL, CLPS, PRLG, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

@@ -1,0 +1,102 @@
+
+ Read problems statements in Mandarin Chinese, Russian and Vietnamese as well.
+As you know Chef likes problems which involving into newest data structures. Today he has troubes in solving tricky problem. You have array A consisting of N integers and Q queries to it. Queries are next:
+- L R K, how many values in segment A[L..R] have frequency not more than K.
+Input
+The first line of input contains T - number of test cases. T test cases follow.
+For each test case, first line contains an integer N - number of elements in array, and integer Q - number of queries to it.
+Second line contains N positive integer numbers - elements of array A. Each of next Q lines containing three integers L, R, K.
+Output
+For each query output answer for it in separate line.
+Constraints
+
+1 ≤ T, N, Q, sum over all values of N in the input, sum over all values of Q in the input ≤ 200,000
+1 ≤ Ai ≤ 109
+1 ≤ L ≤ R ≤ N
+1 ≤ K ≤ N
+
+
+                        Sample Input 1
+                        
+
+
+
+
+
+1
+5 3
+1 2 3 2 1
+2 4 2
+1 5 1
+1 5 2
+
+
+
+                        Sample Output 1
+                        
+
+
+
+
+
+2
+1
+3
+
+
+
+
+
+Author:
+6★mgch
+
+
+Tester:
+5★tuananh93
+
+
+Editorial:
+https://discuss.codechef.com/problems/CHEFNUMK
+
+
+Tags:
+
+               
+                 Frequency Arrays, Mo's Algorithm
+                 
+                     
+                     Data Structures, Arrays, Advanced Algorithms, Pre processing
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2764
+
+
+Date Added:
+9-12-2016
+
+
+Time Limit:
+1.5 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, PERL, SCALA, LUA, BASH, JS, LISP sbcl, PAS gpc, BF, CLOJ, D, CAML, FORT, ASM, FS, WSPC, LISP clisp, SCM guile, PERL6, ERL, CLPS, PRLG, ICK, NICE, ICON, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

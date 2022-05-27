@@ -1,0 +1,109 @@
+
+Salmon is playing a game!
+He is given two integers NN and KK. His goal is to output KK pairs (xi,yi)(xi,yi). He creates a function ff such that f(xi)=yif(xi)=yi and ff is undefined for all other values of xx. His pairs must then meet the following conditions:
+
+All xixi are distinct.
+All yiyi are distinct.
+All xi,yixi,yi are in the range [0,2N−1][0,2N−1] and are integers.
+f(f(xi))f(f(xi)) is defined for all ii.
+Let H(x)H(x) be the number of set bits in the binary representation of xx. Then, H(xi)≠H(f(f(xi)))H(xi)≠H(f(f(xi))) for all ii.
+
+Unfortunately, Salmon is unable to solve this. Help Salmon win the game!
+ If there are multiple correct solutions, you may output any one of them. It can be proven that a solution exists for all NN and KK that meet constraints.
+Input
+
+The first line input contains a single integer TT denoting the number of testcases
+Each of the next TT lines contains two space-separated integers NN and KK respectively.
+
+Output
+
+Output KK lines for each testcase.
+The ii-th line of a testcase should contain two space-separated integers: xixi and yiyi, following the given constraints.
+
+Constraints
+
+1≤T≤2151≤T≤215
+3≤N≤183≤N≤18 
+3≤K≤2N3≤K≤2N 
+The sum of 2N2N over all testcases doesn't exceed 218218
+
+Subtasks
+
+Subtask 1 [20 points]: K≤8K≤8
+Subtask 2 [40 points]: K=2NK=2N
+Subtask 3 [40 points]: No additional constraints.
+
+Sample Input
+2
+3 7
+4 6
+
+Sample Output
+5 3
+1 7
+0 4
+2 5
+3 1
+4 2 
+7 0
+1 10
+10 14
+15 1
+14 13
+5 15
+13 5
+
+Explanation
+In the answer to the first testcase, there are 7 pairs. xixi and yiyi are all in the range [0,23−1][0,23−1], which is the range [0,7][0,7]. All values of xixi are distinct, and all values of yiyi are distinct. However, note that some integers appear in both lists. For example, 5 appears both as x1x1 and as y4y4. This is allowed. For all xixi, f(f(xi))f(f(xi)) is defined and H(f(f(xi)))≠H(xi)H(f(f(xi)))≠H(xi). For example, f(f(7))=4f(f(7))=4. H(7)=3H(7)=3, but H(4)=1H(4)=1. Therefore, H(f(f(7)))≠H(7)H(f(f(7)))≠H(7), as desired.
+
+
+
+Author:
+astoria
+
+
+Editorial:
+https://discuss.codechef.com/problems/UWCOI21F
+
+
+Tags:
+
+               
+                 Case work, Bit Manipulation
+                 
+                     
+                     Special, Mathematics
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2700
+
+
+Date Added:
+18-12-2020
+
+
+Time Limit:
+1 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+CPP17, PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, SQLQ, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

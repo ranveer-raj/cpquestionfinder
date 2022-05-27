@@ -1,0 +1,109 @@
+
+Read problems statements in Mandarin Chinese, Russian, and Bengali as well.
+This is an Interactive Problem.
+Chef found a dirty-looking square plate in his kitchen. Obviously, it is full of germs. Specifically, there are NN germs lying in the whole plate. The plate has dimensions M×MM×M and can be imagined as a 2-dimensional square space bounded by the lines X=0X=0, Y=0Y=0, X=MX=M and Y=MY=M. Chef knows that each germ lies at a point with integer coordinates within this plate and no two germs lie at the same point. But he doesn't know the exact location of the germs. Each germ has a unique integer ID between 11 and NN.
+Chef wants to sanitize this plate, i.e., make it germ-free. But because of low budget, he can afford only NN ml of sanitizer. Each germ requires 11 ml of sanitizer to be killed. So, he needs to be careful not to waste even a single drop of it!
+Luckily, he also has a germ sensor with him which works as follows −−
+It send a laser beam of light along a straight line A⋅x+B⋅y=CA⋅x+B⋅y=C and returns two things:
+
+The ID of the germ having the shortest perpendicular distance to this line. If there are multiple such germs, any of them may be chosen.
+The distance of this germ from the line.  
+
+But again, because of low budget, he is using a cheap model which can be used at most 2N2N times.
+Help him kill all the germs. You can use the sensor or apply sanitizer in an arbitrary order. Note that the sensor does not sense killed germs.
+Interaction:
+
+The first line of input contains an integer TT - the number of test cases.
+For each test case, first read a single line containing two integers NN and MM - the number of germs and the size of the plate.
+Then you may ask queries in the following format −−
+To use the sensor, print a single line containing 44 space separated integers 11, AA, BB, CC satisfying the constraints −128≤A,B≤128−128≤A,B≤128 and −109≤C≤109−109≤C≤109 where A⋅x+B⋅y=CA⋅x+B⋅y=C is the line you wish to query. If you ask an invalid query or exceed 2N2N queries of this type, the grader returns −1−1. Otherwise, the grader returns two space separated integers UU and DD, where UU is the ID of the germ closest to this line and DD is the perpendicular distance of the germ from the line multiplied by A2+B2‾‾‾‾‾‾‾‾√A2+B2. It can be shown that DD will always be an integer under the given constraints and scaling factor.
+To apply 11 ml of sanitizer at the point (X,Y)(X,Y), print a single line containing 33 space separated integers 22, XX, YY satisfying the constraints 0≤X,Y≤M0≤X,Y≤M. If there is any germ present at this point, it will be killed. Then the grader returns a single integer VV. If you ask an invalid query or exceed NN queries of this type, V=−1V=−1. Otherwise, if all the germs are killed after this query then V=1V=1 else V=0V=0. As soon as you receive 11, the test case ends and you should continue solving the remaining test cases.
+If you receive −1−1 from the grader, terminate the program immediately to receive the Wrong Answer verdict otherwise you may receive any verdict.
+
+Don't forget to flush your output after printing each line!
+Constraints:
+
+1≤T≤10241≤T≤1024
+​1≤M≤1091≤M≤109
+1≤N≤40961≤N≤4096
+All germs lie at points with integer coordinates within the plate.
+No two germs lie at the same point.
+No two germs have the same ID.
+ID of each germ lies between 11 and NN inclusive.
+The sum of NN over all test cases does not exceed 40964096.
+
+Example:
+You          Grader
+
+             1
+             2 10
+1 1 1 2
+             1 4
+1 -1 2 -5
+             2 3
+2 1 5
+             0
+1 3 0 1
+             2 23
+2 8 0
+             1
+
+Explanation:
+There are 22 germs lying on a 10×1010×10 plate. The germs lie on the points (1,5)(1,5) and (8,0)(8,0) and have IDs 11 and 22, respectively.
+The first query is a sensor query with the line x+y=2x+y=2. The perpendicular distance of the first germ from this line is 22‾√22 units and the distance of the second germ is 32‾√32 units. Since the first germ is closer, U=1U=1 and D=22‾√×12+12‾‾‾‾‾‾‾√=4D=22×12+12=4 is returned.
+The second query is a sensor query with the line −x+2y=−5−x+2y=−5. The perpendicular distance of the first germ from this line is 145√51455 units and the distance of the second germ is 35√5355 units. Since the second germ is closer, U=2U=2 and D=35√5×(−1)2+22‾‾‾‾‾‾‾‾‾‾√=3D=355×(−1)2+22=3 is returned.
+The third query is applying sanitizer at the point (1,5)(1,5). The first germ lies at this point and is killed. Since, there is still 11 germ alive, V=0V=0 is returned.
+The fourth query is a sensor query with the line 3x=13x=1. The only germ alive is the second germ which is at a distance of 233233 units from this line. So, U=2U=2 and D=233×32+02‾‾‾‾‾‾‾√=23D=233×32+02=23 is returned.
+The fifth query is applying sanitizer at the point (8,0)(8,0). The second germ lies at this point and is killed. Since, all germs are killed, V=1V=1 is returned.
+
+
+
+Author:
+6★jay_1048576
+
+
+Editorial:
+https://discuss.codechef.com/problems/SANITIZE
+
+
+Tags:
+
+               
+                 Interactive Problems, Basic Maths, Geometry, Lines
+                 
+                     
+                     Special, Advanced Algorithms, Mathematics, Computational Geometry
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+3491
+
+
+Date Added:
+8-04-2021
+
+
+Time Limit:
+1 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+CPP17, PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, SQLQ, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

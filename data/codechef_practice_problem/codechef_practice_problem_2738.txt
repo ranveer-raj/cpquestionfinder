@@ -1,0 +1,72 @@
+
+Read problems statements Hindi , Vietnamese , Mandarin Chinese , Russian and Bengali as well.
+When Chef was cooking donuts, thunder suddenly came across the gray-blue sky. That's how Lemon came to Earth, and that's also why she loves DONUTS! Since Lemon is a clever person, she often thinks about some problem before having donuts. This time, she thought about the following problem:
+There are NN donuts. Each donut is a torus described by parameters xx, yy, zz, RR, rr, where the center of the torus has Cartesian coordinates (x,y,z)(x,y,z), RR is the distance from the center of the torus to the center of its tube and rr is the radius of the tube. The rotational axis of each torus is parallel with the zz-axis.
+The tori may touch or intersect each other. What is the total volume they take up, i.e. the volume of the union of all NN tori?
+Input
+
+The first line of the input contains a single integer NN.
+Each of the following NN lines contains five space-separated real numbers xx, yy, zz, RR and rr describing one torus.
+
+Output
+
+Print a single line containing one real number — the total volume of the NN tori. Your answer will be considered correct if its absolute error does not exceed 10−210−2.
+
+Constraints
+
+1≤N≤201≤N≤20
+−900≤x,y,z≤600−900≤x,y,z≤600
+0.1≤r≤R≤500.1≤r≤R≤50
+
+Example Input
+1
+0 0 0 5 2
+
+Example Output
+394.78417590
+
+
+
+
+Author:
+5★dolabmoon
+
+
+Tags:
+
+               
+                 dolabmoon
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2849
+
+
+Date Added:
+24-07-2018
+
+
+Time Limit:
+4 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SCM guile, PERL6, ERL, CLPS, PRLG, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

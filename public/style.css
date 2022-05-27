@@ -1,0 +1,104 @@
+*
+{
+        /* margin: 0;
+        padding: 0; */
+}
+body
+{
+        /* background-image: url('image1.jpg');
+        background-repeat: repeat-y;
+        background-size: 100vw 100vh; */
+        padding-top: 20px;
+        background-color: black;
+}
+body con
+{
+        text-align: center;
+}
+body con dt
+{
+        text-align: center;
+}
+
+nav header ul li
+{
+        display: inline-block;
+}
+nav header ul li a
+{
+        text-decoration: none;
+        height: 50px;
+        width: 20vw;
+        color: cyan;
+        margin: 10px;
+        padding: 2px;
+        border: 3px solid darkgreen;
+        border-radius: 12px;
+        align-items: center;
+        font-size: 20px;
+
+}
+#heading
+{
+        color: cyan;
+        margin-top: 10vh;
+        margin-bottom: 30vh;
+        font-size: 4vw;
+}
+#input1
+{
+        display: inline-block;
+        background-color: white;
+        height: 50px;
+        width: 25vw;
+        color: blue;
+        margin: 10px;
+        padding: 2px;
+        border: 3px solid darkgreen;
+        border-radius: 12px;
+        align-items: center;
+        font-size: 20px;
+}
+#btn
+{
+        display: inline-block;
+        background-color: blue;
+        height: 60px;
+        width: 10vw;
+        color: rgb(128,128,128);
+        margin: 10px;
+        padding: 2px;
+        border: 3px solid darkgreen;
+        border-radius: 12px;
+        align-items: center;
+        font-size: 20px;
+}
+
+.title
+{
+    color: blue;
+    text-align: centre;
+}
+.url
+{
+    color: red;
+    text-align: centre;
+}
+
+.body
+{
+    display: inline-block;
+    color: rgb(102,153,204);
+    /* color: brown; */
+    text-align: justify;
+}
+footer
+{
+        position: fixed;
+        left: 10px;
+        bottom: 10px;
+        /* width: 100%; */
+        /* background-color: red; */
+        color: cyan;
+        text-align: left;
+}

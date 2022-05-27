@@ -1,0 +1,133 @@
+
+Read problem statements in Bengali, Russian, Mandarin and Vietnamese as well.
+Hulk has a set of distinct points PP in the 2D plane. His signature move is HulkHulk SmashSmash. He performed HulkHulk SmashSmash on the set PP which caused the points to change, and so he obtained a new set of points P′P′.
+More formally, HulkHulk SmashSmash makes the new set P′P′ in the following way:
+
+Initially, let P′P′ be empty.
+For every PiPi and PjPj such that 1≤i<j≤N1≤i<j≤N , add the mid point of PiPi and PjPj to the set P′P′ (only if it didn't exist in it already).
+
+So, P′P′ is the set of midpoints of line segments connecting pairs of distinct points of PP.
+Note that points from PP do not necessarily have to be in P′P′. See the samples below for a graphical example.
+Find the number of points of P′P′ which lie on the convex hull of P′P′. A point is said to lie on the convex hull if the shape of the convex hull is changed when this point is removed.
+Input Format
+
+The first line contains a single integer TT, denoting the number of test cases. The description of TT test cases follows.
+The first line of each test case contains a single integer NN, denoting the size of PP.
+The next NN lines contain two space-separated integers each, where the ii-th line contains Pi.x,Pi.yPi.x,Pi.y denoting the x-coordinate and y-coordinate of the ii-th point. 
+
+Output Format
+For each test case, print a single line containing one integer - the number of points of P′P′ which lie on its convex hull.
+Constraints
+
+1≤T≤201≤T≤20
+3≤N≤2⋅1053≤N≤2⋅105
+−5⋅108≤Pi.x,Pi.y≤5⋅108−5⋅108≤Pi.x,Pi.y≤5⋅108
+The convex hull of the input set PP has positive area
+Sum of NN over all tests cases does not exceed 2⋅1052⋅105
+
+Subtasks
+Subtask 1 (20 points):
+
+Sum of NN over all test cases does not exceed 103103
+
+Subtask 2 (80 points):
+
+Original constraints
+
+
+                        Sample Input 1
+                        
+
+
+
+
+
+2
+7
+1 7
+-6 -5
+1 -6
+-6 7
+-4 3
+-2 6
+-3 -6
+4
+1 8
+1 4
+1 0
+5 4
+
+
+
+                        Sample Output 1
+                        
+
+
+
+
+
+8
+4
+
+
+Explanation
+
+In the below images, the set of points PP is denoted by the color pink, the set of points P′P′ is denoted by the color green. The blue point is the origin.
+The below image represents the first test case
+
+The below image represents the second test case
+
+
+Note that by our definition, points (1,4)(1,4) and (3,4)(3,4) are not considered to lie on the convex hull of P′P′, because removing one of them does not change the shape of the hull.
+
+
+
+Author:
+6★dragonado
+
+
+Editorial:
+https://discuss.codechef.com/problems/CONHULK
+
+
+Tags:
+
+               
+                 Sets, Convex Hull, Sorting, Binary Search
+                 
+                     
+                     Data Structures, Advanced Algorithms, Computational Geometry, Polygons, Algorithms, Searching
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2938
+
+
+Date Added:
+5-11-2021
+
+
+Time Limit:
+1 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+CPP17, PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, SQLQ, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

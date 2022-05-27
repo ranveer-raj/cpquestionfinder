@@ -1,0 +1,100 @@
+
+Cherry has a matrix AA consisting of NN rows and MM columns, filled with lowercase English letters.
+You are asked QQ queries. Each query is provided by four integers x1x1, y1y1, x2x2, y2y2 which define the rectangle, where (x1x1, y1y1) stands for the coordinates of the top left cell of the rectangle, while (x2x2, y2y2) stands for the coordinates of the bottom right cell. The answer to the query is the size of the maximum square, that is located fully inside the query rectangle such that :
+
+The characters of each row should be in non-decreasing order.
+The characters of each column should be in non-decreasing order.
+
+Note: x1x1 represents the row number while y1y1 represents the column number.
+Input:
+
+The first line of the input contains two integers NN and MM — the number of rows and the number of columns in the matrix.
+Each of the next NN lines contains a string of MM lowercase English letters denoting one row of the matrix.
+Next line contains an integer QQ — the number of queries.
+Then follow QQ lines with queries descriptions. Each of them contains four integers x1x1, y1y1, x2x2, y2y2 — coordinates of the up left and bottom right cells of the query rectangle.
+
+Output:
+Print QQ  lines. The ii-th of them should contain the maximum size of the square for the ii-th query.
+Constraints
+
+1≤N,M≤5001≤N,M≤500
+1≤Q≤1051≤Q≤105
+1≤x1≤x2≤N1≤x1≤x2≤N
+1≤y1≤y2≤M1≤y1≤y2≤M
+
+Sample Input:
+4 4
+aaaa
+bbaa
+cdef
+wxyz
+3
+1 1 4 4
+1 2 2 3
+3 1 4 4
+
+Sample Output:
+2
+1
+2
+
+Explanation:
+Example Case 1:
+Query 1: The maximum size square that lies inside the query rectangle is 2. One of the such squares is: 
+[aabb][aabb]
+Query 2: The maximum size square that lies inside the query rectangle is 1. One of the such square is:
+[a][a]
+Query 3: The maximum size square that lies inside the query rectangle is 2. One of the such square is:
+[dexy][dexy]
+
+
+
+Author:
+5★cherry0697
+
+
+Editorial:
+https://discuss.codechef.com/problems/CENS20B
+
+
+Tags:
+
+               
+                 Sparse Table, Dynamic Programming, Binary Search
+                 
+                     
+                     Advanced Data Structures, Algorithms, Searching
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+3215
+
+
+Date Added:
+13-07-2020
+
+
+Time Limit:
+1 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+CPP17, PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, SQLQ, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

@@ -1,0 +1,118 @@
+
+Read problems statements in Hindi, Spanish, Mandarin chinese, Russian, Vietnamese and Bengali as well.
+Ada is one of the best hairdressers in ChefLand. She invented a very cool hair style and named it "power tree".
+A power tree with degree ll — let's denote it by PT(l)PT(l) — is a directed graph, which can be constructed recursively as follows:
+
+PT(0)PT(0) consists of a single node.
+For l>0l>0:
+Create one node uu — the root of power tree PT(l)PT(l).
+Construct all power trees with smaller degrees, i.e. PT(0),PT(1),…,PT(l−1)PT(0),PT(1),…,PT(l−1).
+For each of the tree created in the previous step, add a directed edge from uu to its root.
+
+Today, Ada is going to cut the hair of some customers. Of course, all of them want to have a power tree hair style!
+A customer's uncut hair is represented by a directed graph with NN vertices (numbered 11 through NN) and exactly one edge between each pair of vertices. Ada should remove some edges (possibly none) from this graph in such a way that the resulting graph is a power tree. Note that she is not allowed to remove vertices!
+Can you help Ada find the edges she should remove?
+Input
+
+The first line of the input contains a single integer TT denoting the number of test cases. The description of TT test cases follows.
+The first line of each test case contains a single integer NN.
+Each of the next (N2)(N2) lines contains two space-separated integers uu and vv describing a directed edge from vertex uu to vertex vv. The edges are numbered 11 through (N2)(N2) in this order.
+
+Output
+For each test case:
+
+If it is impossible to create a power tree, print a single line containing one integer −1−1.
+Otherwise, print two lines. The first of these lines should contain a single integer ee denoting the number of edges to remove. The second line should contain ee space-separated integers denoting the numbers of the edges to remove.
+
+If there are multiple answers, you may print any one.
+Constraints
+
+1≤T≤1281≤T≤128
+2≤N≤2562≤N≤256
+1≤u,v≤N1≤u,v≤N
+there is exactly one edge between each pair of vertices
+
+
+                        Sample Input 1
+                        
+
+
+
+
+
+1
+4
+1 4
+2 1
+2 4
+3 1
+3 2
+3 4
+
+
+
+                        Sample Output 1
+                        
+
+
+
+
+
+3
+1 3 4
+
+
+Explanation
+Example case 1: Ada should remove edges (1,4)(1,4), (2,4)(2,4) and (3,1)(3,1). The resulting graph is a power tree with degree l=2l=2.
+
+
+
+Author:
+7★alei
+
+
+Editorial:
+https://discuss.codechef.com/problems/PWRTREE
+
+
+Tags:
+
+               
+                 Tree Algos, Constructive
+                 
+                     
+                     Algorithms, Graph Algos
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2955
+
+
+Date Added:
+1-09-2018
+
+
+Time Limit:
+1 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SCM guile, PERL6, ERL, CLPS, PRLG, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

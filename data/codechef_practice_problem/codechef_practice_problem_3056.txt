@@ -1,0 +1,99 @@
+
+Read problem statements in Vietnamese,
+Bengali, Mandarin Chinese, and Russian as well. 
+Find KK distinct numbers in the range [1,N][1,N] such that the bitwise XOR of all the numbers is maximized. Print any set of these numbers that maximize the XOR.
+Input
+
+The first line contains an integer TT, the number of test cases. Then the test cases follow. 
+Each test case contains a single line of input, two integers NN, KK. 
+
+Output
+For each test case, output KK distinct integers in any order as described in the problem.
+Constraints
+
+1≤T≤1041≤T≤104
+1≤K≤N≤1061≤K≤N≤106
+The sum of NN over all queries is at most 4⋅1064⋅106.
+The sum of KK over all queries is at most 2⋅1062⋅106.
+
+Subtasks
+Subtask #1 (5 points):
+
+1≤T≤501≤T≤50
+1≤K≤N≤201≤K≤N≤20
+
+Subtask #2 (20 points):
+
+1≤T≤501≤T≤50
+1≤K≤N≤2001≤K≤N≤200
+The sum of NN over all queries is at most 800800.
+The sum of KK over all queries is at most 400400.
+
+Subtask #3 (75 points): original constraints
+Sample Input
+3
+10 1
+9 2
+8 7
+
+Sample Output
+10
+7 8
+1 2 3 4 5 6 8
+
+Explanation
+Test Case 11: The only possible set is {10}{10} which gives the value 1010.
+Test Case 22: The other possible set is {9,6}{9,6} which gives the value 9⊕6=15=7⊕89⊕6=15=7⊕8.
+Test Case 33: The only possible set is {1,2,3,4,5,6,8}{1,2,3,4,5,6,8} which gives the value 1⊕2⊕3⊕4⊕5⊕6⊕8=151⊕2⊕3⊕4⊕5⊕6⊕8=15.
+
+
+
+Author:
+daanish_adm
+
+
+Editorial:
+https://discuss.codechef.com/problems/OPTSET
+
+
+Tags:
+
+               
+                 Case work, Bitwise Operation
+                 
+                     
+                     Special, Mathematics, Bit Manipulation
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+3036
+
+
+Date Added:
+3-06-2021
+
+
+Time Limit:
+0.5 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+CPP17, PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, SQLQ, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

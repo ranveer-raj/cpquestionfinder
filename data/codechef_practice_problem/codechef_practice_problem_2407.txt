@@ -1,0 +1,109 @@
+
+Given two arrays AA and BB each of length NN.
+Find the value ∑Ni=1∑Nj=1max(Ai⊕Bj,Ai&Bj)∑i=1N∑j=1Nmax(Ai⊕Bj,Ai&Bj).
+Here ⊕⊕ and && denote the bitwise XOR operation and bitwise AND operation respectively.
+Input Format
+
+The first line of input contains a single integer TT - the number of test cases. The description of TT test cases follows.
+The first line of each test case contains an integer NN - the length of arrays AA and BB.
+The second line of each test case contains NN space-separated integers A1,A2,…,ANA1,A2,…,AN representing the array AA.
+The third line of each test case contains NN space-separated integers B1,B2,…,BNB1,B2,…,BN representing the array BB.
+
+Output Format
+For each test case, output the value ∑Ni=1∑Nj=1max(Ai⊕Bj,Ai&Bj)∑i=1N∑j=1Nmax(Ai⊕Bj,Ai&Bj).
+Constraints
+
+1≤T≤1051≤T≤105
+1≤N≤1051≤N≤105
+0≤Ai,Bi<2200≤Ai,Bi<220
+Sum of NN does not exceed 2⋅1052⋅105 over all test cases.
+
+
+                        Sample Input 1
+                        
+
+
+
+
+
+3
+2
+3 4
+1 2
+1
+0
+0
+3
+2 4 3
+1 2 1
+
+
+
+                        Sample Output 1
+                        
+
+
+
+
+
+15
+0
+30
+
+
+Explanation
+
+Test Case 11: For the given arrays, the value is: max(3⊕1,3&1)+max(3⊕2,3&2)+max(4⊕1,4&1)+max(4⊕2,4&2)=2+2+5+6=15max(3⊕1,3&1)+max(3⊕2,3&2)+max(4⊕1,4&1)+max(4⊕2,4&2)=2+2+5+6=15.
+Test Case 22: For the given arrays, the value is: max(0⊕0,0&0)=0max(0⊕0,0&0)=0.
+Test Case 33: For the given arrays, the value is: max(2⊕1,2&1)+max(2⊕2,2&2)+max(2⊕1,2&1)+max(4⊕1,4&1)+max(4⊕2,4&2)+max(4⊕1,4&1)+max(3⊕1,3&1)+max(3⊕2,3&2)+max(3⊕1,3&1)max(2⊕1,2&1)+max(2⊕2,2&2)+max(2⊕1,2&1)+max(4⊕1,4&1)+max(4⊕2,4&2)+max(4⊕1,4&1)+max(3⊕1,3&1)+max(3⊕2,3&2)+max(3⊕1,3&1)
+=3+2+3+5+6+5+2+2+2=30=3+2+3+5+6+5+2+2+2=30.
+
+
+
+
+Author:
+7★d_en_ominator
+
+
+Editorial:
+https://discuss.codechef.com/problems/MAXBITSUM
+
+
+Tags:
+
+               
+                 bit-manipulation, d_en_ominator, easy-medium, start33
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2654
+
+
+Date Added:
+27-02-2022
+
+
+Time Limit:
+1 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+CPP17, PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, SQLQ, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

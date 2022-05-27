@@ -1,0 +1,147 @@
+
+Read problems statements in Vietnamese, Mandarin Chinese
+and Bengali as well.
+There are NN cats (numbered 11 through NN) and MM rats (numbered 11 through MM) on a line. Each cat and each rat wants to move from some point to some (possibly the same) point on this line. Naturally, the cats also want to eat the rats when they get a chance. Both the cats and the rats can only move with constant speed 11.
+For each valid ii, the ii-th cat is initially sleeping at a point aiai. At a time sisi, this cat wakes up and starts moving to a final point bibi with constant velocity and without any detours (so it arrives at this point at the time ei=si+|ai−bi|ei=si+|ai−bi|). After it arrives at the point bibi, it falls asleep again.
+For each valid ii, the ii-th rat is initially hiding at a point cici. At a time riri, this rat stops hiding and starts moving to a final point didi in the same way as the cats ― with constant velocity and without any detours, arriving at the time qi=ri+|ci−di|qi=ri+|ci−di| (if it does not get eaten). After it arrives at the point didi, it hides again.
+If a cat and a rat meet each other (they are located at the same point at the same time), the cat eats the rat, the rat disappears and cannot be eaten by any other cat. A sleeping cat cannot eat a rat and a hidden rat cannot be eaten ― formally, cat ii can eat rat jj only if they meet at a time tt satisfying si≤t≤eisi≤t≤ei and rj≤t≤qjrj≤t≤qj.
+Your task is to find out which rats get eaten by which cats. It is guaranteed that no two cats will meet a rat at the same time.
+Input
+
+The first line of the input contains a single integer TT denoting the number of test cases. The description of TT test cases follows.
+The first line of each test case contains two space-separated integers NN and MM.
+NN lines follow. For each ii (1≤i≤N1≤i≤N), the ii-th of these lines contains three space-separated integers aiai, bibi and sisi.
+MM more lines follow. For each ii (1≤i≤M1≤i≤M), the ii-th of these lines contains three space-separated integers cici, didi and riri.
+
+Output
+For each test case, print MM lines. For each valid ii, the ii-th of these lines should contain a single integer ― the number of the cat that will eat the ii-th rat, or −1−1 if no cat will eat this rat.
+Constraints
+
+1≤T≤101≤T≤10
+0≤N≤1,0000≤N≤1,000
+1≤M≤1,0001≤M≤1,000
+1≤ai,bi,si≤1091≤ai,bi,si≤109 for each valid ii
+1≤ci,di,ri≤1091≤ci,di,ri≤109 for each valid ii
+all initial and final positions of all cats and rats are pairwise distinct
+
+
+                        Sample Input 1
+                        
+
+
+
+
+
+2
+8 7
+2 5 1
+1 4 1
+9 14 10
+20 7 9
+102 99 1
+199 202 1
+302 299 3
+399 402 3
+6 3 1
+10 15 10
+100 101 1
+201 200 1
+300 301 5
+401 400 5
+1000 1010 1020
+8 8
+2 8 2
+12 18 2
+22 28 4
+32 38 4
+48 42 2
+58 52 3
+68 62 1
+78 72 3
+3 6 3
+13 19 3
+21 25 3
+31 39 3
+46 43 4
+59 53 2
+65 61 4
+79 71 2
+
+
+
+                        Sample Output 1
+                        
+
+
+
+
+
+1
+4
+5
+6
+7
+8
+-1
+1
+2
+3
+4
+5
+6
+7
+8
+
+
+
+
+
+Author:
+4★erfaniaa
+
+
+Editorial:
+https://discuss.codechef.com/problems/CATSRATS
+
+
+Tags:
+
+               
+                 Constructive, Implementation
+                 
+                     
+                     Algorithms
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2641
+
+
+Date Added:
+16-03-2019
+
+
+Time Limit:
+1 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SCM guile, PERL6, ERL, CLPS, PRLG, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

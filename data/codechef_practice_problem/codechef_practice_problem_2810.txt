@@ -1,0 +1,133 @@
+
+Read problem statements in Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+There are NN cells (numbered 11 through NN). Initially, each cell contains a single Chef.
+You are given QQ pairs of cell ranges [L1,R1],[L2,R2],…,[LQ,RQ][L1,R1],[L2,R2],…,[LQ,RQ]. Consider a sequence of integers a1,a2,…,aNa1,a2,…,aN, where 1≤ai≤N1≤ai≤N for each valid ii. For each kk from 11 to QQ, the following process is performed:
+
+For each ii (Lk≤i≤RkLk≤i≤Rk), the Chef from cell ii moves to cell aiai. All Chefs move at the same time.
+We check if each cell contains exactly one Chef afterwards. If there is a cell which does not contain exactly one Chef, the sequence aa is invalid and we stop.
+
+You should find a sequence aa which is not invalid. (Note that for such a sequence, each cell contains exactly one Chef at any point.) In addition, you are given an integer pp with the following meaning:
+
+If p=0p=0, you should find the lexicographically smallest sequence aa.
+If p=1p=1, you should find the lexicographically largest sequence aa.
+
+Input
+
+The first line of the input contains two space-separated integers TT and pp, where TT denotes the number of test cases. The description of TT test cases follows.
+The first line of each test case contains two space-separated integers NN and QQ.
+QQ lines follow. For each valid ii, the ii-th of these lines contains two space-separated integers LiLi and RiRi.
+
+Output
+For each test case, print a single line containing NN space-separated integers a1,a2,…,aNa1,a2,…,aN.
+
+If p=0p=0, the sequence a1,a2,…,aNa1,a2,…,aN should be the lexicographically smallest valid sequence.
+If p=1p=1, the sequence a1,a2,…,aNa1,a2,…,aN should be the lexicographically largest valid sequence.
+
+Constraints
+
+1≤T≤1031≤T≤103
+0≤p≤10≤p≤1
+1≤N,Q≤2⋅1051≤N,Q≤2⋅105
+1≤Li≤Ri≤N1≤Li≤Ri≤N for each valid ii
+the sum of NN over all test cases does not exceed 2⋅1052⋅105
+the sum of QQ over all test cases does not exceed 2⋅1052⋅105
+
+Subtasks
+Subtask #1 (15 points): p=0p=0
+Subtask #2 (35 points):
+
+p=1p=1
+the sum of NN over all test cases does not exceed 103103
+the sum of QQ over all test cases does not exceed 103103
+
+Subtask #3 (50 points): p=1p=1
+Example Input 1
+2 0
+7 3
+2 5
+7 7
+3 4
+1 2
+1 1
+1 1
+
+Example Output 1
+1 2 3 4 5 1 7 
+1
+
+Explanation
+Example case 1: Whenever a Chef should move from some cell ii, we have ai=iai=i, so the Chefs do not move. That means the sequence [1,2,3,4,5,1,7][1,2,3,4,5,1,7] is valid and it can be proved that it is lexicographically smallest, too.
+Example Input 2
+2 1
+7 3
+2 5
+7 7
+3 4
+1 2
+1 1
+1 1
+
+Example Output 2
+7 5 4 3 2 7 7 
+1
+
+Explanation
+Example case 1: The Chefs move like this:
+
+first, 2→5,3→4,4→3,5→22→5,3→4,4→3,5→2; then, there is still exactly one Chef in each cell
+next, Chef 77 stays in his cell
+finally, the Chefs in cells 33 and 44 swap places
+
+There is no point when there are two Chefs in a single cell at the same time, so the sequence [7,5,4,3,2,7,7][7,5,4,3,2,7,7] is valid and it can be proved that it is lexicographically largest, too.
+
+
+
+Author:
+shishyando
+
+
+Editorial:
+https://discuss.codechef.com/problems/SOLDIERS
+
+
+Tags:
+
+               
+                 Difference Arrays, Hashing
+                 
+                     
+                     Data Structures, Arrays, Algorithms
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2883
+
+
+Date Added:
+23-02-2021
+
+
+Time Limit:
+1 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+CPP17, PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, SQLQ, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

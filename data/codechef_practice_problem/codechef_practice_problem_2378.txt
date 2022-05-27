@@ -1,0 +1,100 @@
+
+Read problems statements in Hindi, Mandarin Chinese, Russian, Vietnamese, and Bengali as well.
+Zawad is a rare competitive programmer — he takes his studies seriously. One day, while studying in a library, he found a pattern PP in a century old book. The pattern is a string of lowercase English letters, with length MM. Since Zawad is a curious boy, he started experimenting with the pattern.
+In one experiment, Zawad considers all 26N26N strings with length NN that contain only lowercase English letters. The strings are numbered 00 through 26N−126N−1 in lexicographical order. For each valid ii, let CiCi be the length of the longest prefix of PP which is also a suffix of the ii-th of these strings (0≤Ci≤M0≤Ci≤M).
+For each integer kk between 00 and MM inclusive, let SkSk denote the sum of all valid indices ii such that Ci=kCi=k. Zawad wants to know all these sums, but since they could be huge, it is enough to compute them modulo 998,244,353998,244,353.
+Since Zawad is a bit busy at the library, he is asking for your help. Can you find the sums and earn Zawad's respect?
+Input
+
+The first line of the input contains a single integer TT denoting the number of test cases. The description of TT test cases follows.
+The first line of each test case contains two space-separated integers MM and NN.
+The second line contains a single string PP with length MM.
+
+Output
+For each test case, print a single line containing M+1M+1 space-separated integers S0,S1,…,SMS0,S1,…,SM — the sums modulo 998,244,353998,244,353.
+Constraints
+
+1≤T≤51≤T≤5
+1≤M≤1051≤M≤105
+M≤N≤106M≤N≤106
+PP contains only lowercase English letters
+
+
+                        Sample Input 1
+                        
+
+
+
+
+
+2
+1 1
+a
+3 5
+nan
+
+
+
+                        Sample Output 1
+                        
+
+
+
+
+
+325 0
+555099525 502507217 596119576 22936464
+
+
+
+
+
+Author:
+5★solaimanope
+
+
+Editorial:
+https://discuss.codechef.com/problems/IDXSUM
+
+
+Tags:
+
+               
+                 KMP Algorithm, Dynamic Programming
+                 
+                     
+                     Advanced Algorithms, String Matching, Algorithms
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2634
+
+
+Date Added:
+11-05-2019
+
+
+Time Limit:
+1 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SCM guile, PERL6, ERL, CLPS, PRLG, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

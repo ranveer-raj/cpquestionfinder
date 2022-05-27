@@ -1,0 +1,119 @@
+
+You are given two binary strings AA and BB, each of length NN.
+Consider a non-empty substring A′A′ of AA and a non-empty substring B′B′ of BB, both of the same length. Let X=A′⊕B′X=A′⊕B′ be the string obtained by taking the exclusive OR of A′A′ and B′B′.
+You are also given a function f(X)f(X), defined as
+f(X)=⌊|X|2X10⌋f(X)=⌊|X|2X10⌋
+where |X||X| denotes the length of XX and X10X10 denotes the decimal value of the binary integer represented by XX. For example, if X=0110101X=0110101, then |X|=7|X|=7 and X10=53X10=53, so f(X)=⌊7/253⌋=0f(X)=⌊7/253⌋=0.
+Your task is to maximize the value of the function f(X)f(X) for the given strings AA and BB, by choosing A′A′ and B′B′ appropriately.
+Note: The exclusive OR of two binary strings AA and BB such that |A|=|B|=k|A|=|B|=k is the unique binary string XX of length kk such that Xi=1Xi=1 if and only if Ai≠BiAi≠Bi.
+Input Format
+
+The first line contains a single integer TT — the number of test cases. Then the test cases follow.
+Each test case consists of three lines of input.
+The first line of each test case contains an integer NN — the length of the binary strings AA and BB.
+The second line of each test case contains a binary string AA of length NN.
+The third line of each test case contains a binary string BB of length NN.
+
+Output Format
+For each test case, output on a new line the maximum value of the function.
+Constraints
+
+1≤T≤10001≤T≤1000
+1≤N≤1051≤N≤105
+AA and BB are binary strings
+The sum of NN across all test cases does not exceed 5⋅1055⋅105
+
+
+                        Sample Input 1
+                        
+
+
+
+
+
+3
+3
+101
+010
+5
+00000
+11111
+6
+101001
+001010
+
+
+
+                        Sample Output 1
+                        
+
+
+
+
+
+2
+0
+4
+
+
+Explanation
+Test case 11: We calculate the value of f(X)f(X) for a few choices of XX:
+
+If A′=10A′=10 and B′=01B′=01, then X=11X=11. This gives f(X)=⌊2/23⌋=⌊2/8⌋=0f(X)=⌊2/23⌋=⌊2/8⌋=0
+If A′=01A′=01 and B′=10B′=10, then X=11X=11. This gives f(X)=⌊2/23⌋=0f(X)=⌊2/23⌋=0
+If A′=10A′=10 and B′=10B′=10, then X=00X=00. This gives f(X)=⌊2/20⌋=2f(X)=⌊2/20⌋=2
+If A′=101A′=101 and B′=010B′=010, then X=111X=111. This gives f(X)=⌊3/27⌋=0f(X)=⌊3/27⌋=0
+
+It can be verified that the maximum value of ff is 22.
+
+
+
+Author:
+4★hydro_ly_te
+
+
+Editorial:
+https://discuss.codechef.com/problems/MXPRFT
+
+
+Tags:
+
+               
+                 Dynamic Programming
+                 
+                     
+                     Algorithms
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+3015
+
+
+Date Added:
+6-04-2022
+
+
+Time Limit:
+1 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+CPP17, PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, SQLQ, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

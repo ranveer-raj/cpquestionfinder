@@ -1,0 +1,129 @@
+
+Once in the magic city of Lulympus, students were preparing for the final stage of Lulympiad, the national team selection for the IOI. After solving 3SAT in polynomial time complexity, learning the 4D convex hull trick and many other trivial techniques, Chef Lulus AKed the "Baraj Seniori" and decided to take a break and solve the following trivial problem:
+You are given a positive integer NN. Let PP be the set of all permutations of length NN. Find the value of the following expression: ∑p∈P∑Ni=1𝚐𝚌𝚍(p1,p2,…,pi)∑p∈P∑i=1Ngcd(p1,p2,…,pi).
+Here 𝚐𝚌𝚍(p1,p2,…,pi)gcd(p1,p2,…,pi) denotes their greatest common divisor.
+Since the answer can be large, print it modulo MODMOD.
+Input Format
+The first and only line of input contains two integers NN, MODMOD - the parameters defined in the statement.
+Output Format
+Print one integer, the value of ∑p∈P∑Ni=1𝚐𝚌𝚍(p1,p2,…,pi)∑p∈P∑i=1Ngcd(p1,p2,…,pi) modulo MODMOD.
+Constraints
+
+1≤N≤1061≤N≤106 
+108≤MOD≤109108≤MOD≤109
+MODMOD is a prime number
+
+
+                        Sample Input 1
+                        
+
+
+
+
+
+2 100001029
+
+
+
+                        Sample Output 1
+                        
+
+
+
+
+
+5
+
+
+Explanation
+Test case 1: P={[1,2],[2,1]}P={[1,2],[2,1]}. 
+
+For p=[1,2]p=[1,2], ∑Ni=1𝚐𝚌𝚍(p1,p2,…,pi)=𝚐𝚌𝚍(1)+𝚐𝚌𝚍(1,2)=1+1=2∑i=1Ngcd(p1,p2,…,pi)=gcd(1)+gcd(1,2)=1+1=2
+For p=[2,1]p=[2,1], ∑Ni=1𝚐𝚌𝚍(p1,p2,…,pi)=𝚐𝚌𝚍(2)+𝚐𝚌𝚍(2,1)=2+1=3∑i=1Ngcd(p1,p2,…,pi)=gcd(2)+gcd(2,1)=2+1=3
+
+Therefore ∑p∈P∑Ni=1𝚐𝚌𝚍(p1,p2,…,pi)=2+3=5∑p∈P∑i=1Ngcd(p1,p2,…,pi)=2+3=5.
+
+                        Sample Input 2
+                        
+
+
+
+
+
+3 100000921
+
+
+
+                        Sample Output 2
+                        
+
+
+
+
+
+24
+
+
+Explanation
+The permutations of length 3 are 
+
+[1,2,3][1,2,3]
+[1,3,2][1,3,2]
+[2,1,3][2,1,3]
+[2,3,1][2,3,1]
+[3,1,2][3,1,2]
+[3,2,1][3,2,1]
+
+The first permutation contributes with gcd(1)+gcd(1,2)+gcd(1,2,3)=3gcd(1)+gcd(1,2)+gcd(1,2,3)=3. Similarly for all permutations summing the contributions we get 2424.
+
+
+
+Author:
+5★tibinyte
+
+
+Editorial:
+https://discuss.codechef.com/problems/LULIMPIADA
+
+
+Tags:
+
+               
+                 Number Theory, Combinatorics, Dynamic Programming
+                 
+                     
+                     Mathematics, Algorithms
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2996
+
+
+Date Added:
+9-04-2022
+
+
+Time Limit:
+4 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+CPP17, PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, SQLQ, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

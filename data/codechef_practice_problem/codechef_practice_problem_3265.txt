@@ -1,0 +1,145 @@
+
+This problem is similar to the problem "STRFLIP". The only difference between them is the number of moves allowed — in this problem, up to ⌊N/2⌋+10⌊N/2⌋+10 moves can be made. In Div. 1 and Div. 2 this problem is worth 6060 points and "STRFLIP" is worth 4040. In Div. 3 this problem is non-scorable and "STRFLIP" is worth 100100 points.
+You are given a binary string AA of length NN, which we treat as being 11-indexed.
+In one move, you are allowed to
+
+Pick a contiguous substring (i.e. A[L:R]A[L:R] for some 1≤L≤R≤N1≤L≤R≤N) of AA that contains at least one '00' and at least one '11'
+Flip all the characters of the chosen substring (i.e. change every 00 to 11 and every 11 to 00)
+
+You are also given a target string BB of the same length as AA.
+Determine if it is possible to convert AA to BB by applying a sequence of moves as described above.
+If it is possible to convert AA to BB, then find a sequence of no more than ⌊N/2⌋+10⌊N/2⌋+10 moves that accomplishes this.
+It can be shown that whenever it is possible to convert AA to BB, then it is possible to do so using no more than ⌊N/2⌋+10⌊N/2⌋+10 moves.
+If there are multiple answers, you can print any of them.
+Input Format
+
+The first line of input contains a single integer TT, denoting the number of test cases. The description of TT test cases follows.
+Each test case consists of three lines.
+The first line of each test case contains a single integer NN, the size of the strings.
+The second line of each test case contains AA, a binary string with NN characters.
+The third line of each test case contains BB, a binary string with NN characters.
+
+Output Format
+
+For each test case, print the answer starting from a new line in the following format:
+In the first line, print −1−1 if it is impossible to convert AA to BB. Otherwise, print a single non-negative integer KK — the number of moves that your solution requires.
+Use the next KK lines to describe your sequence of moves, in the same order they are to be performed.
+The ithith of these KK lines should contain two integers LiLi and RiRi, denoting the starting and ending positions of the substring chosen in the ithith operation.
+Note that the following conditions must be satisfied:
+0≤K≤⌊N/2⌋+100≤K≤⌊N/2⌋+10
+1≤Li≤Ri≤N1≤Li≤Ri≤N for each valid ii
+Each substring A[Li:Ri]A[Li:Ri] must contain at least one '00' and one '11'.
+
+Constraints
+
+1≤T≤20001≤T≤2000
+20≤N≤10320≤N≤103
+The sum of NN over all testcases does not exceed 50005000
+|A|=|B|=N|A|=|B|=N
+AA and BB are binary strings, i.e, contain only 00 and 11.
+At most ⌊N/2⌋+10⌊N/2⌋+10 moves can be made for each testcase.
+
+
+                        Sample Input 1
+                        
+
+
+
+
+
+3
+5
+10110
+00100
+5
+00000
+11111
+2
+00
+00
+
+
+
+                        Sample Output 1
+                        
+
+
+
+
+
+2
+1 4
+2 3
+-1
+0
+
+
+Explanation
+Note: The sample tests use strings of small lengths just to illustrate the problem, and will not be present in the actual tests. Every string in the actual test files will have a length of at least 2020, as stated by the constraints.
+Test Case 11: The given string is A=10110A=10110. Apart from the single character substrings and the substring A[3:4]=11A[3:4]=11, all other substrings are valid first moves.
+The sample output performs moves as follows:
+
+First, flip the substring A[1:4]A[1:4]. Now, A=01000A=01000.
+Then, flip the substring A[2:3]A[2:3]. Now, A=00100A=00100, which is the target string.
+
+Note that there are several other valid solutions, and any solution using no more than ⌊5/2⌋+10=12⌊5/2⌋+10=12 moves will be accepted. For example, a sequence of 33 moves is shown below:
+
+Flip A[1:5]A[1:5], giving A=01001A=01001
+Flip A[4:5]A[4:5], giving A=01010A=01010
+Flip A[2:4]A[2:4], giving A=00100A=00100
+
+Test Case 2: The given string A=00000A=00000 has no substring with both 00 and 11, consequently there are no moves possible. Therefore it is impossible to convert this string to B=11111B=11111.
+Test Case 3: The given string A=00A=00 is already equal to BB and so no moves are required.
+
+
+
+Author:
+utkarsh_adm
+
+
+Tester:
+7★aryanc403
+
+
+Editorial:
+https://discuss.codechef.com/problems/STRFLIP2
+
+
+Tags:
+
+               
+                 constructive, easy-medium, medium, start22, utkarsh_adm
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+3322
+
+
+Date Added:
+19-01-2022
+
+
+Time Limit:
+1 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+CPP17, PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, SQLQ, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

@@ -1,0 +1,126 @@
+
+Greed has an invincible shield due to which the attacks of Edward would not work on him. But Edward being a prodigy has caught onto the flaws in Greed's shield. The shield is made up of the same fundamental element, by which all other life forms are formed, Carbon.
+He observed that Greed's shield can be represented as a grid GG of carbon clusters with NN rows and MM columns. Each cell on the grid represents the orientation of the carbon cluster, either 00 or 11. Specifically, Gi,jGi,j denote the jj-th carbon cluster in ii-th row.
+The shield is penetrable only when all the carbon clusters in the shield grid have the same orientation. 
+For achieving this, Initially, he chooses a single carbon cluster (ie. a single cell) in the shield. Now, he repeatedly applies the following move on this cluster, till all the carbon clusters in the grid have the same orientation:
+In a single move, Edward flips the orientation of all clusters reachable from the chosen cluster. A cluster is called reachable from another cluster, if both clusters have the same orientation, and it is possible to move from one cluster to the other through clusters of that orientation only, moving vertically and horizontally. If earlier the orientation was 11, it turns into 00 and vice versa.
+Choosing the start cell optimally, can you find the minimum number of moves to make all the clusters have same orientation?
+Do not worry, you do not need to know about Carbon clusters in order to solve this problem.
+Input:
+
+The first line contains TT, the number of test cases. Then the test cases follow. 
+For each test case, the first line contains NN and MM denoting the number of rows and columns of grid GG depicting the shield of Greed.
+For each test case, NN lines follow, each line containing MM integers where the jj-th integer in ii-th line depicts the initial orientation of the Gi,jGi,j cluster.
+
+Output:
+For each test case, output a single integer in a separate line denoting the minimum number of moves required to make the complete shield of a single orientation.
+Constraints
+
+1≤T≤101≤T≤10 
+1≤N,M≤501≤N,M≤50
+0≤Gi,j≤10≤Gi,j≤1 for 1≤i≤N1≤i≤N and 1≤j≤M1≤j≤M
+
+Sample Input:
+4
+6 6
+0 0 0 1 1 1
+0 0 0 1 1 0
+0 0 0 0 0 0
+1 1 1 1 1 1
+1 1 0 0 0 0
+1 1 1 0 0 0
+4 3
+1 1 1
+1 1 1
+1 1 1
+1 1 1
+2 4
+0 0 0 0
+1 1 1 1
+1 5
+1 0 1 0 1
+
+Sample Output:
+2
+0
+1
+2
+
+Explanation:
+
+Testcase 11: Choosing G1,1G1,1 as the start point, the whole shield gets orientation 00 in 22 moves.
+
+After the first move, the grid would look like:
+1 1 1 1 1 1
+1 1 1 1 1 1
+1 1 1 1 1 1
+1 1 1 1 1 1
+1 1 0 0 0 0
+1 1 1 0 0 0
+
+After the second move, the grid would look like:
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+
+There are many other starting points which lead to the optimal minimal number of moves as well.
+
+Testcase 22: The shield is already of same orientation, so 00 moves.
+Testcase 33: Choosing G1,1G1,1 as the start point, the whole shield gets orientation 11 in 11 move.
+Testcase 44: Choosing G1,3G1,3 as the start point, the whole shield gets orientation 11 in 22 move.
+
+
+
+
+Author:
+4★sachin_yadav
+
+
+Editorial:
+https://discuss.codechef.com/problems/DEFECTS
+
+
+Tags:
+
+               
+                 BFS
+                 
+                     
+                     Algorithms, Graph Algos, Traversals
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2882
+
+
+Date Added:
+20-10-2019
+
+
+Time Limit:
+1.5 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+CPP17, PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, SQLQ, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

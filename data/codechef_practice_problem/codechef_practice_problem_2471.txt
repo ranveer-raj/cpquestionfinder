@@ -1,0 +1,119 @@
+
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+You are given a rooted tree with NN vertices (numbered 11 through NN) and a prime number PP. Vertex 11 is the root of the tree and for each vv (2≤v≤N2≤v≤N), the parent of vertex vv is pvpv (pv<vpv<v).
+A vertex ss is an ancestor of another vertex ff if ss lies on the path between 11 and ff (in particular, ff is its own ancestor). For two vertices uu and vv, let's define LCA(u,v)LCA(u,v) as the vertex ss with the largest number which is an ancestor of both uu and vv. Similarly, for two vertices vv and ss, let 𝕃v,sLv,s be the set of all vertices uu such that s=LCA(u,v)s=LCA(u,v).
+Let's define a set 𝔸PAP containing all sequences (indexed from 11) with length NN whose elements are integers between 00 and P−1P−1 inclusive. For two sequences a,b∈𝔸Pa,b∈AP, let's define an operation LCA-convolution as a sequence c=a∗bc=a∗b such that for each valid xx, cx=(∑i=1N∑j∈𝕃i,xaibj)modP.cx=(∑i=1N∑j∈Li,xaibj)modP.
+You are also given some sequence c∈𝔸Pc∈AP. You have two tasks:
+
+Find the number of sequences a∈𝔸Pa∈AP such that c=a∗ac=a∗a. Since this number can be large, compute it modulo 998,244,353998,244,353.
+Find a sequence a∈𝔸Pa∈AP such that c=a∗ac=a∗a (if it exists).
+
+Input
+
+The first line of the input contains a single integer TT denoting the number of test cases. The description of TT test cases follows.
+The first line of each test case contains two space-separated integers NN and PP.
+The second line contains N−1N−1 space-separated integers p2,p3,…,pNp2,p3,…,pN.
+The third line contains NN space-separated integers c1,c2,…,cNc1,c2,…,cN.
+
+Output
+For each test case, print two lines:
+
+The first of these lines should contain a single integer ― the number of sequences from the first task modulo 998,244,353998,244,353.
+If there is no sequence a∈𝔸Pa∈AP such that c=a∗ac=a∗a, the second line should contain the integer −1−1.
+Otherwise, the second line should contain NN space-separated integers a1,a2,…,aNa1,a2,…,aN, where a∈𝔸Pa∈AP and c=a∗ac=a∗a should hold. If there is more than one such sequence, you may find any one of them.
+
+Constraints
+
+1≤T≤1051≤T≤105
+2≤N≤5⋅1052≤N≤5⋅105
+3≤P≤109+93≤P≤109+9
+PP is a prime
+1≤pi<i1≤pi<i for each valid ii
+0≤ci<P0≤ci<P for each valid ii
+the sum of NN over all test cases does not exceed 5⋅1055⋅105
+
+Subtasks
+Subtask 1 (10 points, 1 second time limit):
+
+T≤100T≤100
+N≤6N≤6
+P=3P=3
+
+Subtask 2 (30 points, 1 second time limit):
+
+T≤100T≤100
+the sum of NN over all test cases does not exceed 1,0001,000
+
+Subtask 3 (60 points, 5 seconds time limit): original constraints
+Example Input
+3
+6 3
+1 1 2 3 2
+1 2 0 1 1 1
+5 3
+1 1 1 3
+2 1 0 2 1
+9 101
+1 1 2 3 2 4 3 5
+18 77 44 82 4 20 19 43 97
+
+Example Output
+32
+2 2 0 1 2 2
+0
+-1
+64
+3 70 5 76 20 11 25 12 81
+
+
+
+
+Author:
+7★isaf27
+
+
+Editorial:
+https://discuss.codechef.com/problems/LCASQRT
+
+
+Tags:
+
+               
+                 Trees, Number Theory, Quadratic Residue, DFS, Tonelli-Shanks algorithm
+                 
+                     
+                     Data Structures, Graphs, Mathematics, Modular Arithmetic, Algorithms, Graph Algos, Traversals
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2701
+
+
+Date Added:
+29-11-2020
+
+
+Time Limit:
+1 - 5 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+CPP17, PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, SQLQ, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

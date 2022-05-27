@@ -1,0 +1,105 @@
+
+Cersei wants to be the queen of seven kingdoms.
+For this to happen, she needs to address the soldiers in her army. There are nn soldiers in her army (numbered 11 through nn). Cersei passes on the message to the first soldier (soldier 1).   
+This message needs to reach every soldier in the army. For this, the soldiers communicate among themselves by one soldier passing the message to another soldier through some communication links. It is known that the message could reach every soldier using the given links.
+Now, each soldier will receive the message from exactly one soldier or Cersei and could pass on the message to atmost two soldiers. That is each soldier (except soldier 1) has only one incoming link and every soldier (including soldier 1) has atmost two outgoing links.  
+Now, the High Sparrow feels that Cersei is planning to kill his people first. Hence, for the sake of his people, he decided to appoint some sparrows to overhear every conversation between the soldiers (The conversation between Cersei and the first soldier needn't be overheard due to the fear of Ser Gregor Clegane).   
+To overhear a conversation between soldiers AA and BB, there needs to be a sparrow either at soldier AA or soldier BB or both.
+Also, by his research, the High Sparrow has found that the soldiers are partitioned into some classes (11 to kk). That is, every soldier belongs to exactly one class. He then demands the presence of atleast one sparrow with each class he knows (11 to kk).
+Find the minimum number of sparrows the High Sparrow needs to recruit for the job or tell that he couldn't.
+Input:
+
+The first line of the input contains the number of test cases tt.
+The first line of each test case gives the number of soldiers nn in the army, the number of communication links mm between the soldiers and the number of classes kk in soldiers.
+The next line of the test case consists of nn integers A1,A2....AnA1,A2....An each denoting the class of the ithith soldier.
+The next mm lines of the test case contain two integers uu and vv, which denotes that soldier uu can pass a message to soldier vv (u≠vu≠v).
+
+Output:
+For each test case, print in a single line the minimum number of sparrows required for the above task or print −1−1 if no such way is possible.
+Constraints
+
+1≤t≤5001≤t≤500
+1≤n≤25001≤n≤2500
+m=n−1m=n−1
+1≤k≤101≤k≤10
+1≤ai≤k1≤ai≤k
+The sum of nn over all test cases is ≤2500≤2500.
+
+Sample Input:
+1
+5 4 3
+1 1 2 2 3
+1 2
+1 3
+2 4
+2 5
+
+Sample Output:
+3
+
+EXPLANATION:
+Selecting soldiers 1,4,5 would satisfy all the conditions.
+
+Sample Input:
+1
+5 4 5
+1 1 2 2 3
+1 2
+1 3
+2 4
+2 5
+
+Sample Output:
+-1
+
+EXPLANATION:
+Classes 4 and 5 are not present. So, there is no way possible.
+
+
+
+
+Author:
+4★aashu_k
+
+
+Tags:
+
+               
+                 Bitmasking, Dynamic Programming
+                 
+                     
+                     Mathematics, Bit Manipulation, Algorithms
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2917
+
+
+Date Added:
+27-03-2019
+
+
+Time Limit:
+2 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SCM guile, PERL6, ERL, CLPS, PRLG, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

@@ -1,0 +1,108 @@
+
+Winter is here and so are the white walkers. 
+The war against white walker is going on a 2-D plane.  
+Jon Snow, the heir to the Iron Throne is standing at (0,0)(0,0) on the plane.  
+NN white walkers are coming towards the wall to attack the night's watch.
+Currently each white walker is at a fixed point (xi,yi)(xi,yi)  on the 2-D plane.     
+Horizontal distance between two points (x1,y1)(x1,y1) and (x2,y2)(x2,y2) is |x1−x2||x1−x2|, and vertical distance between them is |y1−y2||y1−y2|.  
+There are QQ queries to answer.
+Each query is of the form LRKLRK.    (1≤L≤R≤N)(1≤L≤R≤N)
+For each query, only white walkers in the range [L,R][L,R] have to be considered.  
+Active white walkers in this range [L,R][L,R] are only those whose horizontal distance from Jon is not more than KK units.    
+The POWER of the active white walker army is calculated as the XORXOR sum of the number of divisors of the vertical distance of active enemies from Jon.
+Jon knows that the active army is of no harm if their power is 0.
+Jon snow has a weapon with which he can kill exactly one active white walker, such that killing him will render the army powerless.  
+Can you help Jon to find out for each query how many choices does he have to kill exactly one white walker such that the army becomes powerless?
+Input:
+
+First line contains NN. The number of white walkers in the army.
+Next NN lines contains 2 integers - (xi,yi)(xi,yi) each denoting the x and y coordinate of white walkers.
+Next line contains an integer QQ denoting the number of queries.
+Next QQ lines contains 3 integers each. LL, RR and KK.
+
+Output :
+
+For each query print the number of white walkers Jon can target to make the army powerless.
+
+Constraints :
+
+1≤N≤1051≤N≤105
+1≤Q≤2∗1051≤Q≤2∗105
+1≤L≤R≤N1≤L≤R≤N
+1≤xi,yi,K≤1091≤xi,yi,K≤109
+
+Sample Input:
+4
+1 15
+2 2
+3 2
+2 5
+2
+2 4 5
+1 3 2
+
+Sample Output:
+3
+0
+
+EXPLANATION:
+For query 1
+
+Active white walkers are at  (2,2), (3,2) and (2,5), as these have horizontal distance from Jon ≤K≤K.
+Power of the active army is XOR sum of NOD of vertical distance from Jon = NOD(2) xor NOD(2) xor NOD(5), where NOD means Number of divisors. Power = 2 ^ 2 ^ 2 = 2
+Therefore Jon can kill any one of the 3 white walkers. So the power of remaining army will be 2 ^ 2 = 0.    
+
+For query 2
+
+Active white walkers are at  (1,15), and (2,2) as these have horizontal distance from Jon ≤K≤K.
+Power of the active army is XOR sum of NOD of vertical distance from Jon = NOD(15) xor NOD(2) , where NOD means Number of divisors. Power = 4^2 = 6
+There is no choice here to kill exactly 1 white walker here to render the power = 0  Hence, the answer is 0.
+
+
+
+
+Author:
+4★aashu_k
+
+
+Tags:
+
+               
+                 Policy Based Data Structures, Prime Divisors
+                 
+                     
+                     Advanced Data Structures, Mathematics, Number Theory, Integer Factorisation, Divisors
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2714
+
+
+Date Added:
+31-03-2019
+
+
+Time Limit:
+2 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SCM guile, PERL6, ERL, CLPS, PRLG, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

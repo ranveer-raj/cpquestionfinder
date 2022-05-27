@@ -1,0 +1,118 @@
+
+Alice recently converted all the positive integers from 11 to 2N−12N−1 (both inclusive) into binary strings and stored them in an array SS.  Note that the binary strings do not have leading zeroes.
+While she was out, Bob sorted all the elements of SS in lexicographical increasing order.
+Let SiSi denotes the ithith string in the sorted array.
+Alice defined a function FF such that F(Si)F(Si) is equal to the count of 11 in the string SiSi.
+For example, F(101)=2F(101)=2 and F(1000)=1F(1000)=1.
+Given a positive integer KK, find the value of ∑Ki=1F(Si)∑i=1KF(Si). 
+String PP is lexicographically smaller than string QQ if one of the following satisfies:
+
+PP is a prefix of QQ and P≠QP≠Q.
+There exists an index ii such that Pi<QiPi<Qi and for all j<ij<i,  Pj=QjPj=Qj.
+
+Input Format
+
+The first line will contain an integer TT - number of test cases. Then the test cases follow.
+The first and only line of each test case contains two integers NN and KK.
+
+Output Format
+For each test case, output the value ∑Ki=1F(Si)∑i=1KF(Si). 
+Constraints
+
+1≤T≤30001≤T≤3000
+1≤N≤501≤N≤50
+1≤K≤2N−11≤K≤2N−1
+Sum of NN over all test cases does not exceed 105105.
+
+
+                        Sample Input 1
+                        
+
+
+
+
+
+3
+3 2
+3 4
+3 7
+
+
+
+                        Sample Output 1
+                        
+
+
+
+
+
+2
+5
+12
+
+
+Explanation
+Converting positive integers to Binary Strings:
+
+1=11=1
+2=102=10
+3=113=11
+4=1004=100
+5=1015=101
+6=1106=110
+7=1117=111
+
+Sorting Binary Strings in lexicographical order:
+After sorting, the strings will appear in the following order:
+[1,10,100,101,11,110,111][1,10,100,101,11,110,111].
+Test case 11: F(S1)+F(S2)=F(1)+F(10)=1+1=2F(S1)+F(S2)=F(1)+F(10)=1+1=2.
+Test case 22: F(S1)+F(S2)+F(S3)+F(S4)=F(1)+F(10)+F(100)+F(101)=1+1+1+2=5F(S1)+F(S2)+F(S3)+F(S4)=F(1)+F(10)+F(100)+F(101)=1+1+1+2=5.
+
+
+
+Author:
+lavish_adm
+
+
+Editorial:
+https://discuss.codechef.com/problems/COUNTONES
+
+
+Tags:
+
+               
+                 lavish_adm, march221, medium, recursion
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2529
+
+
+Date Added:
+9-03-2022
+
+
+Time Limit:
+1 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+CPP17, PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, SQLQ, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

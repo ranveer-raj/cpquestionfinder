@@ -1,0 +1,117 @@
+
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+You are given an unweighted tree with NN nodes (numbered 11 through NN). Let's denote the distance between any two nodes pp and qq by d(p,q)d(p,q).
+You should answer QQ queries. In each query, you are given parameters aa, dada, bb, dbdb, and you should find a node xx such that d(x,a)=dad(x,a)=da and d(x,b)=dbd(x,b)=db, or determine that there is no such node.
+Input
+
+The first line of the input contains a single integer TT denoting the number of test cases. The description of TT test cases follows.
+The first line of each test case contains two space-separated integers NN and QQ.
+Each of the next N−1N−1 lines contains two space-separated integers uu and vv denoting that nodes uu and vv are connected by an edge.
+Each of the next QQ lines contains four space-separated integers aa, dada, bb and dbdb describing a query.
+
+Output
+For each query, print a single line containing one integer ― the number of a node satisfying the given requirements, or −1−1 if no such node exists.
+If there are multiple solutions, you may output any one.
+Constraints
+
+1≤T≤1,0001≤T≤1,000
+1≤N,Q≤1061≤N,Q≤106
+1≤u,v≤N1≤u,v≤N
+the graph on the input is a tree
+1≤a,b≤N1≤a,b≤N
+1≤da,db<N1≤da,db<N
+the sum of NN over all test cases does not exceed 106106
+the sum of QQ over all test cases does not exceed 106106
+
+Subtasks
+Subtask #1 (50 points):
+
+1≤N,Q≤1,0001≤N,Q≤1,000
+the sum of NN over all test cases does not exceed 1,0001,000
+the sum of QQ over all test cases does not exceed 1,0001,000
+
+Subtask #2 (50 points): original constraints
+
+                        Sample Input 1
+                        
+
+
+
+
+
+1
+5 3
+1 2
+2 3
+3 4
+3 5
+2 1 4 1
+2 2 4 2
+1 1 2 1
+
+
+
+                        Sample Output 1
+                        
+
+
+
+
+
+3
+5
+-1
+
+
+
+
+
+Author:
+jafarbadour
+
+
+Editorial:
+https://discuss.codechef.com/problems/DDQUERY
+
+
+Tags:
+
+               
+                 DP on Trees
+                 
+                     
+                     Advanced Algorithms, Advanced DP
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+3223
+
+
+Date Added:
+24-10-2019
+
+
+Time Limit:
+6 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

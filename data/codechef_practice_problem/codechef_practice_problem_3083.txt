@@ -1,0 +1,92 @@
+
+"You know Walter, sometimes it doesn't hurt to have someone watching your back"
+The Hitmen twins of the Juarez Cartel, Leonel and Marco Salamanca, often known as the "Cousins", have set off from Mexico in search of Walter White. They come across an informant, who only agrees to help them if they solve his puzzle of interesting numbers.
+There are NN interesting numbers AA11,, AA22,, ...... AANN consisting of integers from 11 to NN.
+The task is to find KKthth smallest GCDGCD among all GCDGCD (( AAii,AAjj)) for each (i,j)(i,j), such that 1≤i<j≤N1≤i<j≤N.
+Print the KKthth smallest GCDGCD and also find any pair having the resultant GCDGCD (print their indices).
+Input:
+
+The first line will contain TT, number of testcases. TT testcases follow : 
+The first line of each testcase contains two space-separated integers N,KN,K. 
+The second line of each testcase contains NN space-separated integers AA11,, AA22,, ...,...,AANN.
+
+Output:
+For each test case, print two lines. On the first line, print the KKthth smallest GCDGCD. On the second line, print any pair of indices (x,y)(x,y) such that xx != yy and GCDGCD (( AAxx,AAyy)) = KKthth smallest GCDGCD.
+Constraints
+
+1≤T≤1041≤T≤104
+2≤N≤1062≤N≤106
+1≤K≤(N∗(N−1))/21≤K≤(N∗(N−1))/2
+1≤A1≤Aii ≤N≤N
+The sum of NN over all test cases does not exceed 106106
+
+Sample Input:
+2
+5 8
+2 4 4 1 3
+5 7
+2 4 4 1 3
+
+Sample Output:
+2
+1 2
+1
+4 5     
+
+EXPLANATION:
+
+For Test Case 1 :  KKthth smallest GCDGCD is 22, and GCDGCD (( AA11 , AA22)) = 22.
+For Test Case 2 : KKthth smallest GCDGCD is 11, and GCDGCD (( AA44 , AA55)) = 11.
+
+
+
+
+Author:
+6★abhi2402
+
+
+Editorial:
+https://discuss.codechef.com/problems/KGCD
+
+
+Tags:
+
+               
+                 GCD, Sieve of Eratosthenes, Inclusion Exclusion Principle
+                 
+                     
+                     Mathematics, Number Theory, Set Theory
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+3056
+
+
+Date Added:
+13-10-2020
+
+
+Time Limit:
+1 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+CPP17, PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, SQLQ, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

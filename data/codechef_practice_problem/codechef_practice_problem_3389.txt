@@ -1,0 +1,164 @@
+
+Chef has a large orchestra in his kitchen and he is preparing for a concert next week. He also has a music score, which is represented by a string SS with length NN. Each note in the music score is represented by a lowercase or uppercase English letter; the values of lowercase letters 'a' through 'z' are 11 through 2626 and the values of uppercase letters 'A' through 'Z' are 2727 through 5252.
+There are MM melodies (numbered 11 through MM) which Chef considers pretty melodies. For each valid ii, the ii-th pretty melody is represented by a string TiTi and it has a pretty value CiCi.
+There are also AA good melodies. For each valid ii, the ii-th good melody is represented by a string PiPi and it has a cost QiQi.
+To modify Chef's music score (the string SS), there are three types of operations you may apply:
+
+Choose one note (one character in SS) and replace it by another note. The cost of this operation is the absolute difference between the original value and the new value of the replaced note. For example, the cost of replacing 'b' by 'e' is |5−2|=3|5−2|=3, and the cost of replacing 'B' by 'x' is |24−28|=4|24−28|=4.
+Choose a non-empty substring of SS and replace it by a good melody (not necessarily with the same length). For each valid ii, the cost of replacing a substring by a good melody PiPi is QiQi.
+Duplicate a substring ― choose a non-empty substring of SS (let's denote it by ss) and insert a copy of ss into SS, immediately after the chosen occurrence of ss. For example, after applying this operation on the substring "Dc" in the string "AcbDcb", the resulting string is "AcbDcDcb". The cost of this operation is RR.
+
+You may apply any of these operations in any order, but you must satisfy the following restrictions:
+
+You must apply at most 105105 operations.
+You must apply an operation of type 3 at most once.
+You have XX coins. The total cost (sum of costs) of all operations you apply must not exceed XX.
+The length of the string SS must not exceed 106106 at any time.
+
+Let's define the pretty value of Chef's music score V=∑Mi=1Ki⋅CiV=∑i=1MKi⋅Ci, where KiKi denotes the number of times the ii-th pretty melody occurs in Chef's music score as a substring (these occurrences may overlap). Your goal is to maximise the pretty value of Chef's music score.
+Input
+
+The first line of the input contains five space-separated integers NN, MM, AA, XX and RR.
+The second line contains a single string SS with length NN denoting Chef's initial music score.
+MM lines follow. For each ii (1≤i≤M1≤i≤M), the ii-th of these lines contains a string TiTi, followed by a space and an integer CiCi.
+AA more lines follow. For each ii (1≤i≤A1≤i≤A), the ii-th of these lines contains a string PiPi, followed by a space and an integer QiQi.
+
+Output
+
+First, you should print a line containing a single integer LL ― the number of operations you want to apply.
+Then, you should print LL lines describing these operations in the order in which they should be applied, in the following format depending on their types:
+1 x c, if you want to replace the xx-th note (indexed from 11) in the current music score by the character cc (cc must be a lowercase or uppercase English letter)
+2 l r i, if you want to replace the substring between the ll-th and rr-th note (inclusive; 1≤l≤r1≤l≤r) in the current music score by the ii-th good melody
+3 l r, if you want to duplicate the substring between the ll-th and rr-th note (inclusive; 1≤l≤r1≤l≤r) in the current music score
+
+Constraints
+
+100≤N≤20,000100≤N≤20,000
+1≤M≤1001≤M≤100
+0≤A≤10,0000≤A≤10,000
+0≤X,R≤1050≤X,R≤105
+1≤|Ti|≤501≤|Ti|≤50 for each valid ii
+0≤|Ci|≤1030≤|Ci|≤103 for each valid ii
+1≤|Pi|≤201≤|Pi|≤20 for each valid ii
+0≤Qi≤1050≤Qi≤105 for each valid ii
+for each valid ii, TiTi contains only lowercase and uppercase English letters
+for each valid ii, PiPi contains only lowercase and uppercase English letters
+
+Example Input
+6 3 2 13 3
+AFBBet
+BBc 6
+cp 4
+A 3
+EE 3
+Bc 1
+
+Example Output
+4
+1 2 A
+3 1 3
+2 7 8 2
+1 9 p
+
+Explanation
+Note that this is just one possible sequence of operations.
+
+Initially, Chef's music score is "AFBBet" and its pretty value is 33.
+After the first operation (with cost |27−32|=5|27−32|=5), the music score becomes "AABBet" and its pretty value becomes 66.
+After the second operation (with cost 33), it becomes "AABAABBet" and its pretty value becomes 1212.
+After the third operation (with cost 11), it becomes "AABAABBct" and its pretty value becomes 1818.
+After the fourth operation (with cost 44), it becomes "AABAABBcp" and its pretty value becomes 2222.
+At the end, the pretty value of the music score is 2222 and the total cost is 1313.
+
+Scoring
+The score of each test file is max(0,V)/100max(0,V)/100, where VV is the pretty value of Chef's music score after applying all the chosen operations. The score of a submission is the sum of scores of all test files. For example, if your final pretty value is 23332333, then you will get 23.3323.33 points; if your final pretty value is −666−666, then you will get 00 points. However, If your output is invalid or your sequence of operations violates any of the given conditions, the verdict of your submission will be Wrong Answer.
+There are twenty test cases. During the contest, the displayed score will account for exactly five test files, i.e. your score reflects your submission's performance on 25% (5/20) of the test files, one for each of the types described below. However, if your program gets a non-AC verdict on any test file, your submission's verdict will be non-AC. In other words, an AC verdict denotes that your program runs successfully on all the test files. After the end of the contest, your score will be changed to include the sum of your program's scores over the other fifteen test files.
+Test Generation Process
+There are five types of test files. All strings are generated uniformly randomly, unless noted otherwise. Specifically, a uniformly random string with length in the range [a,b][a,b] is generated by first choosing its length uniformly randomly in this range and then choosing each of its characters uniformly randomly; all such choices are independent. You may assume that MM and AA are chosen manually.
+Type 1:
+
+N=100N=100
+Q1,Q2,…,QA,RQ1,Q2,…,QA,R are generated uniformly randomly in the range [0,100][0,100]
+all the pretty values are generated uniformly randomly in the range [−50,100][−50,100]
+XX is generated uniformly randomly in the range [500,1000][500,1000]
+
+Type 2:
+
+N=2,000N=2,000
+|Ti|>2|Ti|>2 for each valid ii
+Q1,Q2,…,QA,RQ1,Q2,…,QA,R are generated uniformly randomly in [0,300][0,300]
+all the pretty values are generated uniformly randomly in [0,103][0,103]
+XX is generated uniformly randomly in the range [104,106][104,106]
+
+Type 3:
+
+N=5,000N=5,000
+each string contains only letters 'a' through 'e'
+|Ti|>4|Ti|>4 for each valid ii
+Q1,Q2,…,QA,RQ1,Q2,…,QA,R are generated uniformly randomly in [0,5][0,5]
+all the pretty values are generated uniformly randomly in [−103,103][−103,103]
+XX is generated uniformly randomly in the range [100,2000][100,2000]
+
+Type 4:
+
+N=20,000N=20,000
+SS contains only the letter 'z'
+|Ti|≤10|Ti|≤10 for each valid ii
+Q1,Q2,…,QA,RQ1,Q2,…,QA,R are generated uniformly randomly in the range [1,200][1,200]
+all the pretty values are generated uniformly randomly in the range [−102,103][−102,103]
+XX is generated uniformly randomly in the range [103,105][103,105]
+
+Type 5:
+
+N=20,000N=20,000
+|Ti|>2|Ti|>2 for each valid ii
+Q1,Q2,…,QAQ1,Q2,…,QA are generated uniformly randomly in the range [0,200][0,200]
+RR is generated uniformly randomly in the range [103,5⋅104][103,5⋅104]
+all the pretty values are generated uniformly randomly in the range [−500,103][−500,103]
+XX is generated uniformly randomly in the range [5⋅103,105][5⋅103,105]
+
+
+
+
+Author:
+4★deluxurous
+
+
+Tags:
+
+               
+                 deluxurous
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+3679
+
+
+Date Added:
+27-01-2019
+
+
+Time Limit:
+5 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SCM guile, PERL6, ERL, CLPS, PRLG, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

@@ -1,0 +1,109 @@
+
+The famous country Chefland can be represented as a number line. There are NN attractions in Chefland, among which the ii-th attraction's position is XiXi, and the time taken to completely explore it is SiSi hours. For convenience, we'll assume the time needed to move 11 unit distance is 11 hour.
+One day, Chef decides to visit KK distinct attractions. He wants you to plan the trip, including selecting the attractions and arranging them. In addition, he somehow wants the trip to be as boring as possible.
+To him, the boredomness of a trip is the total time wasted, including the time spent while moving between the attractions, and the time spent in exploring the attractions.
+Formally, if you list the indices of the attractions in the order he visits as an array P=[P1,P2,P3,...,PK]P=[P1,P2,P3,...,PK], then the boredomness equals ∑Ki=2|XPi−XPi−1|∑i=2K|XPi−XPi−1| + ∑Ki=1SPi∑i=1KSPi.
+Your task is to find the maximum boredomness his trip could have.
+Input Format
+
+The first line contains TT - the number of test cases. Then the test cases follow.
+The first line of each test case contains two space-separated integers NN and KK - the number of attractions in the city and the number of attractions Chef wants to visit.
+NN lines then follow, the ii-th of which contains two space-separated integers XiXi and SiSi - the location and the time needed to completely explore the ii-th attraction.
+
+Output Format
+For each test case, output the maximum possible boredomness the trip could have.
+Constraints
+
+1≤T≤10001≤T≤1000
+2≤K≤N≤2⋅1052≤K≤N≤2⋅105
+KK is even
+−109≤Xi≤109−109≤Xi≤109
+1≤Si≤1091≤Si≤109
+Sum of NN over all test cases does not exceed 2⋅1052⋅105
+
+
+                        Sample Input 1
+                        
+
+
+
+
+
+2
+7 4
+0 3
+1 7
+2 4
+3 9
+4 5
+5 7
+6 4
+4 2
+0 7
+0 10
+0 8
+0 9
+
+
+
+                        Sample Output 1
+                        
+
+
+
+
+
+39
+19
+
+
+Explanation
+
+Test case 11: The trip with the maximum boredomness is [4,7,2,6][4,7,2,6]. The boredomness equals |X4−X7|+|X7−X2|+|X2−X6|+S4+S7+S2+S6=3+6+4+9+4+7+7=39|X4−X7|+|X7−X2|+|X2−X6|+S4+S7+S2+S6=3+6+4+9+4+7+7=39.
+Test case 22: The trip with the maximum boredomness is [2,4][2,4]. The boredomness equals |X2−X4|+S2+S4=0+10+9=19|X2−X4|+S2+S4=0+10+9=19.
+
+
+
+
+Author:
+dannyboy1204
+
+
+Tags:
+
+               
+                 dannyboy1204
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2879
+
+
+Date Added:
+16-01-2022
+
+
+Time Limit:
+1 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+CPP17, PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, SQLQ, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

@@ -1,0 +1,90 @@
+
+Read problem statements in Vietnamese,
+Bengali, Mandarin Chinese, and Russian as well. 
+There is an inter-city math competition among kk various prestigious top schools in the city. Some subset of schools will be selected to compete, where the ii-th school is selected with probability pi(mod998 244 353)pi(mod998 244 353). The schools are all selected independently from each other. It's even possible that the number of selected schools will be 00 or 11, because the contest organizers are not very good mathematicians themselves.
+Once the schools have been selected, each selected school must choose rr of its students to form a team. The ii-th school has aiai students in total it can choose from. Given a selection of the schools, you are interested in the number of ways teams can be formed. Two ways are considered different if there is at least one school that chose different sets of students for its team.
+If the subset of schools is chosen according to the above process, find the expected number of ways they can form teams.
+Input
+
+The first line contains an integer rr.
+The second line contains an integer kk.
+The third line contains kk integers a1,…,aka1,…,ak.
+The fourth line contains kk integers p1,…,pkp1,…,pk.
+
+Output
+Output the expected number of ways to form teams, modulo 998244353998244353.
+Constraints
+
+1≤ai≤1091≤ai≤109
+1≤k≤2⋅1051≤k≤2⋅105
+1≤r≤1051≤r≤105
+1≤pi<998 244 3531≤pi<998 244 353
+
+Subtasks
+Subtask 1 (10 points): r≤100r≤100
+Subtask 2 (90 points): Original constraints.
+Sample Input
+1
+2
+2 2
+1 1
+
+Sample Output
+4
+
+
+
+
+Author:
+4★viv007
+
+
+Tester:
+6★iscsi
+
+
+Editorial:
+https://discuss.codechef.com/problems/MAT
+
+
+Tags:
+
+               
+                 Combinatorics, Expected Value, NTT
+                 
+                     
+                     Mathematics, Probability, Transformations
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+3045
+
+
+Date Added:
+1-06-2021
+
+
+Time Limit:
+5 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+CPP17, PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, SQLQ, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

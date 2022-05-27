@@ -1,0 +1,81 @@
+
+Niket is an incredible magician. He has prepared an extraordinary magic trick which he calls as the biggest achievement of his life. He will be performing this magic trick for the first time in the KK-Pop World Festival. He is nervous and wants to make sure that everything goes well. His magic trick consists of NN acts labeled from 1 to N. Every act except act 1 is directlydirectly dependent upon the successful execution of exactly one of the previous acts. The act i is said to be dependent upon act j iff - 
+
+act i is directly dependent upon the act j (j < i) or
+act i is dependent upon some act x which is dependent upon the act j. (j < x < i) 
+
+An act can never happen if one or more of its dependencies failed. Note that not happening is not the same as failingnot happening is not the same as failing. Also, every act has an associated value aiai which gets added to the audience's anger if that act failsfails. If the anger becomes very large, people will start throwing sharp objects at Niket. 
+Since he is going to perform in the KK-Pop World Festival, he is interested in knowing the minimum possible anger value of audience in the hypothetical situation where he was able to successfully execute exactly Kexactly K acts during his performance. This means that the remaining acts either failed or could not happen (because of the dependency constraints).
+Input
+The first line contains a single interger TT - the number of testcases.
+For each testcase,
+The first line contains two space separated integers NN and KK.
+The following N-1 lines contain the information about the acts 2 to N. ith of these lines contains two space separated integers pipi (pipi < i+1) and aiai- This means that the (i+1)th act is directly dependent upon the pipith act and adds aiai to the anger value.
+Output
+For each testcase, print a line containing the minimum anger value of audience if Niket could perform exactly KK of the acts successfully.
+Constraints
+1≤T≤101≤T≤10
+1≤N≤20001≤N≤2000 
+1≤K≤N1≤K≤N 
+1≤ai≤1091≤ai≤109 
+Sample Input
+1
+5 3
+1 5
+2 4
+2 6
+3 8
+
+Sample Output
+4
+
+Explanation
+If Niket fails on act 3,  a3a3 = 4 gets added to the audience's anger and the act 5 can never happen. This means only 3 acts 1,2 and 4 are successful.
+
+
+
+Author:
+4★meetsid20
+
+
+Tags:
+
+               
+                 Trees, DP on Trees, DFS
+                 
+                     
+                     Data Structures, Graphs, Advanced Algorithms, Advanced DP, Algorithms, Graph Algos, Traversals
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+3114
+
+
+Date Added:
+9-08-2018
+
+
+Time Limit:
+1 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SCM guile, PERL6, ERL, CLPS, PRLG, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

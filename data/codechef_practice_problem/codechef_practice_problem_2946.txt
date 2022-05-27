@@ -1,0 +1,122 @@
+
+Read problems statements Mandarin , Bengali , Hindi , Russian and Vietnamese as well.
+Consider a list LL of permutations, where a permutation with length xx denotes a permutation of integers 11 through xx and the elements of this list are indexed starting from 11. Initially, the list contains a single permutation with length 11 (i.e. L1=(1)L1=(1)).
+You may create new permutations and append them to LL using operations with the following form:
+
+Choose two (not necessarily distinct) valid indices ii and jj.
+Let's denote the permutations LiLi and LjLj by (A1,A2,…,AS)(A1,A2,…,AS) and (B1,B2,…,BR)(B1,B2,…,BR) respectively.
+Create a new permutation in one of the following ways (note that the permutations LiLi and LjLj in the list LL are not actually changed):
+Add SS to each element of LjLj, then concatenate LiLi and LjLj, i.e. the resulting permutation is C=(A1,A2,…,AS,B1+S,B2+S,…,BR+S)C=(A1,A2,…,AS,B1+S,B2+S,…,BR+S). For example, if Li=(1,4,2,3)Li=(1,4,2,3) and Lj=(2,1)Lj=(2,1), then C=(1,4,2,3,6,5)C=(1,4,2,3,6,5).
+Add RR to each element of LiLi, then concatenate LiLi and LjLj, i.e. the resulting permutation is C=(A1+R,A2+R,…,AS+R,B1,B2,…,BR)C=(A1+R,A2+R,…,AS+R,B1,B2,…,BR). For example, if Li=(1,4,2,3)Li=(1,4,2,3) and Lj=(2,1)Lj=(2,1), then C=(3,6,4,5,2,1)C=(3,6,4,5,2,1).
+Append CC to LL, i.e. if LL contained pp permutations before this operation, then CC becomes permutation Lp+1Lp+1.
+
+You are given a permutation P=(P1,P2,…,PN)P=(P1,P2,…,PN). You should create this permutation using at most 2N2N operations (the last of these operations must append PP to LL) or determine that it is impossible. It is not required to use the minimum number of operations.
+Input
+
+The first line of the input contains a single integer TT denoting the number of test cases. The description of TT test cases follows.
+The first line of each test case contains a single integer NN.
+The second line contains NN space-separated integers P1,P2,…,PNP1,P2,…,PN.
+
+Output
+For each test case, if it is impossible to create the given permutation, print a single line containing the string "NO" (without quotes). Otherwise:
+
+Print a line containing the string "YES" (without quotes).
+Then, print a line containing a single integer KK — the number of operations you want to perform (1≤K≤2N1≤K≤2N).
+Then, print KK lines. Each of these lines should contain three space-separated integers ii, jj and ww describing one operation (1≤w≤21≤w≤2), where w=1w=1 or w=2w=2 denotes that you want to create the new permutation in the first way or the second way (described above), respectively.
+
+Your solution will be considered incorrect if either ii or jj is invalid for any of your operations or if at the end, the last permutation in the list is not equal to PP.
+Constraints
+
+1≤T≤1,0001≤T≤1,000
+2≤N≤1062≤N≤106
+the sum of NN over all test cases does not exceed 106106
+
+Subtasks
+Subtask #1 (50 points):
+
+N≤1,000N≤1,000
+the sum of NN over all test cases does not exceed 5,0005,000
+
+Subtask #2 (50 points): original constraints
+
+                        Sample Input 1
+                        
+
+
+
+
+
+2
+3
+3 1 2
+4
+3 1 4 2
+
+
+
+                        Sample Output 1
+                        
+
+
+
+
+
+YES
+2
+1 1 1
+1 2 2
+NO
+
+
+
+
+
+Author:
+6★kingofnumbers
+
+
+Editorial:
+https://discuss.codechef.com/problems/PERMLIST
+
+
+Tags:
+
+               
+                 Disjoint Set Union, Constructive
+                 
+                     
+                     Advanced Data Structures, Algorithms
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2958
+
+
+Date Added:
+22-02-2019
+
+
+Time Limit:
+1 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SCM guile, PERL6, ERL, CLPS, PRLG, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

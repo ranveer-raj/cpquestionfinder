@@ -1,0 +1,123 @@
+
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Consider any way to pair the integers 11 through 2N2N into NN pairs (A1,B1),(A2,B2),…,(AN,BN)(A1,B1),(A2,B2),…,(AN,BN) in such a way that each of these integers is present in exactly one pair, Ai<BiAi<Bi for each valid ii and A1<A2<…<ANA1<A2<…<AN. Let's call such a sequence of pairs a pairing.
+For a pairing (A1,B1),(A2,B2),…,(AN,BN)(A1,B1),(A2,B2),…,(AN,BN), we can create an undirected graph with 2N2N nodes (numbered 11 through 2N2N) and the following edges:
+
+first type: for each valid ii, an edge between nodes ii and i+1i+1
+second type: for each valid ii, an edge between nodes AiAi and BiBi
+
+This pairing is valid if for each edge (i,i+1)(i,i+1) of the first type, there is an edge of the second type (Aj,Bj)(Aj,Bj) which "surrounds" it, i.e. satisfies Aj≤iAj≤i and Bj>iBj>i. The cost of a valid pairing is defined as the number of pairs of edges of the second type such that one of these edges is "nested" in the other, i.e. pairs (Ai,Bi)(Ai,Bi) and (Aj,Bj)(Aj,Bj) such that Ai<Aj<Bj<BiAi<Aj<Bj<Bi.
+Find the sum of costs of all valid pairings. Since this number may be very large, compute it modulo a given prime PP.
+Input
+
+The first line of the input contains a single integer TT denoting the number of test cases. The description of TT test cases follows.
+The first and only line of each test case contains two space-separated integers NN and PP.
+
+Output
+For each test case, print a single line containing one integer — the sum of costs of all valid pairings modulo PP.
+Constraints
+
+1≤T≤1021≤T≤102
+2≤N≤1032≤N≤103
+1≤P≤1091≤P≤109
+PP is prime
+the sum of NN over all test cases does not exceed 10,00010,000
+
+Subtasks
+Subtask #1 (50 points): N≤10N≤10
+Subtask #2 (50 points): original constraints
+
+                        Sample Input 1
+                        
+
+
+
+
+
+3
+2 17
+3 5
+817 999999797
+
+
+
+                        Sample Output 1
+                        
+
+
+
+
+
+1
+3
+223160771
+
+
+Explanation
+Example case 1: For N=2N=2, there are two valid pairings [(1,3),(2,4)][(1,3),(2,4)] and [(1,4),(2,3)][(1,4),(2,3)], with costs 00 and 11 respectively.
+Example case 2: For N=3N=3, all valid pairings along with their costs are listed below. 
+
+[(1,4),(2,5),(3,6)][(1,4),(2,5),(3,6)] with cost 00
+[(1,4),(2,6),(3,5)][(1,4),(2,6),(3,5)] with cost 11
+[(1,5),(2,4),(3,6)][(1,5),(2,4),(3,6)] with cost 11
+[(1,5),(2,6),(3,4)][(1,5),(2,6),(3,4)] with cost 22
+[(1,6),(2,5),(3,4)][(1,6),(2,5),(3,4)] with cost 33
+[(1,6),(2,4),(3,5)][(1,6),(2,4),(3,5)] with cost 22
+[(1,3),(2,6),(4,5)][(1,3),(2,6),(4,5)] with cost 11
+[(1,3),(2,5),(4,6)][(1,3),(2,5),(4,6)] with cost 00
+[(1,6),(2,3),(4,5)][(1,6),(2,3),(4,5)] with cost 22
+[(1,5),(2,3),(4,6)][(1,5),(2,3),(4,6)] with cost 11
+
+The sum of all costs is 1313 and its remainder modulo 55 is 33.
+
+
+
+Author:
+4★shashwatchandr
+
+
+Editorial:
+https://discuss.codechef.com/problems/POFP
+
+
+Tags:
+
+               
+                 Bit Manipulation, Dynamic Programming, Prefix Sum
+                 
+                     
+                     Mathematics, Algorithms, Simple Algos
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2926
+
+
+Date Added:
+22-07-2020
+
+
+Time Limit:
+1.5 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+CPP17, PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, SQLQ, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

@@ -1,0 +1,100 @@
+
+Read problem statements in Hindi, Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+This is an interactive problem.
+There is a hidden sequence A1,A2,…,ANA1,A2,…,AN. You need to find indices of two smallest and two largest elements in it. Formally, you should find four integers aa, bb, cc and dd such that there is a permutation P1,P2,…,PNP1,P2,…,PN of the integers 11 through NN with the following properties:
+
+for each ii (1≤i<N1≤i<N), APi≤APi+1APi≤APi+1 holds
+P1=aP1=a, P2=bP2=b, PN−1=cPN−1=c and PN=dPN=d
+
+In order to find such indices, you may ask at most QQ questions. In each question, you should choose two integers ii and jj (1≤i,j≤N1≤i,j≤N); the grader compares the elements AiAi and AjAj and answers with ii if Ai≤AjAi≤Aj, or with jj if Ai>AjAi>Aj.
+Note: The grader is adaptive, i.e. there is no initially fixed sequence AA, but the grader chooses the answers to your questions in such a way that at any time, there is at least one sequence consistent with all the answers. The answer you choose should be correct for every sequence consistent with all the grader's answers. However, it is guaranteed that the grader is deterministic, i.e. its answers are uniquely determined by your questions.
+Interaction
+
+First, you should read a line containing a single integer TT denoting the number of test cases. The description of interaction for TT test cases follows.
+For each test case, first, you should read a line containing a single integer NN. If N=−2N=−2, it means that your answer to the previous test case was incorrect and your program should terminate immediately.
+Then, you may ask questions.
+To ask a question, you should print a line containing three space-separated integers 11, ii and jj (1≤i,j≤N1≤i,j≤N).
+Then, you should read a line containing a single integer xx.
+If the question was invalid, then x=−2x=−2. Otherwise, xx is the answer to the question, i.e. ii if Ai≤AjAi≤Aj or jj otherwise.
+When you have determined your answer, you should print a line containing five space-separated integers 22, aa, bb, cc and dd (1≤a,b,c,d≤N1≤a,b,c,d≤N) that satisfy the conditions described above. If there are multiple possible solutions, you may find any one.
+Whenever you read −2−2, your program should terminate immediately to receive the Wrong Answer verdict. Otherwise, you may receive any verdict.
+
+Don't forget to flush the output after printing each line!
+Constraints
+
+1≤T≤51≤T≤5
+4≤N≤1,0004≤N≤1,000
+
+Subtasks
+Subtask #1 (50 points): Q=3N+20Q=3N+20
+Subtask #2 (50 points): Q=⌊32N⌋+20Q=⌊32N⌋+20
+Example
+Grader                You
+1
+4
+                      1 1 2
+1
+                      1 2 1
+2
+                      1 1 3
+3
+                      1 1 4
+4
+                      1 3 4
+4
+                      2 4 3 1 2
+
+Explanation
+Example case 1: The hidden sequence is A=[3,3,2,1]A=[3,3,2,1]. Note that another possible solution is a=4a=4, b=3b=3, c=2c=2 and d=1d=1.
+
+
+
+Author:
+7★farhod_farmon
+
+
+Editorial:
+https://discuss.codechef.com/problems/MINMAXIN
+
+
+Tags:
+
+               
+                 Binary Tree, Interactive Problems, Observation
+                 
+                     
+                     Data Structures, Tree Data Structure, Special, Algorithms
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2741
+
+
+Date Added:
+2-10-2019
+
+
+Time Limit:
+2 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

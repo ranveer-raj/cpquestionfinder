@@ -1,0 +1,118 @@
+
+Read problem statements in Russian, Mandarin and Vietnamese as well.
+You are given two increasing arrays of NN integers x1<x2<…<xNx1<x2<…<xN and y1<y2<…<yNy1<y2<…<yN.
+For a permutation σ1,σ2,…,σNσ1,σ2,…,σN of integers 1,2,…,N1,2,…,N, let's define A(σ)A(σ) in the following way:
+
+Consider the points (x1,yσ1),(x2,yσ2),…,(xN,yσN)(x1,yσ1),(x2,yσ2),…,(xN,yσN). Then A(σ)A(σ) equals to the area of the convex hull of these points.
+
+Let SS be the sum of A(σ)A(σ) over all n!n! permutations. One can show that 2S2S is an integer under the constraints of the problem.
+Find the remainder of 2S2S modulo 998244353998244353.
+Input Format
+
+The first line contains a single integer TT, the number of test cases. The description of test cases follows.
+The first line of each test case contains a single integer NN −− the length of the two arrays.
+The second line of each test case contains NN integers x1,x2,…,xNx1,x2,…,xN (x1<x2<…<xNx1<x2<…<xN).
+The third line of each test case contains NN integers y1,y2,…,yNy1,y2,…,yN (y1<y2<…<yNy1<y2<…<yN).
+
+Output Format
+For each test case print the remainder of 2S2S modulo 998244353998244353.
+Constraints
+
+1≤T≤101≤T≤10
+3≤N≤303≤N≤30
+−1000≤xi≤1000−1000≤xi≤1000
+−1000≤yi≤1000−1000≤yi≤1000
+The sum of NN over all test cases doesn't exceed 3030
+
+
+                        Sample Input 1
+                        
+
+
+
+
+
+2
+3
+1 2 3
+1 2 3
+4
+-141 21 321 525
+131 452 653 893
+
+
+
+                        Sample Output 1
+                        
+
+
+
+
+
+12
+9662004
+
+
+Explanation
+Here are the weights of all permutations from the first test case:
+
+For σ=(1,2,3)σ=(1,2,3), we have points (1,1),(2,2),(3,3)(1,1),(2,2),(3,3). They are collinear, so area of their convex hull is 00: A(σ)=0A(σ)=0.
+For σ=(1,3,2)σ=(1,3,2), we have points (1,1),(2,3),(3,2)(1,1),(2,3),(3,2). Their convex hull is the triangle with vertices in them, and its area is 3232: A(σ)=32A(σ)=32.
+For σ=(2,1,3)σ=(2,1,3), we have points (1,2),(2,1),(3,3)(1,2),(2,1),(3,3). Their convex hull is the triangle with vertices in them, and its area is 3232: A(σ)=32A(σ)=32.
+For σ=(2,3,1)σ=(2,3,1), we have points (1,2),(2,3),(3,1)(1,2),(2,3),(3,1). Their convex hull is the triangle with vertices in them, and its area is 3232: A(σ)=32A(σ)=32.
+For σ=(3,1,2)σ=(3,1,2), we have points (1,3),(2,1),(3,2)(1,3),(2,1),(3,2). Their convex hull is the triangle with vertices in them, and its area is 3232: A(σ)=32A(σ)=32.
+For σ=(3,2,1)σ=(3,2,1), we have points (1,3),(2,2),(3,1)(1,3),(2,2),(3,1). They are collinear, so area of their convex hull is 00: A(σ)=0A(σ)=0.
+
+Sum of these values is 66, so the answer to this test case is 2⋅6=122⋅6=12.
+
+
+
+Author:
+7★dario2994
+
+
+Editorial:
+https://discuss.codechef.com/problems/RNDCHULL
+
+
+Tags:
+
+               
+                 Computational Geometry
+                 
+                     
+                     Advanced Algorithms
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+3281
+
+
+Date Added:
+4-12-2021
+
+
+Time Limit:
+4 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+CPP17, PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, SQLQ, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+

@@ -1,0 +1,107 @@
+
+Chef has a circular sequence AA of NN non-negative integers A1,A2,…,ANA1,A2,…,AN where AiAi and Ai+1Ai+1 are considered adjacent, and elements A1A1 and ANAN are considered adjacent.
+An operation on position pp in array AA is defined as replacing ApAp by the bitwise OR of elements adjacent to ApAp. Formally, an operation is defined as:
+
+If p=1p=1, replace A1A1 with AN|A2AN|A2
+If 1<p<N1<p<N, replace ApAp with Ap−1|Ap+1Ap−1|Ap+1
+If p=Np=N, replace ANAN with AN−1|A1AN−1|A1
+
+Here, '|' denotes the bitwise OR operation.
+Now, Chef must apply operations at each position exactly once, but he may apply the operations in any order.
+Being a friend of Chef, you are required to find a sequence of operations, such that after applying all the NN operations, the bitwise OR of the resulting array is KK, or determine that no such sequence of operations exist.
+Input:
+
+The first line of the input contains a single integer TT denoting the number of test cases. The description of TT test cases follows.
+The first line of each test case contains two space-separated integers NN and KK denoting the number of elements, and the required bitwise OR after operations.
+The second line contains NN space-separated integers A1,A2,…,ANA1,A2,…,AN.
+
+Output:
+For each test case, if no valid sequence of operations exist, print -1.
+Otherwise, print NN space-separated integers in which ii-th integer denote the position chosen in the ii-th operation. If there are multiple valid sequences of operations, you may print any valid sequence.
+Constraints
+
+1≤T≤1051≤T≤105
+3≤N≤2∗1053≤N≤2∗105
+0≤Ai,K≤1090≤Ai,K≤109
+It's guaranteed that the total length of the arrays in one test file doesn't exceed 106106
+
+Sample Input:
+5
+3 6
+2 1 6
+3 6
+2 1 5
+3 7
+2 4 6
+3 7
+1 2 4
+3 7
+1 2 6
+
+Sample Output:
+2 1 3
+-1
+-1
+-1
+2 3 1
+
+Explanation:
+In the first test case, initially, the sequence is {2, 1, 6}. 
+
+Chef applies the operation on the 2nd2nd index, so the sequence converts to {2, 6, 6}.
+Next, Chef applies the operation on the 1st1st index, so the sequence converts to {6, 6, 6}.
+Next, Chef applies the operation on the 3rd3rd index, and this time sequence does not change.
+
+The final sequence is {6, 6, 6}, and bitwise OR of this sequence is 66 that is equal to given KK.
+
+
+
+Author:
+5★rishup_nitdgp
+
+
+Editorial:
+https://discuss.codechef.com/problems/RECNDORO
+
+
+Tags:
+
+               
+                 Bit Manipulation, Constructive
+                 
+                     
+                     Mathematics, Algorithms
+                 
+               
+             
+             
+
+
+
+                        Difficulty Rating:
+                    
+
+2649
+
+
+Date Added:
+31-12-2019
+
+
+Time Limit:
+1 secs
+
+
+Source Limit:
+50000 Bytes
+
+
+Languages:
+CPP17, PYTH 3.6, JAVA, C, CPP14, PYTH, PYP3, CS2, ADA, PYPY, TEXT, PAS fpc, NODEJS, RUBY, PHP, GO, HASK, TCL, kotlin, PERL, SCALA, LUA, BASH, JS, rust, LISP sbcl, PAS gpc, BF, CLOJ, R, D, CAML, swift, FORT, ASM, FS, WSPC, LISP clisp, SQL, SCM guile, PERL6, ERL, CLPS, PRLG, ICK, NICE, ICON, COB, SCM chicken, PIKE, SCM qobi, ST, NEM
+
+
+
+
+
+Submit
+
