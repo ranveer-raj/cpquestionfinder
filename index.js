@@ -18,7 +18,7 @@ const PORT = process.env.PORT || 3000;
     var corpus;
     var similarity = [];
     var sentence = "";
-    for (var i = 1; i <= 3429; i++) 
+    for (var i = 1; i <= 999; i++) 
     {
         var str = "data/problem_extract/problem_extract" + i + ".txt";
         sentence = fs.readFileSync(str, "utf8");
