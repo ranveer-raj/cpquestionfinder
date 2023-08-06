@@ -1,15 +1,3 @@
 {
-    "version": 2,
-    "builds": [
-        {
-            "src": "./home.ejs",
-            "use": "@vercel/node"
-        }
-    ],
-        "routes": [
-                {
-                    "src": "/.*",
-                    "dest": "home.ejs"
-                }
-        ]
-}
+    "rewrites": [{ "source": "/(.*)", "destination": "/api" }]
+  }
