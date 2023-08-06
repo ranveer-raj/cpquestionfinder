@@ -24,6 +24,7 @@ const PORT = process.env.PORT || 3000;
         sentence = fs.readFileSync(str, "utf8");
         var newstr = "";
         // newstr = sentence.replaceAll(',', ' ');
+        newstr=sentence.replace(/,/g,' ');
         corpus = tf_idf.addDocumentFromString(newstr);
     }
 
