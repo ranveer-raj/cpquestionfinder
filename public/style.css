@@ -1,15 +1,12 @@
-*
-{
-        /* margin: 0;
-        padding: 0; */
-}
 body
 {
         /* background-image: url('image1.jpg');
         background-repeat: repeat-y;
         background-size: 100vw 100vh; */
         padding-top: 20px;
-        background-color: black;
+        background-image: url("back.jpg");
+        /* background-color: black; */
+        /* background-image: url('https://pngtree.com/freebackground/technology-background-binary-computer-code-vector-design_1264148.html'); */
 }
 body con
 {
@@ -27,12 +24,12 @@ nav header ul li
 nav header ul li a
 {
         text-decoration: none;
-        height: 50px;
+        height: 30px;
         width: 20vw;
-        color: cyan;
+        color: white;
         margin: 10px;
         padding: 2px;
-        border: 3px solid darkgreen;
+        /* border: 3px solid darkgreen; */
         border-radius: 12px;
         align-items: center;
         font-size: 20px;
@@ -41,43 +38,77 @@ nav header ul li a
 #heading
 {
         color: cyan;
-        margin-top: 10vh;
-        margin-bottom: 30vh;
+        /* margin-top: 10vh; */
+        /* margin-bottom: 30vh; */
         font-size: 4vw;
+}
+.fixwidth{
+        width: 50em;
+        margin-inline: auto;
+        /* padding-left: 5px; */
+}
+.aflex{
+        width: 50em;
+        /* padding-left: -5px; */
+        justify-content: space-between;
 }
 #input1
 {
         display: inline-block;
         background-color: white;
         height: 50px;
-        width: 25vw;
-        color: blue;
-        margin: 10px;
-        padding: 2px;
-        border: 3px solid darkgreen;
-        border-radius: 12px;
+        width: 30em;
+        /* color: blue; */
+        /* margin: 10px; */
+        padding-inline: 10px;
+        border: 1px solid black;
+        border-radius: 2px;
         align-items: center;
-        font-size: 20px;
+        font-size: 18px;
 }
 #btn
 {
         display: inline-block;
-        background-color: blue;
-        height: 60px;
-        width: 10vw;
-        color: rgb(128,128,128);
-        margin: 10px;
-        padding: 2px;
-        border: 3px solid darkgreen;
-        border-radius: 12px;
+        background-color: #d30079;
+        height: 50px;
+        width: 10em;
+        color: white;
+        /* margin: 10px; */
+        /* padding: 2px; */
+        /* border: 3px solid darkgreen; */
+        border-radius: 2px;
         align-items: center;
         font-size: 20px;
+}
+#btn:hover
+{
+        /* display: inline-block; */
+        background-color: #e2188b;
+        cursor: pointer;
+}
+.loading
+{
+        margin-top: 10px;
+        color: white;
+        font-size: 25px;
 }
 
 .title
 {
     color: blue;
-    text-align: centre;
+    text-align: left;
+    padding-left: 35px;
+    padding-block: 10px;
+    
+}
+.title a{
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+}
+.title a:hover{
+        /* text-decoration: none; */
+        color: yellow;
 }
 .url
 {
@@ -87,10 +118,10 @@ nav header ul li a
 
 .body
 {
-    display: inline-block;
+    /* display: inline-block; */
     color: rgb(102,153,204);
     /* color: brown; */
-    text-align: justify;
+    /* text-align: start; */
 }
 footer
 {
