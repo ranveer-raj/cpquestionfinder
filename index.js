@@ -43,7 +43,7 @@ app.get("/search",(req,res)=>{
     var input = quest;
     
     // tfidf similarity calculating
-    for (var i = 0; i < 500; i++) //3429
+    for (var i = 0; i < 990; i++) //3429
     {
         similarity[i] = tf_idf.calculateSimilarityIndex(input, tf_idf.corpus[i]);
     }
@@ -51,7 +51,7 @@ app.get("/search",(req,res)=>{
     var index1= -1 ,index2= -1 ,index3= -1 ,index4= -1,index5=-1;
     // index1
     var temp=0;
-    for (var i = 0; i < 500; i++)
+    for (var i = 0; i < 990; i++)
     {
         if(similarity[i]>temp)
         {
@@ -62,7 +62,7 @@ app.get("/search",(req,res)=>{
 
     // index2
     temp=0;
-    for (var i = 0; i < 500; i++)
+    for (var i = 0; i < 990; i++)
     {
         if (i!=index1)
         {
@@ -76,7 +76,7 @@ app.get("/search",(req,res)=>{
 
     // index3
     temp=0;
-    for (var i = 0; i < 500; i++)
+    for (var i = 0; i < 990; i++)
     {
         if (i!=index1 && i!=index2)
         {
@@ -90,7 +90,7 @@ app.get("/search",(req,res)=>{
 
     // index4
     temp=0;
-    for (var i = 0; i < 500; i++)
+    for (var i = 0; i < 990; i++)
     {
         if (i!=index1 && i!=index2 && i!=index3)
         {
@@ -104,7 +104,7 @@ app.get("/search",(req,res)=>{
 
     // index5
     temp=0;
-    for (var i = 0; i < 500; i++)
+    for (var i = 0; i < 990; i++)
     {
         if (i!=index1 && i!=index2 && i!=index3 && i!=index4)
         {
@@ -353,4 +353,3 @@ app.get("/search",(req,res)=>{
 app.listen(PORT, ()=>{
     console.log("server is running on port "+PORT);
 });
-
