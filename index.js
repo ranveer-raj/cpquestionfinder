@@ -23,7 +23,7 @@ const PORT = process.env.PORT || 3000;
         var str = "data/problem_extract/problem_extract" + i + ".txt";
         sentence = fs.readFileSync(str, "utf8");
         var newstr = "";
-        newstr = sentence.replaceAll(',', ' ');
+        // newstr = sentence.replaceAll(',', ' ');
         corpus = tf_idf.addDocumentFromString(newstr);
     }
 
