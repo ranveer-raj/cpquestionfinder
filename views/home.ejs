@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CPQF</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./style.css">
     <!-- <script src="engine.js" charset="utf-8"></script> -->
 </head>
@@ -15,56 +16,38 @@
         <header>
             <ul id="navigation">
                 <li><a href="about.html" target="_blank">About</a></li>
-                <li><a href="contact.html" target="_blank">Contacts</a></li>
+                <li><a href="https://www.linkedin.com/in/ranveeriitkgp/" target="_blank">Contacts</a></li>
             </ul>
         </header>
     </nav>
     <con>
         <h1 id="heading">CP Question Finder</h1>
-        <form>
-            <input type="text" name="question" id="input1" placeholder="Enter your text here...">
-            <!-- <br> -->
-            <input type="submit" value="Search" id="btn" />
-            <!-- <button onclick="func1()" type="button" id="btn" name="button">Search</button> -->
-        </form>
-        <div class="loading"></div>
-        <qtn>
-        <div class="question">
-            <div class="title"></div>
-            <div class="url">
-                <a href=""></a>
+        <div class="fixwidth">
+            <div class="aflex">
+                <form>
+                    <input type="text" name="question" id="input1" placeholder="Enter your text here...">
+                    <input type="submit" value="Search" id="btn" />
+                </form>
             </div>
-            <div class="body"></div>
+            <div class="loading"> </div>
+            <qtn>
+                <div class="question">
+                    <div class="title"></div>
+                </div>
+                <div class="question">
+                    <div class="title"></div>
+                </div>
+                <div class="question">
+                    <div class="title"></div>
+                </div>
+                <div class="question">
+                    <div class="title"></div>
+                </div>
+                <div class="question">
+                    <div class="title"></div>
+                </div>
+            </qtn>
         </div>
-        <div class="question">
-            <div class="title"></div>
-            <div class="url">
-                <a href=""></a>
-            </div>
-            <div class="body"></div>
-        </div>
-        <div class="question">
-            <div class="title"></div>
-            <div class="url">
-                <a href=""></a>
-            </div>
-            <div class="body"></div>
-        </div>
-        <div class="question">
-            <div class="title"></div>
-            <div class="url">
-                <a href=""></a>
-            </div>
-            <div class="body"></div>
-        </div>
-        <div class="question">
-            <div class="title"></div>
-            <div class="url">
-                <a href=""></a>
-            </div>
-            <div class="body"></div>
-        </div>
-        </qtn>
     </con>
     <footer>Copyright &copy; 2022-2023 <br> Ranveer Raj<br> All rights reserved</footer>
 
@@ -76,34 +59,46 @@
     const form = document.querySelector("form");
     const qelment = form.question;
 
-    const questions=document.querySelectorAll(".question");
-    const title=document.querySelectorAll(".title");
-    const url=document.querySelectorAll(".url");
-    const body=document.querySelectorAll(".body");
-    const loadingdiv=document.querySelectorAll(".loading");
+    const questions = document.querySelectorAll(".question");
+    const title = document.querySelectorAll(".title");
+    const url = document.querySelectorAll(".url");
+    const link = document.querySelectorAll(".link");
+    const body = document.querySelectorAll(".body");
+    const loadingdiv = document.querySelectorAll(".loading");
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
         const quest = qelment.value;
-        loadingdiv.innerHTML=`<h3>Loading......</h3>`;
-        for(i=0;i<5;i++)
-            {
-                title[i].innerHTML= ``;
-                url[i].innerHTML= ``;
-                body[i].innerHTML= ``;
-            }
+        loadingdiv[0].innerHTML = `<h3><i class="fa fa-refresh fa-spin"></i> Loading</h3>`;
+        for (i = 0; i < 5; i++) {
+            title[i].innerHTML = ``;
+
+        }
         //fetch
 
         try {
+
             const res = await fetch(`/search?question=${quest}`, {
                 method: "GET"
             });
             const data = await res.json();
-            loadingdiv.innerHTML=``;
-            for(i=0;i<5;i++)
-            {
-                title[i].innerHTML= `<h3>${data[i].title}</h3>`;
-                url[i].innerHTML= `<h3>${data[i].url}</h3>`;
-                body[i].innerHTML= `${data[i].body}`;
+            var cnt = 1;
+
+            for (i = 0; i < 5; i++) {
+                if (data[i].url === ``) {
+                    // do nothing
+                }
+                else {
+                    loadingdiv[0].innerHTML = ``;
+                    title[i].innerHTML = `<a target="_blank" href="${data[i].url}" > Problem ${cnt} : ${data[i].title}</a>`;
+                    cnt++;
+                }
+
+                // url[i].innerHTML= `<h3>${data[i].url}</h3>`;
+                // link[i].innerHTML= `<a target="_blank" href="${data[i].url}" > click here baby</a>`;
+                // body[i].innerHTML= `${data[i].body}`;
+            }
+            if (cnt === 1) {
+                loadingdiv[0].innerHTML = `<h3>Sorry! query not found in database</h3>`;
             }
         } catch (error) {
             alert(error);
